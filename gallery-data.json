@@ -1,0 +1,198 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "site": "Quiet Frames Studio",
+    "photographer": "Michael J McConnell",
+    "updated": "2026-03-28",
+    "note": "This file is the source of truth for all portfolio content. The upload skill updates it automatically."
+  },
+
+  "settings": {
+    "featuredSeriesIds": ["texture-dormancy", "savannah-2026", "intimacy"],
+    "archiveLabel": "Archive",
+    "contactEmail": "",
+    "instagramUrl": "http://instagram.com/quietframesphotos",
+    "printInquiriesText": "For print inquiries, please get in touch."
+  },
+
+  "series": [
+    {
+      "id": "texture-dormancy",
+      "title": "Texture & Dormancy",
+      "subtitle": "Winter — New England, 2025",
+      "description": "Winter landscapes and still forms shot across New England in late 2025. Organic textures, bare structure, quiet light.",
+      "featured": true,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": ["landscape", "nature"],
+        "film": "fp4",
+        "format": "35mm",
+        "location": ["new-england", "massachusetts"]
+      }
+    },
+    {
+      "id": "savannah-2026",
+      "title": "Savannah 2026",
+      "subtitle": "Savannah, GA — Early 2026",
+      "description": "Street life and architecture in the American South. Shot across multiple film stocks.",
+      "featured": true,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": ["street", "architecture"],
+        "film": "mixed",
+        "format": "35mm",
+        "location": ["savannah"]
+      }
+    },
+    {
+      "id": "intimacy",
+      "title": "Intimacy",
+      "subtitle": "Portraits — Medium Format",
+      "description": "A small and deliberate body of portrait work. Close light, familiar faces. Shot on medium format.",
+      "featured": true,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": ["portrait"],
+        "film": "portra-400",
+        "format": "6x7",
+        "location": []
+      }
+    },
+    {
+      "id": "quincy-quarries",
+      "title": "Quincy Quarries",
+      "subtitle": "Quincy, MA",
+      "description": "An industrial landscape reclaimed by time and water. Granite, shadow, and the geometry of abandonment.",
+      "featured": false,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": ["landscape", "architecture"],
+        "film": "fp4",
+        "format": "35mm",
+        "location": ["quincy", "massachusetts"]
+      }
+    },
+    {
+      "id": "lomo-purple-series",
+      "title": "Through the Purple",
+      "subtitle": "Lomography Purple — Parks & Outdoor",
+      "description": "Shot on Lomography Purple, a film that swaps the green channel for violet — grass and foliage render in purple and magenta. An unmistakable, otherworldly palette.",
+      "featured": false,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": ["landscape", "street"],
+        "film": "lomo-purple",
+        "format": "35mm",
+        "location": ["massachusetts"]
+      }
+    },
+    {
+      "id": "sfx-infrared",
+      "title": "SFX Infrared",
+      "subtitle": "Ilford SFX with red filter",
+      "description": "Ilford SFX with a deep red filter — foliage rendered white, skies near black. A different kind of seeing.",
+      "featured": false,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": ["landscape"],
+        "film": "sfx",
+        "format": "35mm",
+        "location": []
+      }
+    },
+    {
+      "id": "coastal",
+      "title": "Coastal",
+      "subtitle": "New England Coastline",
+      "description": "Rocky shorelines, lighthouses, harbors. The New England coast in black and white.",
+      "featured": false,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": ["coastal", "landscape"],
+        "film": "hp5",
+        "format": "35mm",
+        "location": ["coastal-ne", "new-england"]
+      }
+    },
+    {
+      "id": "2025-seasons",
+      "title": "2025 Seasons",
+      "subtitle": "A year of shooting",
+      "description": "A year-long edit. 35mm across all four seasons — parks, streets, trails, light.",
+      "featured": false,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": ["landscape", "street", "nature"],
+        "film": "mixed",
+        "format": "35mm",
+        "location": ["new-england"]
+      }
+    }
+  ],
+
+  "filterGroups": [
+    {
+      "id": "subject",
+      "label": "Subject",
+      "filters": [
+        { "id": "portrait",     "label": "Portrait" },
+        { "id": "street",       "label": "Street" },
+        { "id": "landscape",    "label": "Landscape" },
+        { "id": "architecture", "label": "Architecture" },
+        { "id": "coastal",      "label": "Coastal" },
+        { "id": "nature",       "label": "Nature" },
+        { "id": "still-life",   "label": "Still Life" }
+      ]
+    },
+    {
+      "id": "film",
+      "label": "Film",
+      "filters": [
+        { "id": "hp5",           "label": "Ilford HP5" },
+        { "id": "fp4",           "label": "Ilford FP4" },
+        { "id": "sfx",           "label": "SFX Infrared" },
+        { "id": "pan-f",         "label": "Pan F Plus 50" },
+        { "id": "portra-400",    "label": "Kodak Portra 400" },
+        { "id": "portra-800",    "label": "Kodak Portra 800" },
+        { "id": "kodacolor-200", "label": "KodaColor 200" },
+        { "id": "provia-100f",   "label": "Fuji Provia 100F" },
+        { "id": "cinestill-800t","label": "Cinestill 800T" },
+        { "id": "lomo-purple",   "label": "Lomography Purple" },
+        { "id": "ektar-100",     "label": "Kodak Ektar 100" }
+      ]
+    },
+    {
+      "id": "format",
+      "label": "Format",
+      "filters": [
+        { "id": "35mm", "label": "35mm" },
+        { "id": "6x7",  "label": "6×7 Medium Format" },
+        { "id": "6x9",  "label": "6×9 Medium Format" },
+        { "id": "4x5",  "label": "4×5 Large Format" }
+      ]
+    },
+    {
+      "id": "location",
+      "label": "Place",
+      "filters": [
+        { "id": "new-england",  "label": "New England" },
+        { "id": "massachusetts","label": "Massachusetts" },
+        { "id": "boston",       "label": "Boston" },
+        { "id": "quincy",       "label": "Quincy, MA" },
+        { "id": "savannah",     "label": "Savannah, GA" },
+        { "id": "texas",        "label": "Texas" },
+        { "id": "coastal-ne",   "label": "Coastal NE" }
+      ]
+    }
+  ],
+
+  "photos": []
+}

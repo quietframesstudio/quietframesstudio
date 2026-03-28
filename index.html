@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Quiet Frames Studio — Film photography by Michael J McConnell. 35mm, medium format, and large format work.">
+<title>Quiet Frames Studio — Film Photography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET & CUSTOM PROPS ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:        #f0e9db;
+  --bg-alt:    #e8dece;
+  --bg-dark:   #1c1a15;
+  --ink:       #18160f;
+  --ink-mid:   #5c5446;
+  --ink-light: #9c8e7c;
+  --accent:    #7a6a52;
+  --warm:      #b8a07a;
+  --border:    #d0c4ae;
+  --border-lt: #e0d6c4;
+  --white:     #faf6ee;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.65;
+  min-width: 320px;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23g)'/%3E%3C/svg%3E");
+  opacity: 0.038;
+  pointer-events: none;
+  z-index: 9000;
+}
+img { display: block; width: 100%; object-fit: cover; }
+a   { text-decoration: none; color: inherit; }
+
+/* ── LOADING ─────────────────────────────────────────────────────────── */
+#loading {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 8000;
+  transition: opacity 0.4s;
+}
+#loading.done { opacity: 0; pointer-events: none; }
+.loader-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* ── NAV ─────────────────────────────────────────────────────────────── */
+nav {
+  position: sticky; top: 0; z-index: 500;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 52px;
+  background: rgba(240,233,219,0.93);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-weight: 400;
+  letter-spacing: 0.22em; text-transform: uppercase;
+}
+.logo em { font-style: italic; font-weight: 300; }
+.nav-links { list-style: none; display: flex; gap: 40px; }
+.nav-links a {
+  font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-mid); transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ink); }
+
+/* ── HERO ─────────────────────────────────────────────────────────────── */
+#hero {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  height: calc(100vh - 57px);
+  min-height: 520px; max-height: 860px;
+  gap: 3px; padding: 3px;
+  background: var(--border);
+}
+.hero-main { position: relative; overflow: hidden; cursor: pointer; }
+.hero-stack { display: flex; flex-direction: column; gap: 3px; }
+.hero-sub   { position: relative; overflow: hidden; flex: 1; cursor: pointer; }
+
+.hero-photo {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hero-photo.placeholder {
+  background: linear-gradient(150deg, #c4b09a 0%, #9a8068 40%, #7a6250 100%);
+}
+.hero-main:hover .hero-photo,
+.hero-sub:hover  .hero-photo { transform: scale(1.04); }
+
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(18,16,10,0.72) 0%, rgba(18,16,10,0.1) 50%, transparent 100%);
+  pointer-events: none;
+}
+.hero-label {
+  position: absolute; bottom: 28px; left: 30px; right: 30px;
+  pointer-events: none;
+}
+.hero-tag {
+  font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(240,233,219,0.55); margin-bottom: 7px;
+}
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic;
+  color: var(--white); line-height: 1.15;
+  text-shadow: 0 2px 24px rgba(10,8,4,0.45);
+}
+.hero-main .hero-headline { font-size: clamp(26px, 3.2vw, 46px); }
+.hero-sub  .hero-headline { font-size: clamp(16px, 2vw, 28px); }
+.hero-sub-count {
+  font-size: 10px; letter-spacing: 0.12em;
+  color: rgba(240,233,219,0.45); margin-top: 6px;
+}
+.empty-hero-msg {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; text-align: center; gap: 12px;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 18px; color: var(--ink-light);
+}
+.empty-hero-msg span { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--ink-light); }
+
+/* ── SECTION HEADER ─────────────────────────────────────────────────── */
+.sec-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 52px 52px 28px;
+}
+.sec-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; font-weight: 400;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--ink-mid);
+  display: flex; align-items: center; gap: 16px;
+}
+.sec-label::before { content: ''; width: 32px; height: 1px; background: var(--border); }
+.sec-action {
+  font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-light); transition: color 0.2s; cursor: pointer;
+}
+.sec-action:hover { color: var(--ink); }
+
+/* ── SERIES GRID ────────────────────────────────────────────────────── */
+#series-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 3px; padding: 0 3px 3px;
+  background: var(--border-lt);
+  margin: 0 52px 72px;
+}
+.series-card { background: var(--bg); overflow: hidden; cursor: pointer; }
+.series-card-img { width: 100%; aspect-ratio: 5/6; overflow: hidden; position: relative; }
+.series-card-img img { height: 100%; transition: transform 0.55s ease; }
+.series-card-img .placeholder { background: linear-gradient(155deg, #c0b0a0 0%, #8a7868 100%); height: 100%; }
+.series-card:hover .series-card-img img,
+.series-card:hover .series-card-img .placeholder { transform: scale(1.05); }
+
+.series-card-body { padding: 18px 22px 24px; border-top: 1px solid var(--border-lt); }
+.series-card-title { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-style: italic; font-weight: 300; margin-bottom: 4px; }
+.series-card-sub   { font-size: 11px; color: var(--ink-light); margin-bottom: 10px; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag {
+  font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid var(--border);
+  padding: 3px 8px; border-radius: 1px;
+}
+
+.series-empty {
+  grid-column: 1/-1;
+  padding: 64px 24px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink-light);
+}
+.series-empty small {
+  display: block; font-family: 'Inter', sans-serif; font-size: 11px;
+  margin-top: 8px; letter-spacing: 0.1em; font-style: normal;
+}
+
+/* ── ARCHIVE ─────────────────────────────────────────────────────────── */
+#archive-wrap { background: var(--bg-alt); border-top: 1px solid var(--border); padding-bottom: 80px; }
+.filter-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  padding: 24px 52px; border-bottom: 1px solid var(--border); margin-bottom: 28px;
+}
+.filter-group-lbl {
+  font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-light); margin-right: 2px; white-space: nowrap;
+}
+.filter-sep { width: 1px; height: 18px; background: var(--border); margin: 0 8px; }
+.pill {
+  font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 4px 11px; border: 1px solid var(--border);
+  background: transparent; color: var(--ink-mid);
+  cursor: pointer; border-radius: 1px;
+  font-family: 'Inter', sans-serif; font-weight: 300;
+  transition: all 0.15s; white-space: nowrap;
+}
+.pill:hover { background: var(--bg); color: var(--ink); border-color: var(--ink-mid); }
+.pill.on    { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+#archive-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 10px; padding: 0 52px;
+}
+.arch-item { cursor: pointer; overflow: hidden; }
+.arch-item.hidden { display: none; }
+.arch-photo { width: 100%; overflow: hidden; }
+.arch-photo img { transition: transform 0.4s ease; }
+.arch-item:hover .arch-photo img { transform: scale(1.05); }
+.arch-meta {
+  padding: 7px 0 12px;
+  display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 1px solid var(--border-lt); margin-top: 1px;
+}
+.arch-name { font-size: 11px; color: var(--ink-mid); }
+.arch-film { font-size: 10px; color: var(--ink-light); letter-spacing: 0.08em; text-transform: uppercase; }
+
+.archive-empty {
+  grid-column: 1/-1; padding: 64px 24px; text-align: center;
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--ink-light);
+}
+.archive-empty small {
+  display: block; font-family: 'Inter', sans-serif; font-size: 11px;
+  margin-top: 8px; letter-spacing: 0.1em; font-style: normal;
+}
+
+/* ── ABOUT ───────────────────────────────────────────────────────────── */
+#about {
+  display: grid; grid-template-columns: 1fr 1.8fr;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.about-left {
+  padding: 72px 52px;
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.about-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4.5vw, 60px); font-weight: 300; line-height: 1.08;
+}
+.about-headline em { font-style: italic; color: var(--accent); }
+.about-right { padding: 72px 52px; display: flex; flex-direction: column; justify-content: center; }
+.about-body  { font-size: 14.5px; line-height: 1.85; color: var(--ink-mid); max-width: 520px; }
+.about-body p + p { margin-top: 18px; }
+.text-link {
+  display: inline-block; margin-top: 28px;
+  font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border); padding-bottom: 3px;
+  transition: border-color 0.2s;
+}
+.text-link:hover { border-color: var(--ink); }
+
+/* ── PROCESS STRIP ───────────────────────────────────────────────────── */
+.process-strip {
+  background: var(--bg-dark);
+  padding: 48px 52px;
+  display: flex; align-items: center; justify-content: space-between; gap: 40px;
+}
+.process-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2.2vw, 28px); font-style: italic; font-weight: 300;
+  color: rgba(240,233,219,0.85); line-height: 1.4; max-width: 620px;
+}
+.process-detail {
+  font-size: 10.5px; color: rgba(156,142,124,0.7);
+  letter-spacing: 0.14em; text-transform: uppercase;
+  text-align: right; flex-shrink: 0; line-height: 2;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────────────── */
+footer {
+  padding: 28px 52px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--border);
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-light); font-style: italic;
+}
+.footer-links { list-style: none; display: flex; gap: 28px; }
+.footer-links a {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-light); transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--ink); }
+.footer-copy { font-size: 10px; color: var(--ink-light); }
+
+/* ── LIGHTBOX ────────────────────────────────────────────────────────── */
+#lightbox {
+  display: none; position: fixed; inset: 0; z-index: 7000;
+  background: rgba(18,16,10,0.95);
+  align-items: center; justify-content: center;
+  flex-direction: column;
+}
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; display: block; }
+.lb-close {
+  position: absolute; top: 20px; right: 28px;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(240,233,219,0.5); cursor: pointer; transition: color 0.2s;
+}
+.lb-close:hover { color: var(--white); }
+.lb-meta {
+  margin-top: 16px; text-align: center;
+  font-size: 11px; color: rgba(240,233,219,0.5);
+  letter-spacing: 0.1em;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { gap: 24px; }
+  #hero { grid-template-columns: 1fr; }
+  .hero-stack { display: none; }
+  #series-grid { grid-template-columns: 1fr 1fr; margin: 0 24px 48px; }
+  #archive-grid { grid-template-columns: 1fr 1fr; padding: 0 24px; }
+  .filter-bar { padding: 16px 24px; }
+  .sec-head { padding: 40px 24px 20px; }
+  #about { grid-template-columns: 1fr; }
+  .about-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 24px; }
+  .about-right { padding: 48px 24px; }
+  footer { padding: 24px; flex-direction: column; gap: 16px; text-align: center; }
+  .process-strip { flex-direction: column; padding: 40px 24px; }
+  .process-detail { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<!-- Loading screen -->
+<div id="loading"><div class="loader-logo">Quiet Frames Studio</div></div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <div class="lb-close" onclick="closeLightbox()">✕ &nbsp;Close</div>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-meta" id="lb-meta"></div>
+</div>
+
+<!-- ── NAV ─────────────────────────────────────────────── -->
+<nav>
+  <a href="#" class="logo">Quiet <em>Frames</em> Studio</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#series-section">Series</a></li>
+    <li><a href="#archive-section">Archive</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#" id="nav-print">Print Inquiries</a></li>
+    <li><a href="#" id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section id="hero">
+  <!-- Populated by JS -->
+  <div class="empty-hero-msg">
+    <div>Quiet Frames Studio</div>
+    <span>Add photos via the portfolio upload skill to get started</span>
+  </div>
+</section>
+
+<!-- ── SERIES ─────────────────────────────────────────────── -->
+<div id="series-section">
+  <div class="sec-head">
+    <span class="sec-label">Selected Series</span>
+    <a href="#archive-section" class="sec-action">Full archive ↓</a>
+  </div>
+  <div id="series-grid"></div>
+</div>
+
+<!-- ── ARCHIVE ────────────────────────────────────────────── -->
+<div id="archive-section" style="scroll-margin-top: 57px;">
+  <div id="archive-wrap">
+    <div class="sec-head">
+      <span class="sec-label">Archive</span>
+      <span style="font-size:10.5px;color:var(--ink-light);letter-spacing:0.1em">Filter by tag — combine freely</span>
+    </div>
+    <div class="filter-bar" id="filter-bar"></div>
+    <div id="archive-grid"></div>
+  </div>
+</div>
+
+<!-- ── ABOUT ──────────────────────────────────────────────── -->
+<section id="about">
+  <div class="about-left">
+    <div class="about-headline">Shooting<br><em>film</em><br>slowly.</div>
+  </div>
+  <div class="about-right">
+    <div class="about-body" id="about-body">
+      <p>Quiet Frames Studio is Michael J McConnell — a film photographer working in 35mm, medium format, and large format. Each image is shot on location, developed in small batches, and selected by hand against a lightbox.</p>
+      <p>The work spans portraiture, street photography, landscape, and architecture — connected by an interest in available light, the weight of grain, and what slowing down produces.</p>
+      <p>Cameras: Canon AE-1 · Pentax 6×7 · Fuji GW690II · Horseman 45FA. Film: Ilford, Kodak, Fuji, Lomography.</p>
+    </div>
+    <a href="#" class="text-link" id="insta-link">Instagram →</a>
+  </div>
+</section>
+
+<div class="process-strip">
+  <div class="process-quote">"Every frame is chosen by hand — against a lightbox, not a screen."</div>
+  <div class="process-detail">
+    Shot on 35mm, 6×7, 6×9 &amp; 4×5<br>
+    Epson V700 · Negative Lab Pro<br>
+    Developed: small batches<br>
+    Available as prints
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Quiet Frames Studio</div>
+  <ul class="footer-links">
+    <li><a href="#" id="ft-insta">Instagram</a></li>
+    <li><a href="#">Print Inquiries</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="footer-copy" id="footer-copy">© 2026 Quiet Frames Studio</div>
+</footer>
+
+<script>
+// ── FILM STOCK LABEL MAP ──────────────────────────────────────────────
+const FILM_LABELS = {
+  'hp5':           'Ilford HP5',
+  'fp4':           'Ilford FP4',
+  'sfx':           'Ilford SFX IR',
+  'pan-f':         'Ilford Pan F 50',
+  'portra-400':    'Kodak Portra 400',
+  'portra-800':    'Kodak Portra 800',
+  'kodacolor-200': 'KodaColor 200',
+  'ektar-100':     'Kodak Ektar 100',
+  'provia-100f':   'Fuji Provia 100F',
+  'cinestill-800t':'Cinestill 800T',
+  'lomo-purple':   'Lomography Purple',
+  'velvia-50':     'Fuji Velvia 50',
+  'mixed':         'Mixed Stocks',
+  'unknown':       '',
+};
+
+const FORMAT_LABELS = {
+  '35mm': '35mm',
+  '6x7':  'Pentax 6×7',
+  '6x9':  'Fuji GW690II',
+  '4x5':  '4×5 Large Format',
+};
+
+// ── HELPERS ───────────────────────────────────────────────────────────
+function filmLabel(id) { return FILM_LABELS[id] || id; }
+function formatLabel(id) { return FORMAT_LABELS[id] || id; }
+
+function buildSubtitle(tags) {
+  const parts = [];
+  if (tags.film && tags.film !== 'unknown' && tags.film !== 'mixed')
+    parts.push(filmLabel(tags.film));
+  if (tags.format && tags.format !== 'unknown')
+    parts.push(formatLabel(tags.format));
+  return parts.join(' · ');
+}
+
+// ── RENDER HERO ───────────────────────────────────────────────────────
+function renderHero(data) {
+  const hero = document.getElementById('hero');
+  const featuredIds = data.settings.featuredSeriesIds || [];
+
+  // Get featured series that have photos and a cover
+  const featured = featuredIds
+    .map(id => data.series.find(s => s.id === id))
+    .filter(s => s && s.cover && s.cover.length > 0);
+
+  if (featured.length === 0) {
+    // No photos yet — placeholder state
+    hero.innerHTML = `<div class="empty-hero-msg">
+      <div>Quiet Frames Studio</div>
+      <span>Upload photos via the portfolio upload skill to populate the gallery</span>
+    </div>`;
+    return;
+  }
+
+  const main = featured[0];
+  const subs = featured.slice(1, 3);
+
+  const mainEl = document.createElement('div');
+  mainEl.className = 'hero-main';
+  mainEl.onclick = () => openSeries(main.id);
+  mainEl.innerHTML = `
+    <img class="hero-photo" src="${main.cover}" alt="${main.title}" loading="eager">
+    <div class="hero-overlay"></div>
+    <div class="hero-label">
+      <div class="hero-tag">Series No. 01</div>
+      <div class="hero-headline">${main.title}</div>
+      ${main.subtitle ? `<div class="hero-sub-count">${main.subtitle}</div>` : ''}
+    </div>`;
+
+  hero.innerHTML = '';
+  hero.appendChild(mainEl);
+
+  if (subs.length > 0) {
+    const stack = document.createElement('div');
+    stack.className = 'hero-stack';
+    subs.forEach((s, i) => {
+      const sub = document.createElement('div');
+      sub.className = 'hero-sub';
+      sub.onclick = () => openSeries(s.id);
+      sub.innerHTML = `
+        <img class="hero-photo" src="${s.cover}" alt="${s.title}" loading="eager">
+        <div class="hero-overlay"></div>
+        <div class="hero-label">
+          <div class="hero-tag">Series No. 0${i + 2}</div>
+          <div class="hero-headline">${s.title}</div>
+          ${s.subtitle ? `<div class="hero-sub-count">${s.subtitle}</div>` : ''}
+        </div>`;
+      stack.appendChild(sub);
+    });
+    hero.appendChild(stack);
+  }
+}
+
+// ── RENDER SERIES GRID ────────────────────────────────────────────────
+function renderSeriesGrid(data) {
+  const grid = document.getElementById('series-grid');
+  const seriesWithPhotos = data.series.filter(s => s.photoCount > 0 || s.cover);
+
+  if (seriesWithPhotos.length === 0) {
+    grid.innerHTML = `<div class="series-empty">
+      No series yet
+      <small>Upload photos via the portfolio upload skill to populate series</small>
+    </div>`;
+
+    // Show series shells (without photos) so the layout is visible
+    data.series.forEach(s => {
+      const card = document.createElement('div');
+      card.className = 'series-card';
+      const tags = s.tags || {};
+      const tagPills = [
+        ...(tags.subject || []).map(t => `<span class="tag">${t}</span>`),
+        tags.film && tags.film !== 'unknown' ? `<span class="tag">${filmLabel(tags.film)}</span>` : '',
+        tags.format ? `<span class="tag">${formatLabel(tags.format)}</span>` : '',
+      ].filter(Boolean).slice(0, 4).join('');
+
+      card.innerHTML = `
+        <div class="series-card-img">
+          <div class="placeholder"></div>
+        </div>
+        <div class="series-card-body">
+          <div class="series-card-title">${s.title}</div>
+          <div class="series-card-sub">${s.subtitle || ''}</div>
+          <div class="tag-row">${tagPills}</div>
+        </div>`;
+      grid.appendChild(card);
+    });
+    return;
+  }
+
+  seriesWithPhotos.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'series-card';
+    card.onclick = () => openSeries(s.id);
+    const tags = s.tags || {};
+    const tagPills = [
+      ...(tags.subject || []).map(t => `<span class="tag">${t}</span>`),
+      tags.film && tags.film !== 'unknown' ? `<span class="tag">${filmLabel(tags.film)}</span>` : '',
+      tags.format ? `<span class="tag">${formatLabel(tags.format)}</span>` : '',
+      ...(tags.location || []).map(l => `<span class="tag">${l}</span>`),
+    ].filter(Boolean).slice(0, 4).join('');
+
+    card.innerHTML = `
+      <div class="series-card-img">
+        ${s.cover
+          ? `<img src="${s.cover}" alt="${s.title}" loading="lazy">`
+          : '<div class="placeholder"></div>'}
+      </div>
+      <div class="series-card-body">
+        <div class="series-card-title">${s.title}</div>
+        <div class="series-card-sub">${s.subtitle || (s.photoCount ? `${s.photoCount} frames` : '')}</div>
+        <div class="tag-row">${tagPills}</div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+// ── RENDER FILTER BAR ─────────────────────────────────────────────────
+let activeFilters = new Set();
+
+function renderFilterBar(data) {
+  const bar = document.getElementById('filter-bar');
+  const allBtn = document.createElement('button');
+  allBtn.className = 'pill on';
+  allBtn.textContent = 'All';
+  allBtn.dataset.filter = 'all';
+  allBtn.onclick = () => toggleFilter(allBtn);
+  bar.appendChild(allBtn);
+
+  (data.filterGroups || []).forEach((group, gi) => {
+    if (gi > 0) {
+      const sep = document.createElement('div');
+      sep.className = 'filter-sep';
+      bar.appendChild(sep);
+    }
+    const lbl = document.createElement('span');
+    lbl.className = 'filter-group-lbl';
+    lbl.textContent = group.label;
+    bar.appendChild(lbl);
+
+    group.filters.forEach(f => {
+      const btn = document.createElement('button');
+      btn.className = 'pill';
+      btn.textContent = f.label;
+      btn.dataset.filter = f.id;
+      btn.onclick = () => toggleFilter(btn);
+      bar.appendChild(btn);
+    });
+  });
+}
+
+function toggleFilter(btn) {
+  const val = btn.dataset.filter;
+  if (val === 'all') {
+    activeFilters.clear();
+    document.querySelectorAll('.pill').forEach(p => p.classList.remove('on'));
+    btn.classList.add('on');
+  } else {
+    document.querySelector('.pill[data-filter="all"]').classList.remove('on');
+    btn.classList.toggle('on');
+    if (btn.classList.contains('on')) activeFilters.add(val);
+    else {
+      activeFilters.delete(val);
+      if (activeFilters.size === 0)
+        document.querySelector('.pill[data-filter="all"]').classList.add('on');
+    }
+  }
+  applyFilters();
+}
+
+function applyFilters() {
+  document.querySelectorAll('.arch-item').forEach(item => {
+    if (activeFilters.size === 0) { item.classList.remove('hidden'); return; }
+    const tags = JSON.parse(item.dataset.tags || '[]');
+    const match = [...activeFilters].some(f => tags.includes(f));
+    item.classList.toggle('hidden', !match);
+  });
+}
+
+// ── RENDER ARCHIVE GRID ───────────────────────────────────────────────
+function renderArchive(data) {
+  const grid = document.getElementById('archive-grid');
+
+  if (!data.photos || data.photos.length === 0) {
+    grid.innerHTML = `<div class="archive-empty">
+      Archive is empty
+      <small>Upload photos via the portfolio upload skill</small>
+    </div>`;
+    return;
+  }
+
+  // aspect ratio cycling
+  const aspectCycle = ['3/4', '4/5', '2/3', '1/1', '3/4', '4/5'];
+
+  data.photos.forEach((photo, i) => {
+    const tags = photo.tags || {};
+    const allTagIds = [
+      ...(tags.subject  || []),
+      tags.film   || '',
+      tags.format || '',
+      tags.process || '',
+      ...(tags.location || []),
+      tags.series || '',
+    ].filter(Boolean);
+
+    const filmStr   = filmLabel(tags.film || '');
+    const formatStr = formatLabel(tags.format || '');
+    const metaStr   = [filmStr, formatStr].filter(Boolean).join(' · ');
+    const aspect    = aspectCycle[i % aspectCycle.length];
+
+    const item = document.createElement('div');
+    item.className = 'arch-item';
+    item.dataset.tags = JSON.stringify(allTagIds);
+    item.onclick = () => openLightbox(photo);
+
+    item.innerHTML = `
+      <div class="arch-photo" style="aspect-ratio:${aspect}">
+        <img src="${photo.file}" alt="${photo.title || ''}" loading="lazy"
+             style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div class="arch-meta">
+        <span class="arch-name">${photo.title || ''}</span>
+        <span class="arch-film">${metaStr}</span>
+      </div>`;
+    grid.appendChild(item);
+  });
+}
+
+// ── LIGHTBOX ──────────────────────────────────────────────────────────
+function openLightbox(photo) {
+  const lb    = document.getElementById('lightbox');
+  const img   = document.getElementById('lb-img');
+  const meta  = document.getElementById('lb-meta');
+  const tags  = photo.tags || {};
+  img.src     = photo.file;
+  img.alt     = photo.title || '';
+  const parts = [
+    photo.title,
+    filmLabel(tags.film || ''),
+    formatLabel(tags.format || ''),
+    photo.date,
+  ].filter(Boolean);
+  meta.textContent = parts.join(' · ');
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+  document.getElementById('lb-img').src = '';
+}
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// ── SERIES PAGE (scroll to series in archive) ─────────────────────────
+function openSeries(seriesId) {
+  // For now, scroll to archive and activate the series filter
+  document.getElementById('archive-section').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ── SETTINGS ──────────────────────────────────────────────────────────
+function applySettings(data) {
+  const s = data.settings || {};
+  if (s.instagramUrl) {
+    document.getElementById('insta-link').href = s.instagramUrl;
+    document.getElementById('ft-insta').href   = s.instagramUrl;
+  }
+  const year = new Date().getFullYear();
+  document.getElementById('footer-copy').textContent = `© ${year} Quiet Frames Studio`;
+}
+
+// ── MAIN INIT ─────────────────────────────────────────────────────────
+fetch('gallery-data.json')
+  .then(r => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  })
+  .then(data => {
+    applySettings(data);
+    renderHero(data);
+    renderSeriesGrid(data);
+    renderFilterBar(data);
+    renderArchive(data);
+
+    // Fade out loading screen
+    const loader = document.getElementById('loading');
+    loader.classList.add('done');
+    setTimeout(() => loader.remove(), 500);
+  })
+  .catch(err => {
+    console.error('Could not load gallery-data.json:', err);
+    document.getElementById('loading').classList.add('done');
+  });
+</script>
+
+</body>
+</html>
