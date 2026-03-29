@@ -437,14 +437,135 @@ html[data-theme="dark"] nav {
 }
 .photo-detail-image-pane {
   background: #0f0f0f;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px;
   padding: 52px; min-height: calc(100vh - var(--nav-h));
   position: sticky; top: var(--nav-h); align-self: start;
   height: calc(100vh - var(--nav-h));
 }
 .photo-detail-image-pane img {
-  max-width: 100%; max-height: 100%;
+  max-width: 100%; max-height: calc(100% - 60px);
   object-fit: contain; display: block;
+}
+
+/* ── GALLERY WALL PREVIEW ────────────────────────────────────────────── */
+.gallery-preview-toggle {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(240,233,219,0.4); cursor: pointer; transition: color 0.2s;
+  background: none; border: none; font-family: inherit;
+  padding: 0; margin-top: 12px;
+}
+.gallery-preview-toggle:hover { color: rgba(240,233,219,0.75); }
+.gallery-preview-toggle svg { opacity: 0.5; transition: opacity 0.2s; }
+.gallery-preview-toggle:hover svg { opacity: 0.8; }
+
+.gallery-wall-overlay {
+  display: none; position: fixed; inset: 0; z-index: 6000;
+  align-items: center; justify-content: center;
+  flex-direction: column; gap: 24px;
+}
+.gallery-wall-overlay.open { display: flex; }
+
+/* Wall texture background */
+.gallery-wall-bg {
+  position: absolute; inset: 0;
+  background-color: #d8d0c8;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+  cursor: pointer;
+}
+html[data-theme="dark"] .gallery-wall-bg {
+  background-color: #2a2520;
+}
+
+/* The framed print */
+.gallery-wall-frame-wrap {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  max-width: min(70vw, 700px);
+  max-height: min(75vh, 700px);
+}
+.gallery-wall-frame {
+  /* Outer frame — dark walnut-style */
+  padding: 18px;
+  background: #2a1f14;
+  box-shadow:
+    0 2px 0 #1a110a,
+    0 4px 0 #0d0806,
+    4px 0 0 #1a110a,
+    -4px 0 0 #1a110a,
+    0 -2px 0 #3a2a1a,
+    0 30px 80px rgba(0,0,0,0.65),
+    0 8px 24px rgba(0,0,0,0.45);
+  position: relative;
+}
+/* Inner bevel/lip */
+.gallery-wall-frame::before {
+  content: '';
+  position: absolute; inset: 0;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.06), inset 0 -2px 4px rgba(0,0,0,0.3);
+  pointer-events: none;
+  z-index: 2;
+}
+.gallery-wall-mat {
+  /* White archival mat */
+  padding: 32px 32px 48px;
+  background: #f8f6f2;
+  position: relative;
+}
+.gallery-wall-mat::after {
+  /* Mat bevel shadow */
+  content: '';
+  position: absolute; inset: 0;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.08);
+  pointer-events: none;
+}
+.gallery-wall-photo {
+  display: block;
+  max-width: min(55vw, 560px);
+  max-height: min(55vh, 520px);
+  width: auto; height: auto;
+  object-fit: contain;
+  position: relative; z-index: 1;
+  /* Subtle glass reflection */
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+
+/* Caption below frame */
+.gallery-wall-caption {
+  position: relative; z-index: 1;
+  text-align: center;
+  color: rgba(240,233,219,0.5);
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-size: 13px; letter-spacing: 0.08em;
+  text-transform: none; color: rgba(180,165,145,0.7);
+}
+.gallery-wall-close {
+  position: absolute; top: 20px; right: 24px; z-index: 2;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(240,233,219,0.35); cursor: pointer; transition: color 0.2s;
+  background: none; border: none; font-family: inherit;
+}
+.gallery-wall-close:hover { color: rgba(240,233,219,0.8); }
+
+/* Wall label placard */
+.gallery-wall-placard {
+  position: relative; z-index: 1;
+  background: rgba(240,233,219,0.06);
+  border: 1px solid rgba(240,233,219,0.12);
+  padding: 10px 20px; text-align: center;
+  margin-top: -8px;
+}
+.gallery-wall-placard-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-style: italic; font-weight: 300;
+  color: rgba(240,233,219,0.65); letter-spacing: 0.04em;
+}
+.gallery-wall-placard-sub {
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(240,233,219,0.3); margin-top: 3px;
 }
 .photo-detail-panel {
   background: var(--bg); border-left: 1px solid var(--border);
@@ -803,42 +924,133 @@ footer {
   .photo-detail { grid-template-columns: 1fr 300px; }
 }
 @media (max-width: 960px) {
-  nav { padding: 0 24px; }
+  nav { padding: 0 20px; }
   .nav-links, .nav-collect-btn { display: none; }
   .nav-hamburger { display: flex; }
-  .home-hero-content { padding: 0 32px 52px; }
-  .home-hero-title { font-size: clamp(34px, 8vw, 54px); }
-  .home-featured { padding: 52px 24px 72px; }
-  .featured-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-view { padding: 40px 24px 72px; }
-  .series-row { grid-template-columns: 140px 1fr; }
+  .home-hero { min-height: 480px; }
+  .home-hero-content { padding: 0 28px 44px; gap: 16px; }
+  .home-hero-title { font-size: clamp(32px, 8vw, 54px); }
+  .home-hero-tagline { font-size: clamp(15px, 3.5vw, 20px); }
+  .home-hero-ctas { gap: 10px; }
+  .home-hero-series-tag { display: none; }
+  .home-featured { padding: 44px 20px 64px; }
+  .featured-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+  .gallery-view { padding: 36px 20px 64px; }
+  .gallery-view-header { margin-bottom: 36px; }
+  .series-list { gap: 1px; }
+  .series-row { grid-template-columns: 120px 1fr; gap: 20px; padding: 16px 20px; }
+  .series-row-thumb { width: 120px; }
   .series-row-arrow { display: none; }
-  .series-detail-header { grid-template-columns: 1fr; gap: 32px; padding: 40px 24px 36px; }
-  .series-photo-grid { padding: 3px; grid-template-columns: repeat(2, 1fr); }
-  .series-show-more, .series-nav-strip { padding: 32px 24px; }
+  .series-row-title { font-size: 20px; }
+  .series-detail-header { grid-template-columns: 1fr; gap: 28px; padding: 36px 20px 32px; }
+  .series-detail-title { font-size: clamp(28px, 6vw, 44px); }
+  .series-photo-grid { padding: 2px; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .series-show-more { padding: 28px 20px; }
+  .series-nav-strip { padding: 28px 20px; }
   .photo-detail { grid-template-columns: 1fr; }
-  .photo-detail-image-pane { position: static; height: 60vw; min-height: 260px; padding: 24px; }
-  .photo-detail-panel { border-left: none; border-top: 1px solid var(--border); padding: 32px 24px 52px; }
-  .collect-page { padding: 52px 24px 72px; }
-  .print-specs-grid { grid-template-columns: repeat(2, 1fr); }
-  .collect-process { grid-template-columns: 1fr; gap: 40px; }
-  .archive-view { padding: 40px 24px 72px; }
-  .archive-grid { grid-template-columns: repeat(2, 1fr); }
+  .photo-detail-image-pane { position: static; height: auto; min-height: 52vw; padding: 20px; flex-direction: column; gap: 12px; }
+  .photo-detail-image-pane img { max-height: 56vw; }
+  .gallery-preview-toggle { font-size: 9px; }
+  .photo-detail-panel { border-left: none; border-top: 1px solid var(--border); padding: 28px 20px 48px; }
+  .collect-page { padding: 44px 20px 64px; }
+  .collect-page-header { margin-bottom: 48px; }
+  .print-specs-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .print-spec-card { padding: 24px 20px; }
+  .collect-process { grid-template-columns: 1fr; gap: 36px; padding: 48px 0; }
+  .archive-view { padding: 36px 20px 64px; }
+  .archive-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
   .about-view { grid-template-columns: 1fr; }
-  .about-left { min-height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 52px 24px; }
-  .about-right { padding: 52px 24px; }
-  .process-strip { flex-direction: column; padding: 48px 24px; }
+  .about-left { min-height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 48px 20px; }
+  .about-right { padding: 44px 20px; }
+  .about-body { font-size: 13.5px; }
+  .process-strip { flex-direction: column; padding: 44px 20px; gap: 28px; }
   .process-detail { text-align: left; }
-  footer { padding: 24px; flex-direction: column; gap: 20px; text-align: center; }
+  footer { padding: 20px; flex-direction: column; gap: 16px; text-align: center; }
+  .footer-links { gap: 20px; justify-content: center; flex-wrap: wrap; }
+  /* Gallery wall on tablet */
+  .gallery-wall-frame { padding: 12px; }
+  .gallery-wall-mat { padding: 20px 20px 30px; }
+  .gallery-wall-photo { max-width: 70vw; max-height: 50vh; }
 }
+
 @media (max-width: 600px) {
-  .home-hero-ctas { flex-direction: column; gap: 10px; }
-  .featured-grid { grid-template-columns: 1fr; }
-  .series-row { grid-template-columns: 1fr; }
-  .series-row-thumb { width: 100%; }
-  .series-photo-grid { grid-template-columns: 1fr 1fr; }
-  .archive-grid { grid-template-columns: 1fr 1fr; }
-  .print-specs-grid { grid-template-columns: 1fr 1fr; }
+  :root { --nav-h: 52px; }
+  nav { padding: 0 16px; }
+  .logo { font-size: 13px; letter-spacing: 0.16em; }
+
+  /* Hero */
+  .home-hero { min-height: 420px; }
+  .home-hero-content { padding: 0 20px 36px; gap: 14px; }
+  .home-hero-title { font-size: clamp(28px, 9vw, 44px); line-height: 1.0; }
+  .home-hero-tagline { font-size: 15px; }
+  .home-hero-ctas { flex-direction: column; gap: 10px; width: 100%; }
+  .cta-primary, .cta-secondary { text-align: center; width: 100%; padding: 14px 20px; }
+
+  /* Featured */
+  .home-featured { padding: 36px 16px 52px; }
+  .featured-grid { grid-template-columns: 1fr; gap: 2px; }
+  .series-card-body { padding: 14px 16px 18px; }
+
+  /* Work list */
+  .gallery-view { padding: 28px 16px 52px; }
+  .page-title { font-size: clamp(26px, 7vw, 40px); }
+  .series-row { grid-template-columns: 1fr; gap: 12px; padding: 14px 16px; }
+  .series-row-thumb { width: 100%; aspect-ratio: 16/9; }
+  .series-row-thumb img { border-radius: 0; }
+
+  /* Series detail */
+  .series-detail-header { padding: 28px 16px 24px; gap: 24px; }
+  .series-detail-title { font-size: clamp(24px, 7.5vw, 40px); }
+  .series-detail-desc { font-size: 13px; }
+  .series-photo-grid { grid-template-columns: 1fr 1fr; padding: 2px; gap: 2px; }
+  .series-show-more { padding: 24px 16px; }
+  .series-nav-strip { padding: 24px 16px; flex-direction: column; gap: 16px; text-align: center; }
+
+  /* Photo detail */
+  .photo-detail-image-pane { padding: 12px; min-height: 60vw; }
+  .photo-detail-image-pane img { max-height: 65vw; }
+  .photo-detail-panel { padding: 24px 16px 44px; }
+  .photo-detail-title { font-size: 22px; }
+  .size-options { gap: 6px; }
+  .size-option { padding: 9px 12px; }
+  .photo-prev-next { flex-wrap: wrap; gap: 12px; }
+
+  /* Collect page */
+  .collect-page { padding: 36px 16px 52px; }
+  .collect-page-title { font-size: clamp(28px, 8vw, 48px); }
+  .collect-page-intro { font-size: 13px; }
+  .print-specs-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+  .print-spec-card { padding: 20px 16px; }
+  .print-spec-size { font-size: 22px; }
+  .collect-process { gap: 28px; padding: 36px 0; }
+  .collect-cta-block { padding: 48px 0 0; }
+
+  /* About */
+  .about-left { padding: 40px 16px; }
+  .about-right { padding: 36px 16px; }
+  .about-body { font-size: 13px; line-height: 1.8; }
+  .about-headline { font-size: clamp(30px, 8vw, 48px); }
+
+  /* Archive */
+  .archive-view { padding: 28px 16px 52px; }
+  .archive-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+  .filter-bar { gap: 5px; padding: 16px 0; }
+  .pill { font-size: 9px; padding: 4px 10px; }
+
+  /* Process strip */
+  .process-strip { padding: 36px 16px; }
+  .process-quote { font-size: clamp(15px, 4.5vw, 20px); }
+
+  /* Footer */
+  footer { padding: 20px 16px; gap: 14px; }
+  .footer-links { gap: 16px; font-size: 9px; }
+
+  /* Gallery wall */
+  .gallery-wall-frame { padding: 8px; }
+  .gallery-wall-mat { padding: 14px 14px 22px; }
+  .gallery-wall-photo { max-width: 85vw; max-height: 55vh; }
+  .gallery-wall-placard { padding: 8px 16px; }
+  .gallery-wall-placard-title { font-size: 12px; }
 }
 </style>
 </head>
@@ -858,6 +1070,23 @@ footer {
     <div class="lb-actions">
       <button class="lb-collect-btn" id="lb-collect">Collect This Print</button>
     </div>
+  </div>
+</div>
+
+<!-- Gallery Wall Preview Overlay -->
+<div id="gallery-wall-overlay" class="gallery-wall-overlay" role="dialog" aria-modal="true" aria-label="Gallery wall preview">
+  <div class="gallery-wall-bg" onclick="closeGalleryWall()"></div>
+  <button class="gallery-wall-close" onclick="closeGalleryWall()">✕ &nbsp;Close</button>
+  <div class="gallery-wall-frame-wrap">
+    <div class="gallery-wall-frame">
+      <div class="gallery-wall-mat">
+        <img class="gallery-wall-photo" id="gw-photo" src="" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="gallery-wall-placard" id="gw-placard">
+    <div class="gallery-wall-placard-title" id="gw-title"></div>
+    <div class="gallery-wall-placard-sub" id="gw-sub"></div>
   </div>
 </div>
 
@@ -1029,13 +1258,15 @@ function renderHome(app) {
   const featIds  = s.featuredSeriesIds || [];
   const featured = featIds.map(id => d.series.find(x => x.id === id)).filter(Boolean);
   const heroPrimary = featured[0];
-  const heroImg = heroPrimary && heroPrimary.cover ? heroPrimary.cover : null;
+  // Use explicit heroImage from settings first, otherwise fall back to first featured series cover
+  const heroImg = s.heroImage || (heroPrimary && heroPrimary.cover ? heroPrimary.cover : null);
+  const heroSeriesLabel = heroPrimary ? heroPrimary.title : '';
 
   // Build hero
   const heroHtml = `
-<section class="home-hero" id="home-hero" ${heroImg ? `onclick="navigate('/gallery/${heroPrimary.id}')"` : ''}>
+<section class="home-hero" id="home-hero" onclick="navigate('/work')">
   ${heroImg
-    ? `<img class="home-hero-img" src="${heroImg}" alt="${heroPrimary.title}" loading="eager">`
+    ? `<img class="home-hero-img" src="${heroImg}" alt="${heroSeriesLabel || 'Quiet Frames Studio'}" loading="eager">`
     : '<div class="home-hero-placeholder"></div>'}
   <div class="home-hero-overlay"></div>
   <div class="home-hero-content">
@@ -1047,7 +1278,7 @@ function renderHome(app) {
       <button class="cta-secondary" onclick="event.stopPropagation();navigate('/collect')">Collect Prints</button>
     </div>
   </div>
-  ${heroPrimary ? `<div class="home-hero-series-tag">${heroPrimary.title}</div>` : ''}
+  ${heroSeriesLabel ? `<div class="home-hero-series-tag">${heroSeriesLabel}</div>` : ''}
 </section>`;
 
   // Build featured series cards (skip the hero one, show next 2-3)
@@ -1316,6 +1547,15 @@ function renderPhoto(app, id) {
 <div class="photo-detail">
   <div class="photo-detail-image-pane">
     <img src="${photo.file}" alt="${photo.title || ''}" loading="eager">
+    <button class="gallery-preview-toggle" onclick="openGalleryWall('${photo.file}', '${(photo.title||'Untitled').replace(/'/g,"\\'")}', '${((ser||{}).title||'').replace(/'/g,"\\'")}', '${fl(tags.film||'')}', '${fmt(tags.format||'')}')">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="1" y="3" width="12" height="9" rx="0.5"/>
+        <rect x="2.5" y="4.5" width="9" height="6" rx="0" fill="none"/>
+        <line x1="4" y1="12.5" x2="10" y2="12.5"/>
+        <line x1="7" y1="12" x2="7" y2="12.5"/>
+      </svg>
+      Preview on wall
+    </button>
   </div>
   <div class="photo-detail-panel">
     <span class="photo-nav-back" onclick="${ser ? `navigate('/gallery/${ser.id}')` : `navigate('/work')`}">
@@ -1493,6 +1733,39 @@ function renderAbout(app) {
 </div>
 ${processStrip()}`;
 }
+
+// ═══════════════════════════════════════════════════════════════════════
+// GALLERY WALL PREVIEW
+// ═══════════════════════════════════════════════════════════════════════
+function openGalleryWall(src, title, series, film, format) {
+  const overlay = document.getElementById('gallery-wall-overlay');
+  const img     = document.getElementById('gw-photo');
+  const titleEl = document.getElementById('gw-title');
+  const subEl   = document.getElementById('gw-sub');
+
+  img.src = src;
+  img.alt = title;
+  titleEl.textContent = title;
+  const subParts = [film, format, series].filter(Boolean);
+  subEl.textContent = subParts.join(' · ');
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGalleryWall() {
+  const overlay = document.getElementById('gallery-wall-overlay');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(() => { document.getElementById('gw-photo').src = ''; }, 300);
+}
+
+document.addEventListener('keydown', e => {
+  const overlay = document.getElementById('gallery-wall-overlay');
+  if (overlay && overlay.classList.contains('open') && e.key === 'Escape') {
+    closeGalleryWall();
+  }
+});
 
 // ═══════════════════════════════════════════════════════════════════════
 // LIGHTBOX (used from archive/work browse)

@@ -16,6 +16,7 @@
     "archiveLabel": "Archive",
     "contactEmail": "hello@quietframesstudio.com",
     "instagramUrl": "https://instagram.com/quietframesphotos",
+    "heroImage": "images/2025-seasons/2025-seasons-107.jpg",
     "printInquiriesText": "For print inquiries, please get in touch.",
     "heroTagline": "A study in quiet moments.",
     "printSizes": [
@@ -107,7 +108,7 @@
       "subtitle": "Portraits — Medium Format",
       "description": "An observation of intimate moments shared in public spaces among complete strangers.",
       "featured": true,
-      "cover": "images/intimacy/intimacy-001.jpg",
+      "cover": "images/intimacy/intimacy-006.jpg",
       "photoCount": 5,
       "tags": {
         "subject": [
@@ -203,7 +204,7 @@
       "subtitle": "A year of shooting",
       "description": "A year-long study shot on 35mm, medium format, and 4×5 large format across New England and beyond.",
       "featured": false,
-      "cover": "images/2025-seasons/2025-seasons-001.jpg",
+      "cover": "images/2025-seasons/2025-seasons-107.jpg",
       "photoCount": 134,
       "tags": {
         "subject": [
@@ -221,10 +222,10 @@
     {
       "id": "portraits",
       "title": "Portraits",
-      "subtitle": "",
-      "description": "",
+      "subtitle": "Medium Format — People & Place",
+      "description": "Candid portraits and quiet human moments. Shot primarily on medium format, the larger negative rewards the intimacy of the subject.",
       "featured": false,
-      "cover": "",
+      "cover": "images/2025-seasons/2025-seasons-052.jpg",
       "photoCount": 2,
       "tags": {
         "subject": [
@@ -237,19 +238,20 @@
     },
     {
       "id": "the-light-unseen",
-      "title": "The Light Unseen (Infrared Study)",
-      "subtitle": "",
-      "description": "",
+      "title": "The Light Unseen",
+      "subtitle": "Infrared — Ilford SFX · Pentax 6×7",
+      "description": "Shot on Ilford SFX 200, an extended red-sensitivity film that reaches into the near-infrared spectrum when paired with a deep red filter. Foliage renders white, skies collapse to near black, and water takes on an otherworldly stillness. The Pentax 6×7's large negative reveals every tonal gradation the film can hold — a different kind of seeing, made visible only in the print.",
       "featured": false,
-      "cover": "",
+      "cover": "images/2025-seasons/2025-seasons-167.jpg",
       "photoCount": 12,
       "tags": {
         "subject": [
           "landscape",
           "nature"
         ],
-        "film": "infrared",
-        "format": "mixed",
+        "film": "sfx",
+        "format": "6x7",
+        "camera": "pentax-67",
         "location": []
       }
     }
