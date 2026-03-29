@@ -12,18 +12,39 @@
 <style>
 /* ── RESET & CUSTOM PROPS ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* LIGHT MODE (Default) */
 :root {
-  --bg:        #f0e9db;
-  --bg-alt:    #e8dece;
-  --bg-dark:   #1c1a15;
-  --ink:       #18160f;
-  --ink-mid:   #5c5446;
-  --ink-light: #9c8e7c;
-  --accent:    #7a6a52;
-  --warm:      #b8a07a;
-  --border:    #d0c4ae;
-  --border-lt: #e0d6c4;
-  --white:     #faf6ee;
+  --bg:        #f9f8f5;
+  --bg-alt:    #f0ede8;
+  --bg-dark:   #e8e6e0;
+  --ink:       #1a1a1a;
+  --ink-mid:   #5a5a5a;
+  --ink-light: #8b8b8b;
+  --accent:    #8b8178;
+  --warm:      #d4c5b9;
+  --border:    #e0dcd5;
+  --border-lt: #ebe8e2;
+  --white:     #ffffff;
+}
+
+/* DARK MODE */
+html[data-theme="dark"] {
+  --bg:        #1a1a1a;
+  --bg-alt:    #242424;
+  --bg-dark:   #0f0f0f;
+  --ink:       #f5f5f5;
+  --ink-mid:   #b0b0b0;
+  --ink-light: #808080;
+  --accent:    #c49855;
+  --warm:      #a8a8a8;
+  --border:    #3a3a3a;
+  --border-lt: #2a2a2a;
+  --white:     #1a1a1a;
+}
+
+/* Smooth transitions between modes */
+body, nav, a, button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 html { scroll-behavior: smooth; }
 body {
@@ -70,22 +91,46 @@ nav {
   position: sticky; top: 0; z-index: 500;
   display: flex; align-items: center; justify-content: space-between;
   padding: 18px 52px;
-  background: rgba(240,233,219,0.93);
+  background: rgba(249,248,245,0.93);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
+}
+html[data-theme="dark"] nav {
+  background: rgba(26,26,26,0.93);
 }
 .logo {
   font-family: 'Cormorant Garamond', serif;
   font-size: 16px; font-weight: 400;
   letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink);
 }
 .logo em { font-style: italic; font-weight: 300; }
+.nav-right { display: flex; align-items: center; gap: 40px; }
 .nav-links { list-style: none; display: flex; gap: 40px; }
 .nav-links a {
   font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--ink-mid); transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--ink); }
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--ink-mid);
+  cursor: pointer;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  transition: all 0.2s;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.theme-toggle:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
 
 /* ── HERO ─────────────────────────────────────────────────────────────── */
 #hero {
@@ -366,13 +411,16 @@ footer {
 <!-- ── NAV ─────────────────────────────────────────────── -->
 <nav>
   <a href="#" class="logo">Quiet <em>Frames</em> Studio</a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#series-section">Series</a></li>
-    <li><a href="#archive-section">Archive</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#" id="nav-print">Print Inquiries</a></li>
-    <li><a href="#" id="nav-contact">Contact</a></li>
-  </ul>
+  <div class="nav-right">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#series-section">Series</a></li>
+      <li><a href="#archive-section">Archive</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#" id="nav-print">Print Inquiries</a></li>
+      <li><a href="#" id="nav-contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">☀️</button>
+  </div>
 </nav>
 
 <!-- ── HERO ──────────────────────────────────────────────── -->
@@ -759,6 +807,40 @@ function applySettings(data) {
   const year = new Date().getFullYear();
   document.getElementById('footer-copy').textContent = `© ${year} Quiet Frames Studio`;
 }
+
+// ── THEME TOGGLE ──────────────────────────────────────────────────────
+function initTheme() {
+  // Check localStorage for saved preference
+  const saved = localStorage.getItem('quiet-frames-theme');
+  // Check system preference
+  const prefer = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const theme = saved || prefer;
+
+  applyTheme(theme);
+}
+
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('theme-toggle').textContent = '🌙';
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    document.getElementById('theme-toggle').textContent = '☀️';
+  }
+  localStorage.setItem('quiet-frames-theme', theme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+}
+
+// Theme toggle button
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+// Initialize theme on load
+initTheme();
 
 // ── MAIN INIT ─────────────────────────────────────────────────────────
 fetch('gallery-data.json')
