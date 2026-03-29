@@ -569,7 +569,15 @@ html[data-theme="dark"] nav {
 .print-spec-card {
   background: var(--bg); padding: 32px 28px;
   display: flex; flex-direction: column; gap: 8px;
+  transition: background 0.2s;
 }
+.print-spec-card:hover { background: var(--bg-alt); }
+.print-spec-cta {
+  margin-top: 8px;
+  font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-light); transition: color 0.2s;
+}
+.print-spec-card:hover .print-spec-cta { color: var(--ink); }
 .print-spec-size {
   font-family: 'Cormorant Garamond', serif;
   font-size: 28px; font-style: italic; font-weight: 300; color: var(--ink);
@@ -1279,7 +1287,9 @@ function renderPhoto(app, id) {
   const sizeHtml = printSizes.map((ps, i) => `
 <button class="size-option${i === 0 ? ' selected' : ''}"
     data-size="${ps.id}"
-    onclick="selectSize(this, '${ps.id}', ${ps.price})">
+    data-stripe-url="${ps.stripeUrl || ''}"
+    data-price="${ps.price}"
+    onclick="selectSize(this)">
   <div class="size-option-radio"></div>
   <span class="size-option-label">${ps.label}</span>
   <span class="size-option-price">$${ps.price}</span>
@@ -1341,16 +1351,25 @@ function renderPhoto(app, id) {
   lb_index  = photoIdx;
 }
 
-function selectSize(btn, sizeId, price) {
+function selectSize(btn) {
   document.querySelectorAll('.size-option').forEach(b => b.classList.remove('selected'));
   btn.classList.add('selected');
 }
 
 function collectPrint(photoId, photoTitle, seriesTitle, email) {
-  const selected = document.querySelector('.size-option.selected');
-  const sizeLabel = selected ? selected.querySelector('.size-option-label').textContent : 'print';
-  const subject   = encodeURIComponent(`Print Inquiry — ${photoTitle}`);
-  const body      = encodeURIComponent(
+  const selected   = document.querySelector('.size-option.selected');
+  const sizeLabel  = selected ? selected.querySelector('.size-option-label').textContent : 'print';
+  const stripeUrl  = selected ? selected.dataset.stripeUrl : '';
+
+  // Prefer Stripe checkout — client_reference_id records which photo was ordered
+  if (stripeUrl) {
+    window.open(stripeUrl + '?client_reference_id=' + encodeURIComponent(photoId), '_blank');
+    return;
+  }
+
+  // Fallback: structured email inquiry
+  const subject = encodeURIComponent(`Print Inquiry — ${photoTitle}`);
+  const body    = encodeURIComponent(
     `Hi,\n\nI'm interested in collecting the ${sizeLabel} of "${photoTitle}"${seriesTitle ? ` (${seriesTitle} series)` : ''}.\n\nCould you please send me details on availability and next steps?\n\nThank you.`
   );
   window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
@@ -1367,11 +1386,12 @@ function renderCollect(app) {
   const contactEmail = s.contactEmail || 'm.mcconnell3191@gmail.com';
 
   const specCards = printSizes.map(ps => `
-<div class="print-spec-card">
+<div class="print-spec-card" ${ps.stripeUrl ? `onclick="window.open('${ps.stripeUrl}','_blank')" style="cursor:pointer"` : ''}>
   <div class="print-spec-size">${ps.label}</div>
   <div class="print-spec-divider"></div>
   <div class="print-spec-price">$${ps.price}</div>
   <div class="print-spec-edition">Edition of ${ps.edition} · Signed &amp; numbered</div>
+  ${ps.stripeUrl ? `<div class="print-spec-cta">Purchase →</div>` : ''}
 </div>`).join('');
 
   const collectEmail = encodeURIComponent('Print Inquiry — Quiet Frames Studio');
