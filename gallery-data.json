@@ -10,13 +10,22 @@
   "settings": {
     "featuredSeriesIds": [
       "texture-dormancy",
-      "savannah-2026",
-      "intimacy"
+      "intimacy",
+      "coastal"
     ],
     "archiveLabel": "Archive",
-    "contactEmail": "",
-    "instagramUrl": "http://instagram.com/quietframesphotos",
-    "printInquiriesText": "For print inquiries, please get in touch."
+    "contactEmail": "m.mcconnell3191@gmail.com",
+    "instagramUrl": "https://instagram.com/quietframesphotos",
+    "printInquiriesText": "For print inquiries, please get in touch.",
+    "heroTagline": "A study in quiet moments.",
+    "printSizes": [
+      { "id": "8x10",  "label": "8 × 10\"",  "price": 75,  "edition": 25 },
+      { "id": "11x14", "label": "11 × 14\"", "price": 150, "edition": 25 },
+      { "id": "16x20", "label": "16 × 20\"", "price": 275, "edition": 15 },
+      { "id": "20x24", "label": "20 × 24\"", "price": 425, "edition": 10 }
+    ],
+    "printMedium": "Hahnemühle Photo Rag 308gsm · Archival pigment",
+    "printNote": "Each print is signed and numbered. Editions are strictly limited."
   },
   "series": [
     {

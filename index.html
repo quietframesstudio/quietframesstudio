@@ -3,16 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Quiet Frames Studio — Film photography by Michael J McConnell. 35mm, medium format, and large format work.">
+<meta name="description" content="Quiet Frames Studio — Fine art film photography by Michael J McConnell. 35mm, medium format, and large format. Limited edition archival prints available.">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="Quiet Frames Studio">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quietframesstudio.com">
+<meta property="og:title" content="Quiet Frames Studio — Film Photography">
+<meta property="og:description" content="Fine art film photography by Michael J McConnell. Limited edition archival prints available.">
 <title>Quiet Frames Studio — Film Photography</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-/* ── RESET & CUSTOM PROPS ─────────────────────────────────────────────── */
+/* ── RESET & TOKENS ───────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-/* LIGHT MODE (Default) */
+
 :root {
   --bg:        #f9f8f5;
   --bg-alt:    #f0ede8;
@@ -25,16 +31,16 @@
   --border:    #e0dcd5;
   --border-lt: #ebe8e2;
   --white:     #ffffff;
+  --nav-h:     60px;
 }
 
-/* DARK MODE */
 html[data-theme="dark"] {
   --bg:        #1a1a1a;
   --bg-alt:    #242424;
   --bg-dark:   #0f0f0f;
   --ink:       #f5f5f5;
   --ink-mid:   #b0b0b0;
-  --ink-light: #808080;
+  --ink-light: #707070;
   --accent:    #c49855;
   --warm:      #a8a8a8;
   --border:    #3a3a3a;
@@ -42,10 +48,6 @@ html[data-theme="dark"] {
   --white:     #1a1a1a;
 }
 
-/* Smooth transitions between modes */
-body, nav, a, button {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
@@ -55,18 +57,19 @@ body {
   font-size: 13px;
   line-height: 1.65;
   min-width: 320px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 body::after {
   content: '';
-  position: fixed;
-  inset: 0;
+  position: fixed; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23g)'/%3E%3C/svg%3E");
-  opacity: 0.038;
+  opacity: 0.032;
   pointer-events: none;
   z-index: 9000;
 }
-img { display: block; width: 100%; object-fit: cover; }
+img { display: block; max-width: 100%; }
 a   { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
 
 /* ── LOADING ─────────────────────────────────────────────────────────── */
 #loading {
@@ -74,256 +77,641 @@ a   { text-decoration: none; color: inherit; }
   background: var(--bg);
   display: flex; align-items: center; justify-content: center;
   z-index: 8000;
-  transition: opacity 0.4s;
+  transition: opacity 0.5s;
 }
 #loading.done { opacity: 0; pointer-events: none; }
 .loader-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  font-style: italic;
+  font-size: 16px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--ink-light); font-style: italic;
 }
 
 /* ── NAV ─────────────────────────────────────────────────────────────── */
 nav {
-  position: sticky; top: 0; z-index: 500;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  height: var(--nav-h);
   display: flex; align-items: center; justify-content: space-between;
-  padding: 18px 52px;
-  background: rgba(249,248,245,0.93);
-  backdrop-filter: blur(14px);
+  padding: 0 52px;
+  background: rgba(249,248,245,0.95);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 html[data-theme="dark"] nav {
-  background: rgba(26,26,26,0.93);
+  background: rgba(26,26,26,0.95);
 }
 .logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 16px; font-weight: 400;
+  font-size: 15px; font-weight: 400;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--ink);
 }
 .logo em { font-style: italic; font-weight: 300; }
-.nav-right { display: flex; align-items: center; gap: 40px; }
-.nav-links { list-style: none; display: flex; gap: 40px; }
+.nav-right { display: flex; align-items: center; gap: 36px; }
+.nav-links  { list-style: none; display: flex; gap: 36px; }
 .nav-links a {
   font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--ink-mid); transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--ink); }
-
-/* Theme Toggle Button */
-.theme-toggle {
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--ink-mid);
-  cursor: pointer;
-  font-size: 11px;
-  padding: 6px 12px;
-  border-radius: 3px;
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-collect-btn {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 8px 18px;
+  background: var(--ink); color: var(--bg);
+  border: 1px solid var(--ink);
+  border-radius: 1px;
   transition: all 0.2s;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 400;
 }
-.theme-toggle:hover {
-  color: var(--ink);
-  border-color: var(--ink);
+.nav-collect-btn:hover {
+  background: transparent; color: var(--ink);
+}
+.theme-toggle {
+  background: none; border: 1px solid var(--border);
+  color: var(--ink-mid); cursor: pointer;
+  font-size: 11px; padding: 6px 12px; border-radius: 3px;
+  transition: all 0.2s; letter-spacing: 0.1em;
+  text-transform: uppercase; font-weight: 400;
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--ink); }
+.nav-hamburger {
+  display: none; background: none; border: none;
+  flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+}
+.nav-hamburger span {
+  display: block; width: 22px; height: 1px; background: var(--ink);
+  transition: all 0.2s;
+}
+.mobile-nav {
+  display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  padding: 24px 32px; z-index: 499; flex-direction: column; gap: 20px;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-mid);
 }
 
-/* ── HERO ─────────────────────────────────────────────────────────────── */
-#hero {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  height: calc(100vh - 57px);
-  min-height: 520px; max-height: 860px;
-  gap: 3px; padding: 3px;
-  background: var(--border);
-}
-.hero-main { position: relative; overflow: hidden; cursor: pointer; }
-.hero-stack { display: flex; flex-direction: column; gap: 3px; }
-.hero-sub   { position: relative; overflow: hidden; flex: 1; cursor: pointer; }
+/* ── APP CONTAINER ───────────────────────────────────────────────────── */
+#app { padding-top: var(--nav-h); min-height: 100vh; }
 
-.hero-photo {
+/* ── VIEW: HOME HERO ─────────────────────────────────────────────────── */
+.home-hero {
+  position: relative;
+  height: calc(100vh - var(--nav-h));
+  min-height: 560px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.home-hero-img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 12s ease;
+}
+.home-hero:hover .home-hero-img { transform: scale(1.04); }
+.home-hero-placeholder {
   width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.hero-photo.placeholder {
   background: linear-gradient(150deg, #c4b09a 0%, #9a8068 40%, #7a6250 100%);
 }
-.hero-main:hover .hero-photo,
-.hero-sub:hover  .hero-photo { transform: scale(1.04); }
-
-.hero-overlay {
+.home-hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(18,16,10,0.72) 0%, rgba(18,16,10,0.1) 50%, transparent 100%);
-  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(10,8,6,0.78) 0%,
+    rgba(10,8,6,0.35) 45%,
+    rgba(10,8,6,0.08) 100%
+  );
 }
-.hero-label {
-  position: absolute; bottom: 28px; left: 30px; right: 30px;
-  pointer-events: none;
+.home-hero-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 0 80px 72px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 24px;
 }
-.hero-tag {
-  font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
-  color: rgba(240,233,219,0.55); margin-bottom: 7px;
+.home-hero-eyebrow {
+  font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase;
+  color: rgba(240,233,219,0.5);
 }
-.hero-headline {
-  font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic;
-  color: var(--white); line-height: 1.15;
-  text-shadow: 0 2px 24px rgba(10,8,4,0.45);
-}
-.hero-main .hero-headline { font-size: clamp(26px, 3.2vw, 46px); }
-.hero-sub  .hero-headline { font-size: clamp(16px, 2vw, 28px); }
-.hero-sub-count {
-  font-size: 10px; letter-spacing: 0.12em;
-  color: rgba(240,233,219,0.45); margin-top: 6px;
-}
-.empty-hero-msg {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  height: 100%; text-align: center; gap: 12px;
-  font-family: 'Cormorant Garamond', serif; font-style: italic;
-  font-size: 18px; color: var(--ink-light);
-}
-.empty-hero-msg span { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--ink-light); }
-
-/* ── SECTION HEADER ─────────────────────────────────────────────────── */
-.sec-head {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 52px 52px 28px;
-}
-.sec-label {
+.home-hero-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 11px; font-weight: 400;
-  letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--ink-mid);
+  font-size: clamp(42px, 6vw, 88px);
+  font-weight: 300; line-height: 1.0;
+  color: rgba(240,233,219,0.97);
+  text-shadow: 0 4px 40px rgba(0,0,0,0.3);
+  letter-spacing: 0.02em;
+}
+.home-hero-title em { font-style: italic; }
+.home-hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 2vw, 24px);
+  font-style: italic; font-weight: 300;
+  color: rgba(240,233,219,0.65);
+  letter-spacing: 0.04em;
+}
+.home-hero-ctas {
+  display: flex; gap: 14px; margin-top: 8px;
+}
+.cta-primary {
+  font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 13px 28px;
+  background: rgba(240,233,219,0.97); color: #1a1a1a;
+  border: 1px solid transparent; border-radius: 1px;
+  transition: all 0.25s;
+}
+.cta-primary:hover {
+  background: transparent;
+  color: rgba(240,233,219,0.97);
+  border-color: rgba(240,233,219,0.5);
+}
+.cta-secondary {
+  font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 13px 28px;
+  background: transparent; color: rgba(240,233,219,0.8);
+  border: 1px solid rgba(240,233,219,0.35); border-radius: 1px;
+  transition: all 0.25s;
+}
+.cta-secondary:hover {
+  background: rgba(240,233,219,0.1);
+  border-color: rgba(240,233,219,0.6);
+  color: rgba(240,233,219,0.97);
+}
+.home-hero-series-tag {
+  position: absolute; bottom: 72px; right: 80px;
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(240,233,219,0.35);
+}
+
+/* ── VIEW: HOME FEATURED SERIES ──────────────────────────────────────── */
+.home-featured {
+  padding: 80px 52px 96px;
+}
+.section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 40px;
+}
+.section-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ink-light);
   display: flex; align-items: center; gap: 16px;
 }
-.sec-label::before { content: ''; width: 32px; height: 1px; background: var(--border); }
-.sec-action {
+.section-label::before { content: ''; width: 32px; height: 1px; background: var(--border); }
+.section-link {
   font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--ink-light); transition: color 0.2s; cursor: pointer;
+  color: var(--ink-light); transition: color 0.2s;
+  border-bottom: 1px solid transparent;
 }
-.sec-action:hover { color: var(--ink); }
+.section-link:hover { color: var(--ink); border-color: var(--border); }
 
-/* ── SERIES GRID ────────────────────────────────────────────────────── */
-#series-grid {
+.featured-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 3px; padding: 0 3px 3px;
-  background: var(--border-lt);
-  margin: 0 52px 72px;
+  gap: 3px; background: var(--border-lt);
+  border: 3px solid var(--border-lt);
 }
-.series-card { background: var(--bg); overflow: hidden; cursor: pointer; }
-.series-card-img { width: 100%; aspect-ratio: 5/6; overflow: hidden; position: relative; }
-.series-card-img img { height: 100%; transition: transform 0.55s ease; }
-.series-card-img .placeholder { background: linear-gradient(155deg, #c0b0a0 0%, #8a7868 100%); height: 100%; }
-.series-card:hover .series-card-img img,
-.series-card:hover .series-card-img .placeholder { transform: scale(1.05); }
-
+.series-card {
+  background: var(--bg); cursor: pointer;
+  transition: opacity 0.2s;
+}
+.series-card:hover { opacity: 0.9; }
+.series-card-img {
+  width: 100%; aspect-ratio: 4/5; overflow: hidden;
+  position: relative; background: var(--bg-alt);
+}
+.series-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.series-card:hover .series-card-img img { transform: scale(1.06); }
+.series-card-img .ph {
+  width: 100%; height: 100%;
+  background: linear-gradient(155deg, #c0b0a0 0%, #8a7868 100%);
+}
 .series-card-body { padding: 18px 22px 24px; border-top: 1px solid var(--border-lt); }
-.series-card-title { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-style: italic; font-weight: 300; margin-bottom: 4px; }
+.series-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-style: italic; font-weight: 300;
+  margin-bottom: 4px; line-height: 1.2;
+}
 .series-card-sub   { font-size: 11px; color: var(--ink-light); margin-bottom: 10px; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 5px; }
 .tag {
-  font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--accent); border: 1px solid var(--border);
-  padding: 3px 8px; border-radius: 1px;
+  padding: 2px 7px; border-radius: 1px;
 }
 
-.series-empty {
-  grid-column: 1/-1;
-  padding: 64px 24px;
-  text-align: center;
+/* ── VIEW: GALLERY (series list / work) ──────────────────────────────── */
+.gallery-view { padding: 52px 52px 96px; }
+.gallery-view-header { margin-bottom: 52px; }
+.page-title {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 20px;
-  color: var(--ink-light);
+  font-size: clamp(32px, 4.5vw, 54px);
+  font-weight: 300; line-height: 1.05;
+  margin-bottom: 12px;
 }
-.series-empty small {
-  display: block; font-family: 'Inter', sans-serif; font-size: 11px;
-  margin-top: 8px; letter-spacing: 0.1em; font-style: normal;
+.page-title em { font-style: italic; }
+.page-subtitle {
+  font-size: 12px; color: var(--ink-light);
+  letter-spacing: 0.1em; max-width: 480px; line-height: 1.7;
+}
+.series-list { display: flex; flex-direction: column; gap: 1px; background: var(--border-lt); }
+.series-row {
+  display: grid; grid-template-columns: 200px 1fr auto;
+  align-items: center; gap: 32px;
+  background: var(--bg); padding: 20px 28px;
+  cursor: pointer; transition: background 0.15s;
+}
+.series-row:hover { background: var(--bg-alt); }
+.series-row-thumb {
+  width: 200px; aspect-ratio: 3/2; overflow: hidden; background: var(--bg-alt);
+}
+.series-row-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.series-row:hover .series-row-thumb img { transform: scale(1.05); }
+.series-row-thumb .ph { width: 100%; height: 100%; background: linear-gradient(155deg, #c0b0a0 0%, #8a7868 100%); }
+.series-row-info {}
+.series-row-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; font-weight: 300; margin-bottom: 6px; }
+.series-row-sub { font-size: 11px; color: var(--ink-light); margin-bottom: 8px; }
+.series-row-count { font-size: 10px; letter-spacing: 0.1em; color: var(--ink-light); text-transform: uppercase; }
+.series-row-arrow { font-size: 18px; color: var(--ink-light); }
+
+/* ── VIEW: SERIES DETAIL ─────────────────────────────────────────────── */
+.series-detail { padding-bottom: 96px; }
+.series-detail-header {
+  padding: 52px 52px 48px;
+  border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: end;
+}
+.breadcrumb {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-light); margin-bottom: 20px; cursor: pointer;
+  transition: color 0.2s; display: inline-block;
+}
+.breadcrumb:hover { color: var(--ink); }
+.breadcrumb::before { content: '← '; }
+.series-detail-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 300; font-style: italic; line-height: 1.05;
+  margin-bottom: 10px;
+}
+.series-detail-sub { font-size: 12px; color: var(--ink-light); letter-spacing: 0.08em; margin-bottom: 18px; }
+.series-detail-desc { font-size: 14px; line-height: 1.85; color: var(--ink-mid); max-width: 460px; }
+.series-detail-meta { display: flex; flex-direction: column; gap: 10px; justify-content: flex-end; }
+.series-meta-row {
+  display: flex; justify-content: space-between;
+  padding: 10px 0; border-bottom: 1px solid var(--border-lt);
+  font-size: 11px;
+}
+.series-meta-row:last-child { border-bottom: none; }
+.series-meta-label { color: var(--ink-light); letter-spacing: 0.08em; text-transform: uppercase; font-size: 9.5px; }
+.series-meta-value { color: var(--ink-mid); }
+
+.series-photo-grid {
+  padding: 40px 52px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 3px; background: var(--border-lt);
+  margin: 0;
+}
+.series-photo-item {
+  position: relative; overflow: hidden;
+  cursor: pointer; background: var(--bg-alt);
+  aspect-ratio: 4/5;
+}
+.series-photo-item.landscape { aspect-ratio: 5/4; }
+.series-photo-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.series-photo-item:hover img { transform: scale(1.05); }
+.series-photo-item-overlay {
+  position: absolute; inset: 0;
+  background: rgba(18,16,10,0);
+  transition: background 0.3s;
+  display: flex; align-items: flex-end;
+  padding: 20px;
+}
+.series-photo-item:hover .series-photo-item-overlay {
+  background: rgba(18,16,10,0.35);
+}
+.series-photo-item-label {
+  opacity: 0; transition: opacity 0.3s;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(240,233,219,0.8);
+}
+.series-photo-item:hover .series-photo-item-label { opacity: 1; }
+
+.series-show-more {
+  padding: 40px 52px;
+  display: flex; justify-content: center;
+  border-top: 1px solid var(--border-lt);
+}
+.btn-outline {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 12px 32px; border: 1px solid var(--border);
+  background: transparent; color: var(--ink-mid);
+  transition: all 0.2s; border-radius: 1px;
+}
+.btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+
+.series-nav-strip {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 40px 52px;
+  border-top: 1px solid var(--border);
+}
+.series-nav-prev, .series-nav-next {
+  font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-light); cursor: pointer; transition: color 0.2s;
+}
+.series-nav-prev:hover, .series-nav-next:hover { color: var(--ink); }
+.series-nav-prev::before { content: '← '; }
+.series-nav-next::after  { content: ' →'; }
+.series-nav-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-style: italic; color: var(--ink-light);
 }
 
-/* ── ARCHIVE ─────────────────────────────────────────────────────────── */
-#archive-wrap { background: var(--bg-alt); border-top: 1px solid var(--border); padding-bottom: 80px; }
+/* ── VIEW: PHOTO DETAIL ──────────────────────────────────────────────── */
+.photo-detail {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  min-height: calc(100vh - var(--nav-h));
+}
+.photo-detail-image-pane {
+  background: #0f0f0f;
+  display: flex; align-items: center; justify-content: center;
+  padding: 52px; min-height: calc(100vh - var(--nav-h));
+  position: sticky; top: var(--nav-h); align-self: start;
+  height: calc(100vh - var(--nav-h));
+}
+.photo-detail-image-pane img {
+  max-width: 100%; max-height: 100%;
+  object-fit: contain; display: block;
+}
+.photo-detail-panel {
+  background: var(--bg); border-left: 1px solid var(--border);
+  padding: 40px 36px 60px;
+  display: flex; flex-direction: column; gap: 0;
+  overflow-y: auto;
+}
+.photo-nav-back {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-light); cursor: pointer; transition: color 0.2s;
+  margin-bottom: 32px; display: inline-block;
+}
+.photo-nav-back:hover { color: var(--ink); }
+.photo-nav-back::before { content: '← '; }
+.photo-detail-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-style: italic; font-weight: 300;
+  line-height: 1.15; margin-bottom: 8px;
+}
+.photo-detail-series {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-light); margin-bottom: 28px;
+}
+.photo-meta-block {
+  border-top: 1px solid var(--border-lt);
+  padding: 20px 0;
+}
+.photo-meta-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 8px 0; border-bottom: 1px solid var(--border-lt);
+}
+.photo-meta-row:last-child { border-bottom: none; }
+.photo-meta-label { font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
+.photo-meta-value { font-size: 12px; color: var(--ink-mid); text-align: right; max-width: 60%; }
+
+/* Collect UI */
+.collect-block {
+  border-top: 1px solid var(--border);
+  padding: 28px 0 0;
+  margin-top: 20px;
+}
+.collect-block-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink); margin-bottom: 18px;
+}
+.size-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.size-option {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border: 1px solid var(--border);
+  cursor: pointer; border-radius: 1px; transition: all 0.15s;
+  background: transparent;
+  font-family: inherit;
+}
+.size-option:hover { border-color: var(--ink-mid); }
+.size-option.selected { border-color: var(--ink); background: var(--bg-alt); }
+.size-option-radio {
+  width: 14px; height: 14px; border: 1px solid var(--border);
+  border-radius: 50%; flex-shrink: 0; position: relative; transition: all 0.15s;
+}
+.size-option.selected .size-option-radio {
+  border-color: var(--ink); background: var(--ink);
+}
+.size-option-label { font-size: 11px; color: var(--ink); flex: 1; text-align: left; }
+.size-option-price {
+  font-size: 11px; color: var(--ink-mid);
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+}
+.size-option-edition { font-size: 9.5px; color: var(--ink-light); letter-spacing: 0.06em; }
+.collect-note {
+  font-size: 10.5px; color: var(--ink-light); line-height: 1.65;
+  margin-bottom: 20px; letter-spacing: 0.01em;
+}
+.btn-collect {
+  width: 100%; padding: 14px 24px;
+  background: var(--ink); color: var(--bg);
+  border: 1px solid var(--ink);
+  font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+  border-radius: 1px; cursor: pointer;
+  transition: all 0.2s; font-family: inherit;
+}
+.btn-collect:hover { background: transparent; color: var(--ink); }
+.collect-contact-note {
+  font-size: 10px; color: var(--ink-light); text-align: center;
+  margin-top: 12px; letter-spacing: 0.04em;
+}
+
+.photo-prev-next {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 0 0; border-top: 1px solid var(--border-lt);
+  margin-top: 28px;
+}
+.photo-prev-btn, .photo-next-btn {
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ink-light); cursor: pointer; transition: color 0.2s;
+  background: none; border: none; font-family: inherit;
+}
+.photo-prev-btn:hover, .photo-next-btn:hover { color: var(--ink); }
+.photo-prev-btn::before { content: '← '; }
+.photo-next-btn::after  { content: ' →'; }
+.photo-count-indicator {
+  font-size: 9.5px; color: var(--ink-light); letter-spacing: 0.08em;
+}
+
+/* ── VIEW: COLLECT PAGE ──────────────────────────────────────────────── */
+.collect-page { padding: 72px 52px 96px; }
+.collect-page-header { margin-bottom: 72px; max-width: 640px; }
+.collect-page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 64px); font-weight: 300; font-style: italic;
+  line-height: 1.05; margin-bottom: 20px;
+}
+.collect-page-intro {
+  font-size: 14.5px; line-height: 1.9; color: var(--ink-mid); max-width: 520px;
+}
+.collect-page-intro p + p { margin-top: 16px; }
+.print-specs-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 3px; background: var(--border-lt);
+  margin-bottom: 64px;
+}
+.print-spec-card {
+  background: var(--bg); padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.print-spec-size {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-style: italic; font-weight: 300; color: var(--ink);
+}
+.print-spec-price {
+  font-size: 13px; color: var(--ink-mid); margin-bottom: 4px;
+}
+.print-spec-edition {
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light);
+}
+.print-spec-divider { width: 24px; height: 1px; background: var(--border); margin: 8px 0; }
+.collect-process {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
+  padding: 64px 0; border-top: 1px solid var(--border); margin-bottom: 64px;
+}
+.collect-process-text {}
+.collect-process-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-style: italic; font-weight: 300;
+  margin-bottom: 20px; line-height: 1.2;
+}
+.collect-process-body { font-size: 14px; line-height: 1.9; color: var(--ink-mid); }
+.collect-process-body p + p { margin-top: 14px; }
+.collect-specs-list { display: flex; flex-direction: column; gap: 0; }
+.collect-spec-item {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 14px 0; border-bottom: 1px solid var(--border-lt);
+  font-size: 12px;
+}
+.collect-spec-item:last-child { border-bottom: none; }
+.collect-spec-label { color: var(--ink-light); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+.collect-spec-value { color: var(--ink-mid); text-align: right; }
+.collect-cta-block {
+  text-align: center; padding: 64px 0 0; border-top: 1px solid var(--border);
+}
+.collect-cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; font-style: italic; font-weight: 300;
+  margin-bottom: 12px;
+}
+.collect-cta-sub { font-size: 13px; color: var(--ink-mid); margin-bottom: 28px; }
+.btn-primary-dark {
+  display: inline-block;
+  font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 14px 40px;
+  background: var(--ink); color: var(--bg);
+  border: 1px solid var(--ink);
+  border-radius: 1px; cursor: pointer;
+  transition: all 0.2s; font-family: inherit;
+}
+.btn-primary-dark:hover { background: transparent; color: var(--ink); }
+
+/* ── VIEW: ARCHIVE (all work) ────────────────────────────────────────── */
+.archive-view { padding: 52px 52px 96px; }
 .filter-bar {
   display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
-  padding: 24px 52px; border-bottom: 1px solid var(--border); margin-bottom: 28px;
+  padding: 24px 0; border-bottom: 1px solid var(--border); margin-bottom: 36px;
 }
 .filter-group-lbl {
   font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--ink-light); margin-right: 2px; white-space: nowrap;
+  color: var(--ink-light); margin-right: 4px; white-space: nowrap;
 }
-.filter-sep { width: 1px; height: 18px; background: var(--border); margin: 0 8px; }
+.filter-sep { width: 1px; height: 18px; background: var(--border); margin: 0 10px; }
 .pill {
   font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase;
-  padding: 4px 11px; border: 1px solid var(--border);
+  padding: 5px 12px; border: 1px solid var(--border);
   background: transparent; color: var(--ink-mid);
   cursor: pointer; border-radius: 1px;
-  font-family: 'Inter', sans-serif; font-weight: 300;
+  font-family: inherit; font-weight: 300;
   transition: all 0.15s; white-space: nowrap;
 }
-.pill:hover { background: var(--bg); color: var(--ink); border-color: var(--ink-mid); }
-.pill.on    { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-
-#archive-grid {
+.pill:hover { background: var(--bg-alt); color: var(--ink); border-color: var(--ink-mid); }
+.pill.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.archive-grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 10px; padding: 0 52px;
+  gap: 3px; background: var(--border-lt);
 }
-.arch-item { cursor: pointer; overflow: hidden; }
+.arch-item {
+  cursor: pointer; overflow: hidden;
+  background: var(--bg-alt); position: relative;
+  aspect-ratio: 3/4;
+}
 .arch-item.hidden { display: none; }
-.arch-photo { width: 100%; overflow: hidden; }
-.arch-photo img { transition: transform 0.4s ease; }
-.arch-item:hover .arch-photo img { transform: scale(1.05); }
-.arch-meta {
-  padding: 7px 0 12px;
-  display: flex; justify-content: space-between; align-items: baseline;
-  border-bottom: 1px solid var(--border-lt); margin-top: 1px;
+.arch-item.landscape { aspect-ratio: 4/3; }
+.arch-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s ease;
 }
-.arch-name { font-size: 11px; color: var(--ink-mid); }
-.arch-film { font-size: 10px; color: var(--ink-light); letter-spacing: 0.08em; text-transform: uppercase; }
-
+.arch-item:hover img { transform: scale(1.06); }
+.arch-item-overlay {
+  position: absolute; inset: 0;
+  background: rgba(18,16,10,0); transition: background 0.3s;
+  display: flex; align-items: flex-end; padding: 14px;
+}
+.arch-item:hover .arch-item-overlay { background: rgba(18,16,10,0.45); }
+.arch-item-label {
+  opacity: 0; transition: opacity 0.3s;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(240,233,219,0.8);
+}
+.arch-item:hover .arch-item-label { opacity: 1; }
 .archive-empty {
-  grid-column: 1/-1; padding: 64px 24px; text-align: center;
-  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--ink-light);
+  grid-column: 1/-1; padding: 80px 24px; text-align: center;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 22px; color: var(--ink-light); background: var(--bg);
 }
-.archive-empty small {
-  display: block; font-family: 'Inter', sans-serif; font-size: 11px;
-  margin-top: 8px; letter-spacing: 0.1em; font-style: normal;
+.archive-count {
+  font-size: 10px; color: var(--ink-light); letter-spacing: 0.1em;
+  margin-bottom: 28px; text-transform: uppercase;
 }
 
-/* ── ABOUT ───────────────────────────────────────────────────────────── */
-#about {
+/* ── VIEW: ABOUT ─────────────────────────────────────────────────────── */
+.about-view {
   display: grid; grid-template-columns: 1fr 1.8fr;
-  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .about-left {
-  padding: 72px 52px;
+  padding: 80px 52px;
   border-right: 1px solid var(--border);
   display: flex; flex-direction: column; justify-content: center;
+  min-height: calc(100vh - var(--nav-h));
 }
 .about-headline {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(36px, 4.5vw, 60px); font-weight: 300; line-height: 1.08;
 }
 .about-headline em { font-style: italic; color: var(--accent); }
-.about-right { padding: 72px 52px; display: flex; flex-direction: column; justify-content: center; }
-.about-body  { font-size: 14.5px; line-height: 1.85; color: var(--ink-mid); max-width: 520px; }
+.about-right { padding: 80px 52px; display: flex; flex-direction: column; justify-content: center; }
+.about-body  { font-size: 14.5px; line-height: 1.88; color: var(--ink-mid); max-width: 520px; }
 .about-body p + p { margin-top: 18px; }
 .text-link {
-  display: inline-block; margin-top: 28px;
+  display: inline-block; margin-top: 32px;
   font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--ink);
-  border-bottom: 1px solid var(--border); padding-bottom: 3px;
+  color: var(--ink); border-bottom: 1px solid var(--border); padding-bottom: 3px;
   transition: border-color 0.2s;
 }
 .text-link:hover { border-color: var(--ink); }
 
 /* ── PROCESS STRIP ───────────────────────────────────────────────────── */
 .process-strip {
-  background: var(--bg-dark);
-  padding: 48px 52px;
+  background: #0f0f0f;
+  padding: 52px 80px;
   display: flex; align-items: center; justify-content: space-between; gap: 40px;
 }
 .process-quote {
@@ -332,23 +720,24 @@ html[data-theme="dark"] nav {
   color: rgba(240,233,219,0.85); line-height: 1.4; max-width: 620px;
 }
 .process-detail {
-  font-size: 10.5px; color: rgba(156,142,124,0.7);
+  font-size: 10.5px; color: rgba(156,142,124,0.65);
   letter-spacing: 0.14em; text-transform: uppercase;
-  text-align: right; flex-shrink: 0; line-height: 2;
+  text-align: right; flex-shrink: 0; line-height: 2.2;
 }
 
 /* ── FOOTER ──────────────────────────────────────────────────────────── */
 footer {
-  padding: 28px 52px;
+  padding: 32px 52px;
   display: flex; align-items: center; justify-content: space-between;
   border-top: 1px solid var(--border);
+  background: var(--bg);
 }
 .footer-logo {
   font-family: 'Cormorant Garamond', serif;
   font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--ink-light); font-style: italic;
 }
-.footer-links { list-style: none; display: flex; gap: 28px; }
+.footer-links { list-style: none; display: flex; gap: 32px; }
 .footer-links a {
   font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--ink-light); transition: color 0.2s;
@@ -359,466 +748,801 @@ footer {
 /* ── LIGHTBOX ────────────────────────────────────────────────────────── */
 #lightbox {
   display: none; position: fixed; inset: 0; z-index: 7000;
-  background: rgba(18,16,10,0.95);
+  background: rgba(10,8,6,0.97);
   align-items: center; justify-content: center;
-  flex-direction: column;
 }
 #lightbox.open { display: flex; }
-#lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; display: block; }
-.lb-close {
-  position: absolute; top: 20px; right: 28px;
-  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(240,233,219,0.5); cursor: pointer; transition: color 0.2s;
+.lb-inner {
+  position: relative; max-width: 92vw; max-height: 90vh;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
 }
-.lb-close:hover { color: var(--white); }
+#lb-img { max-width: 100%; max-height: 80vh; object-fit: contain; }
+.lb-close {
+  position: absolute; top: -44px; right: 0;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(240,233,219,0.45); cursor: pointer; transition: color 0.2s;
+}
+.lb-close:hover { color: rgba(240,233,219,0.9); }
 .lb-meta {
-  margin-top: 16px; text-align: center;
-  font-size: 11px; color: rgba(240,233,219,0.5);
+  text-align: center;
+  font-size: 11px; color: rgba(240,233,219,0.4);
   letter-spacing: 0.1em;
 }
+.lb-actions {
+  display: flex; gap: 16px; margin-top: 4px;
+}
+.lb-collect-btn {
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 8px 22px;
+  background: rgba(240,233,219,0.12); color: rgba(240,233,219,0.7);
+  border: 1px solid rgba(240,233,219,0.25);
+  border-radius: 1px; cursor: pointer; font-family: inherit;
+  transition: all 0.2s;
+}
+.lb-collect-btn:hover { background: rgba(240,233,219,0.22); color: rgba(240,233,219,0.95); }
+.lb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer;
+  font-size: 20px; color: rgba(240,233,219,0.4);
+  padding: 20px; transition: color 0.2s;
+}
+.lb-nav:hover { color: rgba(240,233,219,0.9); }
+.lb-prev { left: -60px; }
+.lb-next { right: -60px; }
 
 /* ── RESPONSIVE ──────────────────────────────────────────────────────── */
-@media (max-width: 900px) {
-  nav { padding: 16px 24px; }
-  .nav-links { gap: 24px; }
-  #hero { grid-template-columns: 1fr; }
-  .hero-stack { display: none; }
-  #series-grid { grid-template-columns: 1fr 1fr; margin: 0 24px 48px; }
-  #archive-grid { grid-template-columns: 1fr 1fr; padding: 0 24px; }
-  .filter-bar { padding: 16px 24px; }
-  .sec-head { padding: 40px 24px 20px; }
-  #about { grid-template-columns: 1fr; }
-  .about-left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 24px; }
-  .about-right { padding: 48px 24px; }
-  footer { padding: 24px; flex-direction: column; gap: 16px; text-align: center; }
-  .process-strip { flex-direction: column; padding: 40px 24px; }
+@media (max-width: 1100px) {
+  .photo-detail { grid-template-columns: 1fr 300px; }
+}
+@media (max-width: 960px) {
+  nav { padding: 0 24px; }
+  .nav-links, .nav-collect-btn { display: none; }
+  .nav-hamburger { display: flex; }
+  .home-hero-content { padding: 0 32px 52px; }
+  .home-hero-title { font-size: clamp(34px, 8vw, 54px); }
+  .home-featured { padding: 52px 24px 72px; }
+  .featured-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-view { padding: 40px 24px 72px; }
+  .series-row { grid-template-columns: 140px 1fr; }
+  .series-row-arrow { display: none; }
+  .series-detail-header { grid-template-columns: 1fr; gap: 32px; padding: 40px 24px 36px; }
+  .series-photo-grid { padding: 3px; grid-template-columns: repeat(2, 1fr); }
+  .series-show-more, .series-nav-strip { padding: 32px 24px; }
+  .photo-detail { grid-template-columns: 1fr; }
+  .photo-detail-image-pane { position: static; height: 60vw; min-height: 260px; padding: 24px; }
+  .photo-detail-panel { border-left: none; border-top: 1px solid var(--border); padding: 32px 24px 52px; }
+  .collect-page { padding: 52px 24px 72px; }
+  .print-specs-grid { grid-template-columns: repeat(2, 1fr); }
+  .collect-process { grid-template-columns: 1fr; gap: 40px; }
+  .archive-view { padding: 40px 24px 72px; }
+  .archive-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-view { grid-template-columns: 1fr; }
+  .about-left { min-height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 52px 24px; }
+  .about-right { padding: 52px 24px; }
+  .process-strip { flex-direction: column; padding: 48px 24px; }
   .process-detail { text-align: left; }
+  footer { padding: 24px; flex-direction: column; gap: 20px; text-align: center; }
+}
+@media (max-width: 600px) {
+  .home-hero-ctas { flex-direction: column; gap: 10px; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .series-row { grid-template-columns: 1fr; }
+  .series-row-thumb { width: 100%; }
+  .series-photo-grid { grid-template-columns: 1fr 1fr; }
+  .archive-grid { grid-template-columns: 1fr 1fr; }
+  .print-specs-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- Loading screen -->
+<!-- Loading -->
 <div id="loading"><div class="loader-logo">Quiet Frames Studio</div></div>
 
 <!-- Lightbox -->
-<div id="lightbox">
-  <div class="lb-close" onclick="closeLightbox()">✕ &nbsp;Close</div>
-  <img id="lb-img" src="" alt="">
-  <div class="lb-meta" id="lb-meta"></div>
+<div id="lightbox" role="dialog" aria-modal="true">
+  <div class="lb-inner">
+    <div class="lb-close" onclick="closeLightbox()" role="button" tabindex="0">✕ &nbsp;Close</div>
+    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous">&#8592;</button>
+    <button class="lb-nav lb-next" id="lb-next" aria-label="Next">&#8594;</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-meta" id="lb-meta"></div>
+    <div class="lb-actions">
+      <button class="lb-collect-btn" id="lb-collect">Collect This Print</button>
+    </div>
+  </div>
 </div>
 
-<!-- ── NAV ─────────────────────────────────────────────── -->
+<!-- Nav -->
 <nav>
-  <a href="#" class="logo">Quiet <em>Frames</em> Studio</a>
+  <a href="#/" class="logo" onclick="navigate('/')">Quiet <em>Frames</em> Studio</a>
   <div class="nav-right">
     <ul class="nav-links" id="nav-links">
-      <li><a href="#series-section">Series</a></li>
-      <li><a href="#archive-section">Archive</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#" id="nav-print">Print Inquiries</a></li>
-      <li><a href="#" id="nav-contact">Contact</a></li>
+      <li><a href="#/work"    onclick="navigate('/work')"    id="nav-work">Work</a></li>
+      <li><a href="#/about"   onclick="navigate('/about')"   id="nav-about">About</a></li>
+      <li><a href="#/collect" onclick="navigate('/collect')" id="nav-collect-link">Collect</a></li>
     </ul>
+    <button class="nav-collect-btn" onclick="navigate('/collect')">Collect Prints</button>
     <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">☀️</button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<!-- ── HERO ──────────────────────────────────────────────── -->
-<section id="hero">
-  <!-- Populated by JS -->
-  <div class="empty-hero-msg">
-    <div>Quiet Frames Studio</div>
-    <span>Add photos via the portfolio upload skill to get started</span>
-  </div>
-</section>
-
-<!-- ── SERIES ─────────────────────────────────────────────── -->
-<div id="series-section">
-  <div class="sec-head">
-    <span class="sec-label">Selected Series</span>
-    <a href="#archive-section" class="sec-action">Full archive ↓</a>
-  </div>
-  <div id="series-grid"></div>
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#/work"    onclick="navigate('/work');closeMobileNav()">Work</a>
+  <a href="#/about"   onclick="navigate('/about');closeMobileNav()">About</a>
+  <a href="#/collect" onclick="navigate('/collect');closeMobileNav()">Collect</a>
+  <a href="mailto:m.mcconnell3191@gmail.com" id="mobile-contact">Contact</a>
 </div>
 
-<!-- ── ARCHIVE ────────────────────────────────────────────── -->
-<div id="archive-section" style="scroll-margin-top: 57px;">
-  <div id="archive-wrap">
-    <div class="sec-head">
-      <span class="sec-label">Archive</span>
-      <span style="font-size:10.5px;color:var(--ink-light);letter-spacing:0.1em">Filter by tag — combine freely</span>
-    </div>
-    <div class="filter-bar" id="filter-bar"></div>
-    <div id="archive-grid"></div>
-  </div>
-</div>
+<!-- App -->
+<main id="app"></main>
 
-<!-- ── ABOUT ──────────────────────────────────────────────── -->
-<section id="about">
-  <div class="about-left">
-    <div class="about-headline">Shooting<br><em>film</em><br>slowly.</div>
-  </div>
-  <div class="about-right">
-    <div class="about-body" id="about-body">
-      <p>I'm a film photographer based just outside of Boston, working across 35mm, medium format, and 4×5. Most of my work is made within an hour or two of home — city streets, coastlines, parks, and the quiet in-between spaces that don't announce themselves.</p>
-      <p>I shoot film because it's a choice, not a nostalgia trip. In a world where a single memory card can hold thousands of images, I'd rather load a roll of 36 and stop there. That constraint isn't a limitation — it's the whole point. When you know you have 36 frames, or 12, or 8, you slow down. You look longer before you lift the camera. You think about the light, the moment, whether this is actually the frame. That deliberateness changes what you see and what you make.</p>
-      <p>The same is true of the tools. An old camera with a prime lens doesn't autofocus, doesn't bracket exposures, doesn't do the thinking for you. Every decision is yours — focus, aperture, timing. That friction is what I'm after.</p>
-      <p>And then there's what comes after the shoot. I develop my own black and white and color film at home. I watch the images emerge from the tank. I cut the negatives, scan them, process them. The whole sequence takes time, and it can't be rushed. That's not inconvenience — that's the ritual. There's something meditative about a process that demands your full attention and gives you no shortcuts. At the end of it, I have something physical: a strip of film I can hold up to the light, that exists in the world independent of any hard drive or cloud account. I own it. That matters to me.</p>
-      <p>My work tends to live in quiet moments — subtle light, everyday interactions, the kind of intimacy that exists in public spaces without announcing itself. A lot of it is also tied to fatherhood and memory, photographing not just what things look like, but what they feel like to live through. Even when my family isn't in the frame, they're often part of the moment.</p>
-      <p>I'm less interested in perfect images and more interested in honest ones.</p>
-      <p>Prints are available. If you'd like to discuss a purchase or commission, I'd love to hear from you.</p>
-    </div>
-    <a href="#" class="text-link" id="insta-link">Instagram →</a>
-  </div>
-</section>
-
-<div class="process-strip">
-  <div class="process-quote">"Every frame is chosen by hand — against a lightbox, not a screen."</div>
-  <div class="process-detail">
-    Shot on 35mm, 6×7, 6×9 &amp; 4×5<br>
-    Epson V700 · Negative Lab Pro<br>
-    Developed: small batches<br>
-    Available as prints
-  </div>
-</div>
-
-<footer>
+<!-- Footer (always visible) -->
+<footer id="site-footer">
   <div class="footer-logo">Quiet Frames Studio</div>
   <ul class="footer-links">
-    <li><a href="#" id="ft-insta">Instagram</a></li>
-    <li><a href="#">Print Inquiries</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="https://instagram.com/quietframesphotos" target="_blank" rel="noopener" id="ft-insta">Instagram</a></li>
+    <li><a href="#/collect" onclick="navigate('/collect')">Collect</a></li>
+    <li><a href="mailto:m.mcconnell3191@gmail.com" id="ft-contact">Contact</a></li>
   </ul>
   <div class="footer-copy" id="footer-copy">© 2026 Quiet Frames Studio</div>
 </footer>
 
 <script>
-// ── FILM STOCK LABEL MAP ──────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════════════
+// DATA & CONFIG
+// ═══════════════════════════════════════════════════════════════════════
+let GALLERY_DATA = null;
+let lb_photos    = [];
+let lb_index     = 0;
+
 const FILM_LABELS = {
-  'hp5':           'Ilford HP5',
-  'fp4':           'Ilford FP4',
-  'sfx':           'Ilford SFX IR',
-  'pan-f':         'Ilford Pan F 50',
+  'hp5':           'Ilford HP5 Plus',
+  'fp4':           'Ilford FP4 Plus',
+  'sfx':           'Ilford SFX Infrared',
+  'pan-f':         'Ilford Pan F Plus 50',
   'portra-400':    'Kodak Portra 400',
   'portra-800':    'Kodak Portra 800',
-  'kodacolor-200': 'KodaColor 200',
+  'kodacolor-200': 'Kodacolor 200',
   'ektar-100':     'Kodak Ektar 100',
   'provia-100f':   'Fuji Provia 100F',
   'cinestill-800t':'Cinestill 800T',
   'lomo-purple':   'Lomography Purple',
   'velvia-50':     'Fuji Velvia 50',
-  'mixed':         'Mixed Stocks',
+  'mixed':         'Mixed stocks',
   'unknown':       '',
 };
-
 const FORMAT_LABELS = {
   '35mm': '35mm',
-  '6x7':  'Pentax 6×7',
-  '6x9':  'Fuji GW690II',
+  '6x7':  'Pentax 6×7 Medium Format',
+  '6x9':  'Fuji GW690II (6×9)',
   '4x5':  '4×5 Large Format',
 };
+const CAMERA_LABELS = {
+  'canon-ae1':  'Canon AE-1',
+  'pentax-67':  'Pentax 6×7',
+  'fuji-gw690': 'Fuji GW690II',
+  'horseman-45':'Horseman 45FA',
+};
 
-// ── HELPERS ───────────────────────────────────────────────────────────
-function filmLabel(id) { return FILM_LABELS[id] || id; }
-function formatLabel(id) { return FORMAT_LABELS[id] || id; }
+function fl(id) { return FILM_LABELS[id]   || id || ''; }
+function fmt(id){ return FORMAT_LABELS[id]  || id || ''; }
+function cam(id){ return CAMERA_LABELS[id]  || id || ''; }
 
-function buildSubtitle(tags) {
-  const parts = [];
-  if (tags.film && tags.film !== 'unknown' && tags.film !== 'mixed')
-    parts.push(filmLabel(tags.film));
-  if (tags.format && tags.format !== 'unknown')
-    parts.push(formatLabel(tags.format));
-  return parts.join(' · ');
+// ═══════════════════════════════════════════════════════════════════════
+// ROUTER
+// ═══════════════════════════════════════════════════════════════════════
+function navigate(path) {
+  window.location.hash = '#' + path;
 }
 
-// ── RENDER HERO ───────────────────────────────────────────────────────
-function renderHero(data) {
-  const hero = document.getElementById('hero');
-  const featuredIds = data.settings.featuredSeriesIds || [];
+function getRoute() {
+  const hash = window.location.hash || '#/';
+  const path  = hash.replace(/^#/, '') || '/';
+  const parts = path.split('/').filter(Boolean);
+  if (parts.length === 0) return { view: 'home' };
+  if (parts[0] === 'work')    return { view: 'work' };
+  if (parts[0] === 'about')   return { view: 'about' };
+  if (parts[0] === 'collect') return { view: 'collect' };
+  if (parts[0] === 'gallery' && parts[1]) return { view: 'series', id: parts[1] };
+  if (parts[0] === 'photo'   && parts[1]) return { view: 'photo',  id: parts[1] };
+  return { view: 'home' };
+}
 
-  // Get featured series that have photos and a cover
-  const featured = featuredIds
-    .map(id => data.series.find(s => s.id === id))
-    .filter(s => s && s.cover && s.cover.length > 0);
+function route() {
+  if (!GALLERY_DATA) return;
+  const r = getRoute();
+  updateNavActive(r.view);
+  updateSEO(r);
+  window.scrollTo({ top: 0, behavior: 'instant' });
 
-  if (featured.length === 0) {
-    // No photos yet — placeholder state
-    hero.innerHTML = `<div class="empty-hero-msg">
-      <div>Quiet Frames Studio</div>
-      <span>Upload photos via the portfolio upload skill to populate the gallery</span>
-    </div>`;
-    return;
-  }
-
-  const main = featured[0];
-  const subs = featured.slice(1, 3);
-
-  const mainEl = document.createElement('div');
-  mainEl.className = 'hero-main';
-  mainEl.onclick = () => openSeries(main.id);
-  mainEl.innerHTML = `
-    <img class="hero-photo" src="${main.cover}" alt="${main.title}" loading="eager">
-    <div class="hero-overlay"></div>
-    <div class="hero-label">
-      <div class="hero-tag">Series No. 01</div>
-      <div class="hero-headline">${main.title}</div>
-      ${main.subtitle ? `<div class="hero-sub-count">${main.subtitle}</div>` : ''}
-    </div>`;
-
-  hero.innerHTML = '';
-  hero.appendChild(mainEl);
-
-  if (subs.length > 0) {
-    const stack = document.createElement('div');
-    stack.className = 'hero-stack';
-    subs.forEach((s, i) => {
-      const sub = document.createElement('div');
-      sub.className = 'hero-sub';
-      sub.onclick = () => openSeries(s.id);
-      sub.innerHTML = `
-        <img class="hero-photo" src="${s.cover}" alt="${s.title}" loading="eager">
-        <div class="hero-overlay"></div>
-        <div class="hero-label">
-          <div class="hero-tag">Series No. 0${i + 2}</div>
-          <div class="hero-headline">${s.title}</div>
-          ${s.subtitle ? `<div class="hero-sub-count">${s.subtitle}</div>` : ''}
-        </div>`;
-      stack.appendChild(sub);
-    });
-    hero.appendChild(stack);
+  const app = document.getElementById('app');
+  switch (r.view) {
+    case 'home':    renderHome(app);         break;
+    case 'work':    renderWork(app);         break;
+    case 'series':  renderSeries(app, r.id); break;
+    case 'photo':   renderPhoto(app, r.id);  break;
+    case 'collect': renderCollect(app);      break;
+    case 'about':   renderAbout(app);        break;
+    default:        renderHome(app);
   }
 }
 
-// ── RENDER SERIES GRID ────────────────────────────────────────────────
-function renderSeriesGrid(data) {
-  const grid = document.getElementById('series-grid');
-  const seriesWithPhotos = data.series.filter(s => s.photoCount > 0 || s.cover);
+function updateNavActive(view) {
+  ['nav-work','nav-about','nav-collect-link'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('active');
+  });
+  const map = { work:'nav-work', about:'nav-about', collect:'nav-collect-link', series:'nav-work', photo:'nav-work' };
+  const el = document.getElementById(map[view]);
+  if (el) el.classList.add('active');
+}
 
-  if (seriesWithPhotos.length === 0) {
-    grid.innerHTML = `<div class="series-empty">
-      No series yet
-      <small>Upload photos via the portfolio upload skill to populate series</small>
-    </div>`;
+function updateSEO(route) {
+  let title = 'Quiet Frames Studio — Film Photography';
+  let desc  = 'Fine art film photography by Michael J McConnell. Limited edition archival prints available.';
 
-    // Show series shells (without photos) so the layout is visible
-    data.series.forEach(s => {
-      const card = document.createElement('div');
-      card.className = 'series-card';
-      const tags = s.tags || {};
-      const tagPills = [
-        ...(tags.subject || []).map(t => `<span class="tag">${t}</span>`),
-        tags.film && tags.film !== 'unknown' ? `<span class="tag">${filmLabel(tags.film)}</span>` : '',
-        tags.format ? `<span class="tag">${formatLabel(tags.format)}</span>` : '',
-      ].filter(Boolean).slice(0, 4).join('');
-
-      card.innerHTML = `
-        <div class="series-card-img">
-          <div class="placeholder"></div>
-        </div>
-        <div class="series-card-body">
-          <div class="series-card-title">${s.title}</div>
-          <div class="series-card-sub">${s.subtitle || ''}</div>
-          <div class="tag-row">${tagPills}</div>
-        </div>`;
-      grid.appendChild(card);
-    });
-    return;
+  if (route.view === 'series' && GALLERY_DATA) {
+    const s = GALLERY_DATA.series.find(x => x.id === route.id);
+    if (s) { title = `${s.title} — Quiet Frames Studio`; desc = s.description || desc; }
+  } else if (route.view === 'photo' && GALLERY_DATA) {
+    const p = GALLERY_DATA.photos.find(x => x.id === route.id);
+    if (p) { title = `${p.title} — Quiet Frames Studio`; }
+  } else if (route.view === 'collect') {
+    title = 'Collect Prints — Quiet Frames Studio';
+    desc  = 'Limited edition archival fine art prints on Hahnemühle Photo Rag. Signed and numbered.';
+  } else if (route.view === 'about') {
+    title = 'About — Quiet Frames Studio';
   }
 
-  seriesWithPhotos.forEach(s => {
-    const card = document.createElement('div');
-    card.className = 'series-card';
-    card.onclick = () => openSeries(s.id);
-    const tags = s.tags || {};
-    const tagPills = [
-      ...(tags.subject || []).map(t => `<span class="tag">${t}</span>`),
-      tags.film && tags.film !== 'unknown' ? `<span class="tag">${filmLabel(tags.film)}</span>` : '',
-      tags.format ? `<span class="tag">${formatLabel(tags.format)}</span>` : '',
-      ...(tags.location || []).map(l => `<span class="tag">${l}</span>`),
-    ].filter(Boolean).slice(0, 4).join('');
+  document.title = title;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.content = desc;
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.content = title;
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.content = desc;
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.content = 'https://quietframesstudio.com' + (window.location.hash || '');
+}
 
-    card.innerHTML = `
-      <div class="series-card-img">
-        ${s.cover
-          ? `<img src="${s.cover}" alt="${s.title}" loading="lazy">`
-          : '<div class="placeholder"></div>'}
+window.addEventListener('hashchange', route);
+
+// ═══════════════════════════════════════════════════════════════════════
+// VIEW: HOME
+// ═══════════════════════════════════════════════════════════════════════
+function renderHome(app) {
+  const d   = GALLERY_DATA;
+  const s   = d.settings || {};
+  const featIds  = s.featuredSeriesIds || [];
+  const featured = featIds.map(id => d.series.find(x => x.id === id)).filter(Boolean);
+  const heroPrimary = featured[0];
+  const heroImg = heroPrimary && heroPrimary.cover ? heroPrimary.cover : null;
+
+  // Build hero
+  const heroHtml = `
+<section class="home-hero" id="home-hero" ${heroImg ? `onclick="navigate('/gallery/${heroPrimary.id}')"` : ''}>
+  ${heroImg
+    ? `<img class="home-hero-img" src="${heroImg}" alt="${heroPrimary.title}" loading="eager">`
+    : '<div class="home-hero-placeholder"></div>'}
+  <div class="home-hero-overlay"></div>
+  <div class="home-hero-content">
+    <div class="home-hero-eyebrow">Film Photography</div>
+    <h1 class="home-hero-title">Quiet <em>Frames</em><br>Studio</h1>
+    <p class="home-hero-tagline">${s.heroTagline || 'A study in quiet moments.'}</p>
+    <div class="home-hero-ctas">
+      <button class="cta-primary" onclick="event.stopPropagation();navigate('/work')">View Work</button>
+      <button class="cta-secondary" onclick="event.stopPropagation();navigate('/collect')">Collect Prints</button>
+    </div>
+  </div>
+  ${heroPrimary ? `<div class="home-hero-series-tag">${heroPrimary.title}</div>` : ''}
+</section>`;
+
+  // Build featured series cards (skip the hero one, show next 2-3)
+  const showSeries = featured.filter(s => s.cover).slice(0, 4);
+  const cardHtml = showSeries.map(ser => `
+<div class="series-card" onclick="navigate('/gallery/${ser.id}')" role="button" tabindex="0">
+  <div class="series-card-img">
+    <img src="${ser.cover}" alt="${ser.title}" loading="lazy">
+  </div>
+  <div class="series-card-body">
+    <div class="series-card-title">${ser.title}</div>
+    <div class="series-card-sub">${ser.subtitle || ''}</div>
+    <div class="tag-row">${seriesTags(ser).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+  </div>
+</div>`).join('');
+
+  const featuredBlock = showSeries.length > 0 ? `
+<section class="home-featured">
+  <div class="section-header">
+    <span class="section-label">Featured Series</span>
+    <a class="section-link" href="#/work" onclick="navigate('/work')">All series →</a>
+  </div>
+  <div class="featured-grid">${cardHtml}</div>
+</section>` : '';
+
+  app.innerHTML = heroHtml + featuredBlock + processStrip();
+}
+
+function seriesTags(ser) {
+  const tags = ser.tags || {};
+  const out = [];
+  if (tags.film && tags.film !== 'unknown' && tags.film !== 'mixed') out.push(fl(tags.film));
+  if (tags.format) out.push(tags.format);
+  (tags.subject || []).forEach(s => out.push(s));
+  return out;
+}
+
+function processStrip() {
+  return `
+<div class="process-strip">
+  <div class="process-quote">"Every frame is chosen by hand — against a lightbox, not a screen."</div>
+  <div class="process-detail">
+    Shot on 35mm, 6×7, 6×9 &amp; 4×5<br>
+    Epson V700 · Negative Lab Pro<br>
+    Hand-developed in small batches<br>
+    Limited edition prints available
+  </div>
+</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// VIEW: WORK (all series list)
+// ═══════════════════════════════════════════════════════════════════════
+function renderWork(app) {
+  const d = GALLERY_DATA;
+  const allSeries = d.series.filter(s => s.photoCount > 0 || s.cover);
+
+  const rowsHtml = allSeries.map(ser => {
+    const thumbHtml = ser.cover
+      ? `<img src="${ser.cover}" alt="${ser.title}" loading="lazy">`
+      : '<div class="ph"></div>';
+    const count = ser.photoCount || 0;
+    return `
+<div class="series-row" onclick="navigate('/gallery/${ser.id}')" role="button" tabindex="0">
+  <div class="series-row-thumb">${thumbHtml}</div>
+  <div class="series-row-info">
+    <div class="series-row-title">${ser.title}</div>
+    <div class="series-row-sub">${ser.subtitle || ''}</div>
+    <div class="series-row-count">${count} frame${count !== 1 ? 's' : ''}</div>
+  </div>
+  <div class="series-row-arrow">→</div>
+</div>`;
+  }).join('');
+
+  app.innerHTML = `
+<div class="gallery-view">
+  <div class="gallery-view-header">
+    <h1 class="page-title">The <em>Work</em></h1>
+    <p class="page-subtitle">Film photography across 35mm, medium format, and large format. New England and beyond.</p>
+  </div>
+  <div class="series-list">${rowsHtml || '<p style="color:var(--ink-light);padding:40px 0">No series yet.</p>'}</div>
+</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// VIEW: SERIES DETAIL
+// ═══════════════════════════════════════════════════════════════════════
+function renderSeries(app, id) {
+  const d   = GALLERY_DATA;
+  const ser = d.series.find(s => s.id === id);
+  if (!ser) { navigate('/work'); return; }
+
+  const photos = (d.photos || []).filter(p => (p.tags && p.tags.series) === id);
+  const CURATED_MAX = 18;
+  const curated = photos.slice(0, CURATED_MAX);
+
+  // Series meta
+  const tags = ser.tags || {};
+  const metaRows = [
+    tags.film   && tags.film !== 'unknown' ? ['Film',   fl(tags.film)] : null,
+    tags.format  ? ['Format', fmt(tags.format)] : null,
+    (tags.location||[]).length ? ['Location', (tags.location||[]).join(', ')] : null,
+    ser.photoCount ? ['Frames', `${ser.photoCount} photographs`] : null,
+  ].filter(Boolean).map(([lbl, val]) => `
+<div class="series-meta-row">
+  <span class="series-meta-label">${lbl}</span>
+  <span class="series-meta-value">${val}</span>
+</div>`).join('');
+
+  // Prev/next series
+  const allSeries = d.series.filter(s => s.photoCount > 0 || s.cover);
+  const idx = allSeries.findIndex(s => s.id === id);
+  const prev = idx > 0 ? allSeries[idx - 1] : null;
+  const next = idx < allSeries.length - 1 ? allSeries[idx + 1] : null;
+
+  // Photo grid
+  const gridHtml = curated.map((photo, i) => {
+    const isLandscape = photo.orientation === 'landscape';
+    return `
+<div class="series-photo-item${isLandscape ? ' landscape' : ''}"
+     onclick="openSeriesPhoto('${id}', '${photo.id}')"
+     role="button" tabindex="0"
+     aria-label="${photo.title || 'Photograph'}">
+  <img src="${photo.file}" alt="${photo.title || ser.title}" loading="lazy">
+  <div class="series-photo-item-overlay">
+    <span class="series-photo-item-label">${photo.title || ''}</span>
+  </div>
+</div>`;
+  }).join('');
+
+  const showMoreHtml = photos.length > CURATED_MAX ? `
+<div class="series-show-more">
+  <button class="btn-outline" onclick="showAllSeriesPhotos('${id}')">
+    View all ${photos.length} photographs in this series
+  </button>
+</div>` : '';
+
+  const navHtml = `
+<div class="series-nav-strip">
+  <div>
+    ${prev ? `<span class="series-nav-prev" onclick="navigate('/gallery/${prev.id}')">${prev.title}</span>` : '<span></span>'}
+  </div>
+  <div class="series-nav-title">${allSeries.length} Series</div>
+  <div>
+    ${next ? `<span class="series-nav-next" onclick="navigate('/gallery/${next.id}')">${next.title}</span>` : '<span></span>'}
+  </div>
+</div>`;
+
+  app.innerHTML = `
+<div class="series-detail">
+  <div class="series-detail-header">
+    <div>
+      <span class="breadcrumb" onclick="navigate('/work')">All Series</span>
+      <h1 class="series-detail-title">${ser.title}</h1>
+      <div class="series-detail-sub">${ser.subtitle || ''}</div>
+      <p class="series-detail-desc">${ser.description || ''}</p>
+    </div>
+    <div class="series-detail-meta">${metaRows}</div>
+  </div>
+  <div class="series-photo-grid" id="series-photo-grid">
+    ${photos.length === 0
+      ? '<p style="grid-column:1/-1;padding:64px 24px;text-align:center;font-family:Cormorant Garamond,serif;font-style:italic;color:var(--ink-light)">No photographs in this series yet.</p>'
+      : gridHtml}
+  </div>
+  ${showMoreHtml}
+  ${navHtml}
+</div>`;
+
+  // Set up lightbox context for this series
+  lb_photos = photos;
+}
+
+function showAllSeriesPhotos(id) {
+  const d = GALLERY_DATA;
+  const photos = (d.photos || []).filter(p => (p.tags && p.tags.series) === id);
+  const grid = document.getElementById('series-photo-grid');
+  if (!grid) return;
+
+  const gridHtml = photos.map((photo, i) => {
+    const isLandscape = photo.orientation === 'landscape';
+    return `
+<div class="series-photo-item${isLandscape ? ' landscape' : ''}"
+     onclick="openSeriesPhoto('${id}', '${photo.id}')"
+     role="button" tabindex="0">
+  <img src="${photo.file}" alt="${photo.title || ''}" loading="lazy">
+  <div class="series-photo-item-overlay">
+    <span class="series-photo-item-label">${photo.title || ''}</span>
+  </div>
+</div>`;
+  }).join('');
+
+  grid.innerHTML = gridHtml;
+  const showMore = document.querySelector('.series-show-more');
+  if (showMore) showMore.remove();
+  lb_photos = photos;
+}
+
+function openSeriesPhoto(seriesId, photoId) {
+  navigate('/photo/' + photoId);
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// VIEW: PHOTO DETAIL
+// ═══════════════════════════════════════════════════════════════════════
+function renderPhoto(app, id) {
+  const d     = GALLERY_DATA;
+  const photo = d.photos.find(p => p.id === id);
+  if (!photo) { navigate('/work'); return; }
+
+  const tags  = photo.tags || {};
+  const ser   = d.series.find(s => s.id === tags.series);
+  const seriesPhotos = ser
+    ? d.photos.filter(p => p.tags && p.tags.series === tags.series)
+    : [];
+  const photoIdx = seriesPhotos.findIndex(p => p.id === id);
+  const prevPhoto = photoIdx > 0 ? seriesPhotos[photoIdx - 1] : null;
+  const nextPhoto = photoIdx < seriesPhotos.length - 1 ? seriesPhotos[photoIdx + 1] : null;
+
+  // Metadata rows
+  const metaData = [
+    tags.film   && tags.film !== 'unknown' ? ['Film',    fl(tags.film)] : null,
+    tags.format  ? ['Format', fmt(tags.format)] : null,
+    tags.camera  ? ['Camera', cam(tags.camera)] : null,
+    (tags.location||[]).length ? ['Location', (tags.location||[]).join(', ')] : null,
+    photo.date   ? ['Year',   photo.date.substring(0,4)] : null,
+    tags.process ? ['Process', tags.process === 'bw' ? 'Black & White' : 'Color'] : null,
+  ].filter(Boolean);
+
+  const metaHtml = metaData.map(([lbl, val]) => `
+<div class="photo-meta-row">
+  <span class="photo-meta-label">${lbl}</span>
+  <span class="photo-meta-value">${val}</span>
+</div>`).join('');
+
+  // Print sizes
+  const printSizes = (d.settings && d.settings.printSizes) || [];
+  const sizeHtml = printSizes.map((ps, i) => `
+<button class="size-option${i === 0 ? ' selected' : ''}"
+    data-size="${ps.id}"
+    onclick="selectSize(this, '${ps.id}', ${ps.price})">
+  <div class="size-option-radio"></div>
+  <span class="size-option-label">${ps.label}</span>
+  <span class="size-option-price">$${ps.price}</span>
+</button>`).join('');
+
+  const printMedium = (d.settings && d.settings.printMedium) || 'Archival pigment on fine art paper';
+  const printNote   = (d.settings && d.settings.printNote)   || 'Each print is signed and numbered.';
+  const contactEmail = (d.settings && d.settings.contactEmail) || 'm.mcconnell3191@gmail.com';
+
+  const prevNextHtml = (prevPhoto || nextPhoto) ? `
+<div class="photo-prev-next">
+  <button class="photo-prev-btn"
+    ${prevPhoto ? `onclick="navigate('/photo/${prevPhoto.id}')"` : 'disabled style="opacity:0.3"'}>
+    Prev
+  </button>
+  <span class="photo-count-indicator">${photoIdx + 1} / ${seriesPhotos.length}</span>
+  <button class="photo-next-btn"
+    ${nextPhoto ? `onclick="navigate('/photo/${nextPhoto.id}')"` : 'disabled style="opacity:0.3"'}>
+    Next
+  </button>
+</div>` : '';
+
+  app.innerHTML = `
+<div class="photo-detail">
+  <div class="photo-detail-image-pane">
+    <img src="${photo.file}" alt="${photo.title || ''}" loading="eager">
+  </div>
+  <div class="photo-detail-panel">
+    <span class="photo-nav-back" onclick="${ser ? `navigate('/gallery/${ser.id}')` : `navigate('/work')`}">
+      ${ser ? ser.title : 'All Series'}
+    </span>
+    <h1 class="photo-detail-title">${photo.title || 'Untitled'}</h1>
+    ${ser ? `<div class="photo-detail-series">${ser.title}</div>` : ''}
+
+    <div class="photo-meta-block">${metaHtml}</div>
+
+    <div class="collect-block">
+      <div class="collect-block-title">Collect This Print</div>
+      <div class="size-options">${sizeHtml}</div>
+      <p class="collect-note">
+        ${printMedium}<br>
+        ${printNote}
+      </p>
+      <button class="btn-collect" id="collect-btn"
+        onclick="collectPrint('${photo.id}', '${photo.title || 'Untitled'}', '${(ser||{}).title || ''}', '${contactEmail}')">
+        Collect This Print →
+      </button>
+      <p class="collect-contact-note">
+        You'll be connected with the photographer directly.
+      </p>
+    </div>
+
+    ${prevNextHtml}
+  </div>
+</div>`;
+
+  // Set keyboard nav
+  lb_photos = seriesPhotos;
+  lb_index  = photoIdx;
+}
+
+function selectSize(btn, sizeId, price) {
+  document.querySelectorAll('.size-option').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function collectPrint(photoId, photoTitle, seriesTitle, email) {
+  const selected = document.querySelector('.size-option.selected');
+  const sizeLabel = selected ? selected.querySelector('.size-option-label').textContent : 'print';
+  const subject   = encodeURIComponent(`Print Inquiry — ${photoTitle}`);
+  const body      = encodeURIComponent(
+    `Hi,\n\nI'm interested in collecting the ${sizeLabel} of "${photoTitle}"${seriesTitle ? ` (${seriesTitle} series)` : ''}.\n\nCould you please send me details on availability and next steps?\n\nThank you.`
+  );
+  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// VIEW: COLLECT
+// ═══════════════════════════════════════════════════════════════════════
+function renderCollect(app) {
+  const d = GALLERY_DATA;
+  const s = d.settings || {};
+  const printSizes  = s.printSizes  || [];
+  const printMedium = s.printMedium || 'Hahnemühle Photo Rag 308gsm · Archival pigment';
+  const contactEmail = s.contactEmail || 'm.mcconnell3191@gmail.com';
+
+  const specCards = printSizes.map(ps => `
+<div class="print-spec-card">
+  <div class="print-spec-size">${ps.label}</div>
+  <div class="print-spec-divider"></div>
+  <div class="print-spec-price">$${ps.price}</div>
+  <div class="print-spec-edition">Edition of ${ps.edition} · Signed &amp; numbered</div>
+</div>`).join('');
+
+  const collectEmail = encodeURIComponent('Print Inquiry — Quiet Frames Studio');
+  const collectBody  = encodeURIComponent('Hi,\n\nI\'m interested in collecting one of your prints. Could you please tell me more about availability?\n\nThank you.');
+
+  app.innerHTML = `
+<div class="collect-page">
+  <div class="collect-page-header">
+    <h1 class="collect-page-title">Collect a <em>Print</em></h1>
+    <div class="collect-page-intro">
+      <p>All prints are made on Hahnemühle Photo Rag 308gsm using archival pigment inks — the same paper used by museum collections and fine art institutions worldwide.</p>
+      <p>Each print is personally signed and numbered by the photographer. Editions are strictly limited and will not be reprinted once sold through.</p>
+    </div>
+  </div>
+
+  <div class="print-specs-grid">${specCards}</div>
+
+  <div class="collect-process">
+    <div class="collect-process-text">
+      <h2 class="collect-process-title">The Print Process</h2>
+      <div class="collect-process-body">
+        <p>Every print begins as an analog negative — hand-developed in my home darkroom. The negatives are scanned on an Epson V700 at full resolution and processed using Negative Lab Pro, preserving the grain, tone, and character of the original film.</p>
+        <p>Prints are produced at a professional fine art lab on Hahnemühle Photo Rag 308gsm — a 100% cotton rag paper with a warm, matte surface that suits the analog aesthetic of the work. No glossy finishes, no digital sharpening. The prints look like what they are: film photographs.</p>
+        <p>I inspect and hand-sign every print before it ships. If you receive a print with any defect, I will replace it.</p>
       </div>
-      <div class="series-card-body">
-        <div class="series-card-title">${s.title}</div>
-        <div class="series-card-sub">${s.subtitle || (s.photoCount ? `${s.photoCount} frames` : '')}</div>
-        <div class="tag-row">${tagPills}</div>
-      </div>`;
-    grid.appendChild(card);
-  });
-}
-
-// ── RENDER FILTER BAR ─────────────────────────────────────────────────
-let activeFilters = new Set();
-
-function renderFilterBar(data) {
-  const bar = document.getElementById('filter-bar');
-  const allBtn = document.createElement('button');
-  allBtn.className = 'pill on';
-  allBtn.textContent = 'All';
-  allBtn.dataset.filter = 'all';
-  allBtn.onclick = () => toggleFilter(allBtn);
-  bar.appendChild(allBtn);
-
-  (data.filterGroups || []).forEach((group, gi) => {
-    if (gi > 0) {
-      const sep = document.createElement('div');
-      sep.className = 'filter-sep';
-      bar.appendChild(sep);
-    }
-    const lbl = document.createElement('span');
-    lbl.className = 'filter-group-lbl';
-    lbl.textContent = group.label;
-    bar.appendChild(lbl);
-
-    group.filters.forEach(f => {
-      const btn = document.createElement('button');
-      btn.className = 'pill';
-      btn.textContent = f.label;
-      btn.dataset.filter = f.id;
-      btn.onclick = () => toggleFilter(btn);
-      bar.appendChild(btn);
-    });
-  });
-}
-
-function toggleFilter(btn) {
-  const val = btn.dataset.filter;
-  if (val === 'all') {
-    activeFilters.clear();
-    document.querySelectorAll('.pill').forEach(p => p.classList.remove('on'));
-    btn.classList.add('on');
-  } else {
-    document.querySelector('.pill[data-filter="all"]').classList.remove('on');
-    btn.classList.toggle('on');
-    if (btn.classList.contains('on')) activeFilters.add(val);
-    else {
-      activeFilters.delete(val);
-      if (activeFilters.size === 0)
-        document.querySelector('.pill[data-filter="all"]').classList.add('on');
-    }
-  }
-  applyFilters();
-}
-
-function applyFilters() {
-  document.querySelectorAll('.arch-item').forEach(item => {
-    if (activeFilters.size === 0) { item.classList.remove('hidden'); return; }
-    const tags = JSON.parse(item.dataset.tags || '[]');
-    const match = [...activeFilters].some(f => tags.includes(f));
-    item.classList.toggle('hidden', !match);
-  });
-}
-
-// ── RENDER ARCHIVE GRID ───────────────────────────────────────────────
-function renderArchive(data) {
-  const grid = document.getElementById('archive-grid');
-
-  if (!data.photos || data.photos.length === 0) {
-    grid.innerHTML = `<div class="archive-empty">
-      Archive is empty
-      <small>Upload photos via the portfolio upload skill</small>
-    </div>`;
-    return;
-  }
-
-  // aspect ratio cycling
-  const aspectCycle = ['3/4', '4/5', '2/3', '1/1', '3/4', '4/5'];
-
-  data.photos.forEach((photo, i) => {
-    const tags = photo.tags || {};
-    const allTagIds = [
-      ...(tags.subject  || []),
-      tags.film   || '',
-      tags.format || '',
-      tags.process || '',
-      ...(tags.location || []),
-      tags.series || '',
-    ].filter(Boolean);
-
-    const filmStr   = filmLabel(tags.film || '');
-    const formatStr = formatLabel(tags.format || '');
-    const metaStr   = [filmStr, formatStr].filter(Boolean).join(' · ');
-    const aspect    = aspectCycle[i % aspectCycle.length];
-
-    const item = document.createElement('div');
-    item.className = 'arch-item';
-    item.dataset.tags = JSON.stringify(allTagIds);
-    item.onclick = () => openLightbox(photo);
-
-    item.innerHTML = `
-      <div class="arch-photo" style="aspect-ratio:${aspect}">
-        <img src="${photo.file}" alt="${photo.title || ''}" loading="lazy"
-             style="width:100%;height:100%;object-fit:cover">
+    </div>
+    <div class="collect-specs-list">
+      <div class="collect-spec-item">
+        <span class="collect-spec-label">Paper</span>
+        <span class="collect-spec-value">Hahnemühle Photo Rag 308gsm</span>
       </div>
-      <div class="arch-meta">
-        <span class="arch-name">${photo.title || ''}</span>
-        <span class="arch-film">${metaStr}</span>
-      </div>`;
-    grid.appendChild(item);
-  });
+      <div class="collect-spec-item">
+        <span class="collect-spec-label">Process</span>
+        <span class="collect-spec-value">Archival pigment ink</span>
+      </div>
+      <div class="collect-spec-item">
+        <span class="collect-spec-label">Finish</span>
+        <span class="collect-spec-value">Matte (no OBA)</span>
+      </div>
+      <div class="collect-spec-item">
+        <span class="collect-spec-label">Longevity</span>
+        <span class="collect-spec-value">100+ year archival rating</span>
+      </div>
+      <div class="collect-spec-item">
+        <span class="collect-spec-label">Signature</span>
+        <span class="collect-spec-value">Hand-signed &amp; numbered by photographer</span>
+      </div>
+      <div class="collect-spec-item">
+        <span class="collect-spec-label">Framing</span>
+        <span class="collect-spec-value">Available on request</span>
+      </div>
+      <div class="collect-spec-item">
+        <span class="collect-spec-label">Shipping</span>
+        <span class="collect-spec-value">Flat-packed, insured, tracked</span>
+      </div>
+      <div class="collect-spec-item">
+        <span class="collect-spec-label">Returns</span>
+        <span class="collect-spec-value">Defects replaced at no cost</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="collect-cta-block">
+    <h2 class="collect-cta-title">Interested in a print?</h2>
+    <p class="collect-cta-sub">Browse the work and collect directly from individual image pages, or reach out to discuss.</p>
+    <a class="btn-primary-dark"
+       href="mailto:${contactEmail}?subject=${collectEmail}&body=${collectBody}">
+      Get in Touch →
+    </a>
+  </div>
+</div>`;
 }
 
-// ── LIGHTBOX ──────────────────────────────────────────────────────────
-function openLightbox(photo) {
-  const lb    = document.getElementById('lightbox');
+// ═══════════════════════════════════════════════════════════════════════
+// VIEW: ABOUT
+// ═══════════════════════════════════════════════════════════════════════
+function renderAbout(app) {
+  const d = GALLERY_DATA;
+  const s = d.settings || {};
+  const igUrl = s.instagramUrl || '#';
+
+  app.innerHTML = `
+<div class="about-view">
+  <div class="about-left">
+    <h1 class="about-headline">Shooting<br><em>film</em><br>slowly.</h1>
+  </div>
+  <div class="about-right">
+    <div class="about-body">
+      <p>I'm a film photographer based just outside of Boston, working across 35mm, medium format, and 4×5. Most of my work is made within an hour or two of home — city streets, coastlines, parks, and the quiet in-between spaces that don't announce themselves.</p>
+      <p>I shoot film because it's a choice, not a nostalgia trip. In a world where a single memory card can hold thousands of images, I'd rather load a roll of 36 and stop there. That constraint isn't a limitation — it's the whole point. When you know you have 36 frames, or 12, or 8, you slow down. You look longer before you lift the camera. You think about the light, the moment, whether this is actually the frame. That deliberateness changes what you see and what you make.</p>
+      <p>The same is true of the tools. An old camera with a prime lens doesn't autofocus, doesn't bracket exposures, doesn't do the thinking for you. Every decision is yours — focus, aperture, timing. That friction is what I'm after.</p>
+      <p>And then there's what comes after the shoot. I develop my own black and white and color film at home. I watch the images emerge from the tank. I cut the negatives, scan them, process them. The whole sequence takes time, and it can't be rushed. That's not inconvenience — that's the ritual. There's something meditative about a process that demands your full attention and gives you no shortcuts. At the end of it, I have something physical: a strip of film I can hold up to the light.</p>
+      <p>My work tends to live in quiet moments — subtle light, everyday interactions, the kind of intimacy that exists in public spaces without announcing itself. Even when my family isn't in the frame, they're often part of the moment.</p>
+      <p>I'm less interested in perfect images and more interested in honest ones.</p>
+      <p>Prints are available. If you'd like to discuss a purchase or commission, I'd love to hear from you.</p>
+    </div>
+    <a href="${igUrl}" target="_blank" rel="noopener" class="text-link" id="insta-link">Instagram →</a>
+  </div>
+</div>
+${processStrip()}`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// LIGHTBOX (used from archive/work browse)
+// ═══════════════════════════════════════════════════════════════════════
+function openLightbox(photo, photos, idx) {
+  lb_photos = photos || [];
+  lb_index  = idx || 0;
+  _showLightboxPhoto(photo);
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function _showLightboxPhoto(photo) {
   const img   = document.getElementById('lb-img');
   const meta  = document.getElementById('lb-meta');
   const tags  = photo.tags || {};
-  img.src     = photo.file;
-  img.alt     = photo.title || '';
+  img.src = photo.file;
+  img.alt = photo.title || '';
+
   const parts = [
-    photo.title,
-    filmLabel(tags.film || ''),
-    formatLabel(tags.format || ''),
-    photo.date,
+    photo.title || '',
+    fl(tags.film || ''),
+    tags.format || '',
   ].filter(Boolean);
   meta.textContent = parts.join(' · ');
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
+
+  const email   = (GALLERY_DATA.settings||{}).contactEmail || 'm.mcconnell3191@gmail.com';
+  const subject = encodeURIComponent(`Print Inquiry — ${photo.title || 'Untitled'}`);
+  const body    = encodeURIComponent(`Hi,\n\nI'm interested in collecting a print of "${photo.title || 'this photograph'}".\n\nCould you please send details on sizing and availability?\n\nThank you.`);
+  document.getElementById('lb-collect').onclick = () => {
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  };
+
+  const prevEl = document.getElementById('lb-prev');
+  const nextEl = document.getElementById('lb-next');
+  prevEl.style.display = lb_index > 0 ? '' : 'none';
+  nextEl.style.display = lb_index < lb_photos.length - 1 ? '' : 'none';
 }
+
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('open');
   document.body.style.overflow = '';
   document.getElementById('lb-img').src = '';
 }
+
+document.getElementById('lb-prev').onclick = () => {
+  if (lb_index > 0) { lb_index--; _showLightboxPhoto(lb_photos[lb_index]); }
+};
+document.getElementById('lb-next').onclick = () => {
+  if (lb_index < lb_photos.length - 1) { lb_index++; _showLightboxPhoto(lb_photos[lb_index]); }
+};
 document.getElementById('lightbox').addEventListener('click', function(e) {
   if (e.target === this) closeLightbox();
 });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft'  && lb_index > 0) { lb_index--; _showLightboxPhoto(lb_photos[lb_index]); }
+  if (e.key === 'ArrowRight' && lb_index < lb_photos.length - 1) { lb_index++; _showLightboxPhoto(lb_photos[lb_index]); }
+});
 
-// ── SERIES PAGE (scroll to series in archive) ─────────────────────────
-function openSeries(seriesId) {
-  // For now, scroll to archive and activate the series filter
-  document.getElementById('archive-section').scrollIntoView({ behavior: 'smooth' });
-}
-
-// ── SETTINGS ──────────────────────────────────────────────────────────
-function applySettings(data) {
-  const s = data.settings || {};
-  if (s.instagramUrl) {
-    document.getElementById('insta-link').href = s.instagramUrl;
-    document.getElementById('ft-insta').href   = s.instagramUrl;
-  }
-  const year = new Date().getFullYear();
-  document.getElementById('footer-copy').textContent = `© ${year} Quiet Frames Studio`;
-}
-
-// ── THEME TOGGLE ──────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════════════
+// THEME
+// ═══════════════════════════════════════════════════════════════════════
 function initTheme() {
-  // Check localStorage for saved preference
-  const saved = localStorage.getItem('quiet-frames-theme');
-  // Check system preference
+  const saved  = localStorage.getItem('quiet-frames-theme');
   const prefer = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  const theme = saved || prefer;
-
-  applyTheme(theme);
+  applyTheme(saved || prefer);
 }
-
 function applyTheme(theme) {
   if (theme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -829,40 +1553,65 @@ function applyTheme(theme) {
   }
   localStorage.setItem('quiet-frames-theme', theme);
 }
-
 function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  applyTheme(next);
+  applyTheme(current === 'dark' ? 'light' : 'dark');
 }
-
-// Theme toggle button
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-
-// Initialize theme on load
 initTheme();
 
-// ── MAIN INIT ─────────────────────────────────────────────────────────
-fetch('gallery-data.json')
-  .then(r => {
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return r.json();
-  })
-  .then(data => {
-    applySettings(data);
-    renderHero(data);
-    renderSeriesGrid(data);
-    renderFilterBar(data);
-    renderArchive(data);
+// ═══════════════════════════════════════════════════════════════════════
+// MOBILE NAV
+// ═══════════════════════════════════════════════════════════════════════
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobile-nav').classList.toggle('open');
+});
+function closeMobileNav() {
+  document.getElementById('mobile-nav').classList.remove('open');
+}
 
-    // Fade out loading screen
+// ═══════════════════════════════════════════════════════════════════════
+// SETTINGS (footer links, contact)
+// ═══════════════════════════════════════════════════════════════════════
+function applySettings(d) {
+  const s = d.settings || {};
+  const email = s.contactEmail || 'm.mcconnell3191@gmail.com';
+  const ig    = s.instagramUrl || '#';
+
+  // Footer
+  const ftInsta = document.getElementById('ft-insta');
+  if (ftInsta) { ftInsta.href = ig; ftInsta.target = '_blank'; ftInsta.rel = 'noopener'; }
+  const ftContact = document.getElementById('ft-contact');
+  if (ftContact) ftContact.href = `mailto:${email}`;
+  document.getElementById('footer-copy').textContent = `© ${new Date().getFullYear()} Quiet Frames Studio`;
+
+  // Mobile contact
+  const mobContact = document.getElementById('mobile-contact');
+  if (mobContact) mobContact.href = `mailto:${email}`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════════
+fetch('gallery-data.json')
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then(data => {
+    GALLERY_DATA = data;
+    applySettings(data);
+    route();
+
     const loader = document.getElementById('loading');
     loader.classList.add('done');
-    setTimeout(() => loader.remove(), 500);
+    setTimeout(() => loader.remove(), 600);
   })
   .catch(err => {
     console.error('Could not load gallery-data.json:', err);
-    document.getElementById('loading').classList.add('done');
+    const loader = document.getElementById('loading');
+    if (loader) loader.classList.add('done');
+    document.getElementById('app').innerHTML = `
+      <div style="padding:80px 52px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--ink-light)">
+        Unable to load gallery data.
+      </div>`;
   });
 </script>
 
