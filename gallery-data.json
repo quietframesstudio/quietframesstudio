@@ -1,0 +1,5304 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "site": "Quiet Frames Studio",
+    "photographer": "Michael J McConnell",
+    "updated": "2026-03-29",
+    "note": "This file is the source of truth for all portfolio content. The upload skill updates it automatically.",
+    "photosAdded": 236
+  },
+  "settings": {
+    "featuredSeriesIds": [
+      "texture-dormancy",
+      "intimacy",
+      "coastal"
+    ],
+    "archiveLabel": "Archive",
+    "contactEmail": "hello@quietframesstudio.com",
+    "instagramUrl": "https://instagram.com/quietframesphotos",
+    "printInquiriesText": "For print inquiries, please get in touch.",
+    "heroTagline": "A study in quiet moments.",
+    "printSizes": [
+      {
+        "id": "8x10",
+        "label": "8 × 10\"",
+        "price": 75,
+        "edition": 25,
+        "stripeUrl": "https://buy.stripe.com/bJe14h5KI7ht1ds8o42kw00",
+        "stripeProductId": "prod_UErmKzBMDhecnD",
+        "stripePriceId": "price_1TGO3D9kczdEn9JNtKxAiqd1"
+      },
+      {
+        "id": "16x20",
+        "label": "16 × 20\"",
+        "price": 150,
+        "edition": 25,
+        "stripeUrl": "https://buy.stripe.com/9B614h0qocBN9JY9s82kw01",
+        "stripeProductId": "prod_UErmpGhn46WA4V",
+        "stripePriceId": "price_1TGO3E9kczdEn9JNJr8ql9Oa"
+      },
+      {
+        "id": "24x30",
+        "label": "24 × 30\"",
+        "price": 300,
+        "edition": 15,
+        "stripeUrl": "https://buy.stripe.com/aFa7sFb5245h7BQ0VC2kw02",
+        "stripeProductId": "prod_UErmbtuVK6xT3K",
+        "stripePriceId": "price_1TGO3G9kczdEn9JNOu9SYPco"
+      },
+      {
+        "id": "20x24",
+        "label": "20 × 24\" (Premium)",
+        "price": 425,
+        "edition": 10,
+        "stripeUrl": "https://buy.stripe.com/eVq00d0qofNZ4pE33K2kw03",
+        "stripeProductId": "prod_UErmV9vEloNxv7",
+        "stripePriceId": "price_1TGO3H9kczdEn9JNYdYYX9ny"
+      }
+    ],
+    "printMedium": "Hahnemühle Photo Rag 308gsm · Archival pigment",
+    "printNote": "Each print is signed and numbered. Editions are strictly limited."
+  },
+  "series": [
+    {
+      "id": "texture-dormancy",
+      "title": "Texture & Dormancy",
+      "subtitle": "Winter — New England, 2025",
+      "description": "Winter landscapes and still forms shot across New England in late 2025. Organic textures, bare structure, quiet light.",
+      "featured": true,
+      "cover": "images/texture-dormancy/texture-dormancy-001.jpg",
+      "photoCount": 19,
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "medium-format",
+        "location": [
+          "new-england",
+          "massachusetts"
+        ]
+      }
+    },
+    {
+      "id": "savannah-2026",
+      "title": "Savannah 2026",
+      "subtitle": "Savannah, GA — Early 2026",
+      "description": "Street life and architecture in the American South. Shot across multiple film stocks.",
+      "featured": true,
+      "cover": "",
+      "photoCount": 28,
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "location": [
+          "savannah"
+        ]
+      }
+    },
+    {
+      "id": "intimacy",
+      "title": "Intimacy",
+      "subtitle": "Portraits — Medium Format",
+      "description": "An observation of intimate moments shared in public spaces among complete strangers.",
+      "featured": true,
+      "cover": "images/intimacy/intimacy-001.jpg",
+      "photoCount": 5,
+      "tags": {
+        "subject": [
+          "portrait"
+        ],
+        "film": "portra-400",
+        "format": "6x7",
+        "location": []
+      }
+    },
+    {
+      "id": "quincy-quarries",
+      "title": "Quincy Quarries",
+      "subtitle": "Quincy, MA",
+      "description": "An industrial landscape reclaimed by time and water. Granite, shadow, and the geometry of abandonment.",
+      "featured": false,
+      "cover": "images/quincy-quarries/quincy-quarries-001.jpg",
+      "photoCount": 11,
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "portra-800",
+        "format": "35mm",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ]
+      }
+    },
+    {
+      "id": "lomo-purple-series",
+      "title": "Through the Purple",
+      "subtitle": "Lomography Purple — Parks & Outdoor",
+      "description": "Shot on Lomography Purple, a film that swaps the green channel for violet — grass and foliage render in purple and magenta. An unmistakable, otherworldly palette.",
+      "featured": false,
+      "cover": "images/lomo-purple-series/lomo-purple-series-001.jpg",
+      "photoCount": 10,
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "lomo-purple",
+        "format": "35mm",
+        "location": [
+          "massachusetts"
+        ]
+      }
+    },
+    {
+      "id": "sfx-infrared",
+      "title": "SFX Infrared",
+      "subtitle": "Ilford SFX with red filter",
+      "description": "Ilford SFX with a deep red filter — foliage rendered white, skies near black. A different kind of seeing.",
+      "featured": false,
+      "cover": "",
+      "photoCount": 0,
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "sfx",
+        "format": "35mm",
+        "location": []
+      }
+    },
+    {
+      "id": "coastal",
+      "title": "Coastal New England",
+      "subtitle": "New England Coastline",
+      "description": "Rocky shorelines, lighthouses, harbors. The New England coast in black and white.",
+      "featured": false,
+      "cover": "images/coastal/coastal-001.jpg",
+      "photoCount": 15,
+      "tags": {
+        "subject": [
+          "coastal",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "location": [
+          "coastal-ne",
+          "new-england"
+        ]
+      }
+    },
+    {
+      "id": "2025-seasons",
+      "title": "2025 Seasons",
+      "subtitle": "A year of shooting",
+      "description": "A year-long study shot on 35mm, medium format, and 4×5 large format across New England and beyond.",
+      "featured": false,
+      "cover": "images/2025-seasons/2025-seasons-001.jpg",
+      "photoCount": 134,
+      "tags": {
+        "subject": [
+          "landscape",
+          "street",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "mixed",
+        "location": [
+          "new-england"
+        ]
+      }
+    },
+    {
+      "id": "portraits",
+      "title": "Portraits",
+      "subtitle": "",
+      "description": "",
+      "featured": false,
+      "cover": "",
+      "photoCount": 2,
+      "tags": {
+        "subject": [
+          "portrait"
+        ],
+        "film": "mixed",
+        "format": "mixed",
+        "location": []
+      }
+    },
+    {
+      "id": "the-light-unseen",
+      "title": "The Light Unseen (Infrared Study)",
+      "subtitle": "",
+      "description": "",
+      "featured": false,
+      "cover": "",
+      "photoCount": 12,
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "infrared",
+        "format": "mixed",
+        "location": []
+      }
+    }
+  ],
+  "filterGroups": [
+    {
+      "id": "subject",
+      "label": "Subject",
+      "filters": [
+        {
+          "id": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "id": "street",
+          "label": "Street"
+        },
+        {
+          "id": "landscape",
+          "label": "Landscape"
+        },
+        {
+          "id": "architecture",
+          "label": "Architecture"
+        },
+        {
+          "id": "coastal",
+          "label": "Coastal"
+        },
+        {
+          "id": "nature",
+          "label": "Nature"
+        },
+        {
+          "id": "still-life",
+          "label": "Still Life"
+        }
+      ]
+    },
+    {
+      "id": "film",
+      "label": "Film",
+      "filters": [
+        {
+          "id": "hp5",
+          "label": "Ilford HP5"
+        },
+        {
+          "id": "fp4",
+          "label": "Ilford FP4"
+        },
+        {
+          "id": "sfx",
+          "label": "SFX Infrared"
+        },
+        {
+          "id": "pan-f",
+          "label": "Pan F Plus 50"
+        },
+        {
+          "id": "portra-400",
+          "label": "Kodak Portra 400"
+        },
+        {
+          "id": "portra-800",
+          "label": "Kodak Portra 800"
+        },
+        {
+          "id": "kodacolor-200",
+          "label": "KodaColor 200"
+        },
+        {
+          "id": "provia-100f",
+          "label": "Fuji Provia 100F"
+        },
+        {
+          "id": "cinestill-800t",
+          "label": "Cinestill 800T"
+        },
+        {
+          "id": "lomo-purple",
+          "label": "Lomography Purple"
+        },
+        {
+          "id": "ektar-100",
+          "label": "Kodak Ektar 100"
+        }
+      ]
+    },
+    {
+      "id": "format",
+      "label": "Format",
+      "filters": [
+        {
+          "id": "35mm",
+          "label": "35mm"
+        },
+        {
+          "id": "6x7",
+          "label": "6×7 Medium Format"
+        },
+        {
+          "id": "6x9",
+          "label": "6×9 Medium Format"
+        },
+        {
+          "id": "4x5",
+          "label": "4×5 Large Format"
+        }
+      ]
+    },
+    {
+      "id": "location",
+      "label": "Place",
+      "filters": [
+        {
+          "id": "new-england",
+          "label": "New England"
+        },
+        {
+          "id": "massachusetts",
+          "label": "Massachusetts"
+        },
+        {
+          "id": "boston",
+          "label": "Boston"
+        },
+        {
+          "id": "quincy",
+          "label": "Quincy, MA"
+        },
+        {
+          "id": "savannah",
+          "label": "Savannah, GA"
+        },
+        {
+          "id": "texas",
+          "label": "Texas"
+        },
+        {
+          "id": "coastal-ne",
+          "label": "Coastal NE"
+        }
+      ]
+    }
+  ],
+  "photos": [
+    {
+      "id": "qu-001",
+      "file": "images/quincy-quarries/quincy-quarries-001.jpg",
+      "title": "Quincy Quarries #001",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "qu-002",
+      "file": "images/quincy-quarries/quincy-quarries-002.jpg",
+      "title": "Quincy Quarries #002",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "qu-003",
+      "file": "images/quincy-quarries/quincy-quarries-003.jpg",
+      "title": "Quincy Quarries #003",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "qu-004",
+      "file": "images/quincy-quarries/quincy-quarries-004.jpg",
+      "title": "Quincy Quarries #004",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "ektar-100",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "qu-005",
+      "file": "images/quincy-quarries/quincy-quarries-005.jpg",
+      "title": "Quincy Quarries #005",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-002",
+      "file": "images/2025-seasons/2025-seasons-002.jpg",
+      "title": "2025 Seasons #002",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape",
+          "still-life"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-003",
+      "file": "images/2025-seasons/2025-seasons-003.jpg",
+      "title": "2025 Seasons #003",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape",
+          "still-life"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-004",
+      "file": "images/2025-seasons/2025-seasons-004.jpg",
+      "title": "2025 Seasons #004",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape",
+          "still-life"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-005",
+      "file": "images/2025-seasons/2025-seasons-005.jpg",
+      "title": "2025 Seasons #005",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape",
+          "still-life"
+        ],
+        "film": "hp5",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-006",
+      "file": "images/2025-seasons/2025-seasons-006.jpg",
+      "title": "2025 Seasons #006",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape",
+          "still-life"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-007",
+      "file": "images/2025-seasons/2025-seasons-007.jpg",
+      "title": "2025 Seasons #007",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape",
+          "still-life"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-008",
+      "file": "images/2025-seasons/2025-seasons-008.jpg",
+      "title": "2025 Seasons #008",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "architecture"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-009",
+      "file": "images/2025-seasons/2025-seasons-009.jpg",
+      "title": "2025 Seasons #009",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-010",
+      "file": "images/2025-seasons/2025-seasons-010.jpg",
+      "title": "2025 Seasons #010",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-011",
+      "file": "images/2025-seasons/2025-seasons-011.jpg",
+      "title": "2025 Seasons #011",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-012",
+      "file": "images/2025-seasons/2025-seasons-012.jpg",
+      "title": "2025 Seasons #012",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-013",
+      "file": "images/2025-seasons/2025-seasons-013.jpg",
+      "title": "2025 Seasons #013",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-014",
+      "file": "images/2025-seasons/2025-seasons-014.jpg",
+      "title": "2025 Seasons #014",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-015",
+      "file": "images/2025-seasons/2025-seasons-015.jpg",
+      "title": "2025 Seasons #015",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-016",
+      "file": "images/2025-seasons/2025-seasons-016.jpg",
+      "title": "2025 Seasons #016",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-017",
+      "file": "images/2025-seasons/2025-seasons-017.jpg",
+      "title": "2025 Seasons #017",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-018",
+      "file": "images/2025-seasons/2025-seasons-018.jpg",
+      "title": "2025 Seasons #018",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-019",
+      "file": "images/2025-seasons/2025-seasons-019.jpg",
+      "title": "2025 Seasons #019",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "portra-400",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-020",
+      "file": "images/2025-seasons/2025-seasons-020.jpg",
+      "title": "2025 Seasons #020",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-021",
+      "file": "images/2025-seasons/2025-seasons-021.jpg",
+      "title": "2025 Seasons #021",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-022",
+      "file": "images/2025-seasons/2025-seasons-022.jpg",
+      "title": "2025 Seasons #022",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-023",
+      "file": "images/2025-seasons/2025-seasons-023.jpg",
+      "title": "2025 Seasons #023",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-024",
+      "file": "images/2025-seasons/2025-seasons-024.jpg",
+      "title": "2025 Seasons #024",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-025",
+      "file": "images/2025-seasons/2025-seasons-025.jpg",
+      "title": "2025 Seasons #025",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-026",
+      "file": "images/2025-seasons/2025-seasons-026.jpg",
+      "title": "2025 Seasons #026",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-027",
+      "file": "images/2025-seasons/2025-seasons-027.jpg",
+      "title": "2025 Seasons #027",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-028",
+      "file": "images/2025-seasons/2025-seasons-028.jpg",
+      "title": "2025 Seasons #028",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-029",
+      "file": "images/2025-seasons/2025-seasons-029.jpg",
+      "title": "2025 Seasons #029",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-030",
+      "file": "images/2025-seasons/2025-seasons-030.jpg",
+      "title": "2025 Seasons #030",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "cinestill-800t",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "lo-001",
+      "file": "images/lomo-purple-series/lomo-purple-series-001.jpg",
+      "title": "Lomo Purple Series #001",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-003",
+      "file": "images/lomo-purple-series/lomo-purple-series-003.jpg",
+      "title": "Lomo Purple Series #003",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-004",
+      "file": "images/lomo-purple-series/lomo-purple-series-004.jpg",
+      "title": "Lomo Purple Series #004",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-005",
+      "file": "images/lomo-purple-series/lomo-purple-series-005.jpg",
+      "title": "Lomo Purple Series #005",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "20-032",
+      "file": "images/2025-seasons/2025-seasons-032.jpg",
+      "title": "2025 Seasons #032",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-034",
+      "file": "images/2025-seasons/2025-seasons-034.jpg",
+      "title": "2025 Seasons #034",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-035",
+      "file": "images/2025-seasons/2025-seasons-035.jpg",
+      "title": "2025 Seasons #035",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-036",
+      "file": "images/2025-seasons/2025-seasons-036.jpg",
+      "title": "2025 Seasons #036",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-037",
+      "file": "images/2025-seasons/2025-seasons-037.jpg",
+      "title": "2025 Seasons #037",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-038",
+      "file": "images/2025-seasons/2025-seasons-038.jpg",
+      "title": "2025 Seasons #038",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-039",
+      "file": "images/2025-seasons/2025-seasons-039.jpg",
+      "title": "2025 Seasons #039",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-040",
+      "file": "images/2025-seasons/2025-seasons-040.jpg",
+      "title": "2025 Seasons #040",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-042",
+      "file": "images/2025-seasons/2025-seasons-042.jpg",
+      "title": "2025 Seasons #042",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-043",
+      "file": "images/2025-seasons/2025-seasons-043.jpg",
+      "title": "2025 Seasons #043",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "portra-400",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-044",
+      "file": "images/2025-seasons/2025-seasons-044.jpg",
+      "title": "2025 Seasons #044",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "portra-400",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-045",
+      "file": "images/2025-seasons/2025-seasons-045.jpg",
+      "title": "2025 Seasons #045",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "portra-400",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-046",
+      "file": "images/2025-seasons/2025-seasons-046.jpg",
+      "title": "2025 Seasons #046",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "portra-400",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "co-001",
+      "file": "images/coastal/coastal-001.jpg",
+      "title": "Coastal #001",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "coastal-ne",
+          "massachusetts"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-002",
+      "file": "images/coastal/coastal-002.jpg",
+      "title": "Coastal #002",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston-public-gardens",
+          "massachusetts"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-003",
+      "file": "images/coastal/coastal-003.jpg",
+      "title": "Coastal #003",
+      "date": "2025",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston-public-gardens",
+          "massachusetts"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-004",
+      "file": "images/coastal/coastal-004.jpg",
+      "title": "Coastal #004",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston-public-gardens",
+          "massachusetts"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-005",
+      "file": "images/coastal/coastal-005.jpg",
+      "title": "Coastal #005",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "copley-square",
+          "massachusetts"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-006",
+      "file": "images/coastal/coastal-006.jpg",
+      "title": "Coastal #006",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "york-maine",
+          "new-england"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-007",
+      "file": "images/coastal/coastal-007.jpg",
+      "title": "Coastal #007",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "york-maine",
+          "new-england"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-008",
+      "file": "images/coastal/coastal-008.jpg",
+      "title": "Coastal #008",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "york-maine",
+          "new-england"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-009",
+      "file": "images/coastal/coastal-009.jpg",
+      "title": "Coastal #009",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "645",
+        "camera": "mamiya-645-1000s",
+        "location": [
+          "york-maine",
+          "new-england"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-010",
+      "file": "images/coastal/coastal-010.jpg",
+      "title": "Coastal #010",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "york-maine",
+          "new-england"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-011",
+      "file": "images/coastal/coastal-011.jpg",
+      "title": "Coastal #011",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "645",
+        "camera": "mamiya-645-1000s",
+        "location": [
+          "york-maine",
+          "new-england"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-012",
+      "file": "images/coastal/coastal-012.jpg",
+      "title": "Coastal #012",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "645",
+        "camera": "mamiya-645-1000s",
+        "location": [
+          "york-maine",
+          "new-england"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-013",
+      "file": "images/coastal/coastal-013.jpg",
+      "title": "Coastal #013",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "645",
+        "camera": "mamiya-645-1000s",
+        "location": [
+          "lexington",
+          "massachusetts"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-014",
+      "file": "images/coastal/coastal-014.jpg",
+      "title": "Coastal #014",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "645",
+        "camera": "mamiya-645-1000s",
+        "location": [
+          "lexington",
+          "massachusetts"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "co-016",
+      "file": "images/coastal/coastal-016.jpg",
+      "title": "Coastal #016",
+      "date": "2025",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "coastal",
+          "architecture"
+        ],
+        "film": "hp5",
+        "format": "645",
+        "camera": "mamiya-645-1000s",
+        "location": [
+          "boston-public-gardens",
+          "massachusetts"
+        ],
+        "series": "coastal",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-001",
+      "file": "images/texture-dormancy/texture-dormancy-001.jpg",
+      "title": "Texture Dormancy #001",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-002",
+      "file": "images/texture-dormancy/texture-dormancy-002.jpg",
+      "title": "Texture Dormancy #002",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-003",
+      "file": "images/texture-dormancy/texture-dormancy-003.jpg",
+      "title": "Texture Dormancy #003",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-004",
+      "file": "images/texture-dormancy/texture-dormancy-004.jpg",
+      "title": "Texture Dormancy #004",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-005",
+      "file": "images/texture-dormancy/texture-dormancy-005.jpg",
+      "title": "Texture Dormancy #005",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-006",
+      "file": "images/texture-dormancy/texture-dormancy-006.jpg",
+      "title": "Texture Dormancy #006",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-007",
+      "file": "images/texture-dormancy/texture-dormancy-007.jpg",
+      "title": "Texture Dormancy #007",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-008",
+      "file": "images/texture-dormancy/texture-dormancy-008.jpg",
+      "title": "Texture Dormancy #008",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-009",
+      "file": "images/texture-dormancy/texture-dormancy-009.jpg",
+      "title": "Texture Dormancy #009",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-010",
+      "file": "images/texture-dormancy/texture-dormancy-010.jpg",
+      "title": "Texture Dormancy #010",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-011",
+      "file": "images/texture-dormancy/texture-dormancy-011.jpg",
+      "title": "Texture Dormancy #011",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-012",
+      "file": "images/texture-dormancy/texture-dormancy-012.jpg",
+      "title": "Texture Dormancy #012",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-013",
+      "file": "images/texture-dormancy/texture-dormancy-013.jpg",
+      "title": "Texture Dormancy #013",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-014",
+      "file": "images/texture-dormancy/texture-dormancy-014.jpg",
+      "title": "Texture Dormancy #014",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-015",
+      "file": "images/texture-dormancy/texture-dormancy-015.jpg",
+      "title": "Texture Dormancy #015",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-016",
+      "file": "images/texture-dormancy/texture-dormancy-016.jpg",
+      "title": "Texture Dormancy #016",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-017",
+      "file": "images/texture-dormancy/texture-dormancy-017.jpg",
+      "title": "Texture Dormancy #017",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-018",
+      "file": "images/texture-dormancy/texture-dormancy-018.jpg",
+      "title": "Texture Dormancy #018",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "te-019",
+      "file": "images/texture-dormancy/texture-dormancy-019.jpg",
+      "title": "Texture Dormancy #019",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "fp4",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "texture-dormancy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-048",
+      "file": "images/2025-seasons/2025-seasons-048.jpg",
+      "title": "2025 Seasons #048",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-049",
+      "file": "images/2025-seasons/2025-seasons-049.jpg",
+      "title": "2025 Seasons #049",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-050",
+      "file": "images/2025-seasons/2025-seasons-050.jpg",
+      "title": "2025 Seasons #050",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-051",
+      "file": "images/2025-seasons/2025-seasons-051.jpg",
+      "title": "2025 Seasons #051",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-052",
+      "file": "images/2025-seasons/2025-seasons-052.jpg",
+      "title": "2025 Seasons #052",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "portraits",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-053",
+      "file": "images/2025-seasons/2025-seasons-053.jpg",
+      "title": "2025 Seasons #053",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-054",
+      "file": "images/2025-seasons/2025-seasons-054.jpg",
+      "title": "2025 Seasons #054",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-055",
+      "file": "images/2025-seasons/2025-seasons-055.jpg",
+      "title": "2025 Seasons #055",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-056",
+      "file": "images/2025-seasons/2025-seasons-056.jpg",
+      "title": "2025 Seasons #056",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-057",
+      "file": "images/2025-seasons/2025-seasons-057.jpg",
+      "title": "2025 Seasons #057",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-058",
+      "file": "images/2025-seasons/2025-seasons-058.jpg",
+      "title": "2025 Seasons #058",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-059",
+      "file": "images/2025-seasons/2025-seasons-059.jpg",
+      "title": "2025 Seasons #059",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "lomo-purple-series",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-060",
+      "file": "images/2025-seasons/2025-seasons-060.jpg",
+      "title": "2025 Seasons #060",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "lomo-purple-series",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-061",
+      "file": "images/2025-seasons/2025-seasons-061.jpg",
+      "title": "2025 Seasons #061",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "lomo-purple-series",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-062",
+      "file": "images/2025-seasons/2025-seasons-062.jpg",
+      "title": "2025 Seasons #062",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "lomo-purple-series",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-063",
+      "file": "images/2025-seasons/2025-seasons-063.jpg",
+      "title": "2025 Seasons #063",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "lomo-purple-series",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-064",
+      "file": "images/2025-seasons/2025-seasons-064.jpg",
+      "title": "2025 Seasons #064",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "lomo-purple-series",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-065",
+      "file": "images/2025-seasons/2025-seasons-065.jpg",
+      "title": "2025 Seasons #065",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-066",
+      "file": "images/2025-seasons/2025-seasons-066.jpg",
+      "title": "2025 Seasons #066",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-067",
+      "file": "images/2025-seasons/2025-seasons-067.jpg",
+      "title": "2025 Seasons #067",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-068",
+      "file": "images/2025-seasons/2025-seasons-068.jpg",
+      "title": "2025 Seasons #068",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-069",
+      "file": "images/2025-seasons/2025-seasons-069.jpg",
+      "title": "2025 Seasons #069",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-070",
+      "file": "images/2025-seasons/2025-seasons-070.jpg",
+      "title": "2025 Seasons #070",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-071",
+      "file": "images/2025-seasons/2025-seasons-071.jpg",
+      "title": "2025 Seasons #071",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-072",
+      "file": "images/2025-seasons/2025-seasons-072.jpg",
+      "title": "2025 Seasons #072",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-073",
+      "file": "images/2025-seasons/2025-seasons-073.jpg",
+      "title": "2025 Seasons #073",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-074",
+      "file": "images/2025-seasons/2025-seasons-074.jpg",
+      "title": "2025 Seasons #074",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-075",
+      "file": "images/2025-seasons/2025-seasons-075.jpg",
+      "title": "2025 Seasons #075",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-076",
+      "file": "images/2025-seasons/2025-seasons-076.jpg",
+      "title": "2025 Seasons #076",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-077",
+      "file": "images/2025-seasons/2025-seasons-077.jpg",
+      "title": "2025 Seasons #077",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-078",
+      "file": "images/2025-seasons/2025-seasons-078.jpg",
+      "title": "2025 Seasons #078",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-079",
+      "file": "images/2025-seasons/2025-seasons-079.jpg",
+      "title": "2025 Seasons #079",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-080",
+      "file": "images/2025-seasons/2025-seasons-080.jpg",
+      "title": "2025 Seasons #080",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-081",
+      "file": "images/2025-seasons/2025-seasons-081.jpg",
+      "title": "2025 Seasons #081",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-082",
+      "file": "images/2025-seasons/2025-seasons-082.jpg",
+      "title": "2025 Seasons #082",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-083",
+      "file": "images/2025-seasons/2025-seasons-083.jpg",
+      "title": "2025 Seasons #083",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-084",
+      "file": "images/2025-seasons/2025-seasons-084.jpg",
+      "title": "2025 Seasons #084",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-085",
+      "file": "images/2025-seasons/2025-seasons-085.jpg",
+      "title": "2025 Seasons #085",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-086",
+      "file": "images/2025-seasons/2025-seasons-086.jpg",
+      "title": "2025 Seasons #086",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-087",
+      "file": "images/2025-seasons/2025-seasons-087.jpg",
+      "title": "2025 Seasons #087",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-088",
+      "file": "images/2025-seasons/2025-seasons-088.jpg",
+      "title": "2025 Seasons #088",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-089",
+      "file": "images/2025-seasons/2025-seasons-089.jpg",
+      "title": "2025 Seasons #089",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-090",
+      "file": "images/2025-seasons/2025-seasons-090.jpg",
+      "title": "2025 Seasons #090",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-093",
+      "file": "images/2025-seasons/2025-seasons-093.jpg",
+      "title": "2025 Seasons #093",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-094",
+      "file": "images/2025-seasons/2025-seasons-094.jpg",
+      "title": "2025 Seasons #094",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-095",
+      "file": "images/2025-seasons/2025-seasons-095.jpg",
+      "title": "2025 Seasons #095",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-096",
+      "file": "images/2025-seasons/2025-seasons-096.jpg",
+      "title": "2025 Seasons #096",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-098",
+      "file": "images/2025-seasons/2025-seasons-098.jpg",
+      "title": "2025 Seasons #098",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-099",
+      "file": "images/2025-seasons/2025-seasons-099.jpg",
+      "title": "2025 Seasons #099",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-101",
+      "file": "images/2025-seasons/2025-seasons-101.jpg",
+      "title": "2025 Seasons #101",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-102",
+      "file": "images/2025-seasons/2025-seasons-102.jpg",
+      "title": "2025 Seasons #102",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-103",
+      "file": "images/2025-seasons/2025-seasons-103.jpg",
+      "title": "2025 Seasons #103",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-104",
+      "file": "images/2025-seasons/2025-seasons-104.jpg",
+      "title": "2025 Seasons #104",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-105",
+      "file": "images/2025-seasons/2025-seasons-105.jpg",
+      "title": "2025 Seasons #105",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-106",
+      "file": "images/2025-seasons/2025-seasons-106.jpg",
+      "title": "2025 Seasons #106",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-107",
+      "file": "images/2025-seasons/2025-seasons-107.jpg",
+      "title": "2025 Seasons #107",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-108",
+      "file": "images/2025-seasons/2025-seasons-108.jpg",
+      "title": "2025 Seasons #108",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-109",
+      "file": "images/2025-seasons/2025-seasons-109.jpg",
+      "title": "2025 Seasons #109",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-110",
+      "file": "images/2025-seasons/2025-seasons-110.jpg",
+      "title": "2025 Seasons #110",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-111",
+      "file": "images/2025-seasons/2025-seasons-111.jpg",
+      "title": "2025 Seasons #111",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-112",
+      "file": "images/2025-seasons/2025-seasons-112.jpg",
+      "title": "2025 Seasons #112",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-113",
+      "file": "images/2025-seasons/2025-seasons-113.jpg",
+      "title": "2025 Seasons #113",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-115",
+      "file": "images/2025-seasons/2025-seasons-115.jpg",
+      "title": "2025 Seasons #115",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-116",
+      "file": "images/2025-seasons/2025-seasons-116.jpg",
+      "title": "2025 Seasons #116",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-117",
+      "file": "images/2025-seasons/2025-seasons-117.jpg",
+      "title": "2025 Seasons #117",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-118",
+      "file": "images/2025-seasons/2025-seasons-118.jpg",
+      "title": "2025 Seasons #118",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-119",
+      "file": "images/2025-seasons/2025-seasons-119.jpg",
+      "title": "2025 Seasons #119",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-120",
+      "file": "images/2025-seasons/2025-seasons-120.jpg",
+      "title": "2025 Seasons #120",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-121",
+      "file": "images/2025-seasons/2025-seasons-121.jpg",
+      "title": "2025 Seasons #121",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-122",
+      "file": "images/2025-seasons/2025-seasons-122.jpg",
+      "title": "2025 Seasons #122",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-123",
+      "file": "images/2025-seasons/2025-seasons-123.jpg",
+      "title": "2025 Seasons #123",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-124",
+      "file": "images/2025-seasons/2025-seasons-124.jpg",
+      "title": "2025 Seasons #124",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-125",
+      "file": "images/2025-seasons/2025-seasons-125.jpg",
+      "title": "2025 Seasons #125",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-126",
+      "file": "images/2025-seasons/2025-seasons-126.jpg",
+      "title": "2025 Seasons #126",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-127",
+      "file": "images/2025-seasons/2025-seasons-127.jpg",
+      "title": "2025 Seasons #127",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-128",
+      "file": "images/2025-seasons/2025-seasons-128.jpg",
+      "title": "2025 Seasons #128",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-129",
+      "file": "images/2025-seasons/2025-seasons-129.jpg",
+      "title": "2025 Seasons #129",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-130",
+      "file": "images/2025-seasons/2025-seasons-130.jpg",
+      "title": "2025 Seasons #130",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-136",
+      "file": "images/2025-seasons/2025-seasons-136.jpg",
+      "title": "2025 Seasons #136",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-137",
+      "file": "images/2025-seasons/2025-seasons-137.jpg",
+      "title": "2025 Seasons #137",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-138",
+      "file": "images/2025-seasons/2025-seasons-138.jpg",
+      "title": "2025 Seasons #138",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-139",
+      "file": "images/2025-seasons/2025-seasons-139.jpg",
+      "title": "2025 Seasons #139",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-140",
+      "file": "images/2025-seasons/2025-seasons-140.jpg",
+      "title": "2025 Seasons #140",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-141",
+      "file": "images/2025-seasons/2025-seasons-141.jpg",
+      "title": "2025 Seasons #141",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-142",
+      "file": "images/2025-seasons/2025-seasons-142.jpg",
+      "title": "2025 Seasons #142",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-143",
+      "file": "images/2025-seasons/2025-seasons-143.jpg",
+      "title": "2025 Seasons #143",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-144",
+      "file": "images/2025-seasons/2025-seasons-144.jpg",
+      "title": "2025 Seasons #144",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-145",
+      "file": "images/2025-seasons/2025-seasons-145.jpg",
+      "title": "2025 Seasons #145",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-146",
+      "file": "images/2025-seasons/2025-seasons-146.jpg",
+      "title": "2025 Seasons #146",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-147",
+      "file": "images/2025-seasons/2025-seasons-147.jpg",
+      "title": "2025 Seasons #147",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-148",
+      "file": "images/2025-seasons/2025-seasons-148.jpg",
+      "title": "2025 Seasons #148",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-149",
+      "file": "images/2025-seasons/2025-seasons-149.jpg",
+      "title": "2025 Seasons #149",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-150",
+      "file": "images/2025-seasons/2025-seasons-150.jpg",
+      "title": "2025 Seasons #150",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-151",
+      "file": "images/2025-seasons/2025-seasons-151.jpg",
+      "title": "2025 Seasons #151",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-152",
+      "file": "images/2025-seasons/2025-seasons-152.jpg",
+      "title": "2025 Seasons #152",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-153",
+      "file": "images/2025-seasons/2025-seasons-153.jpg",
+      "title": "2025 Seasons #153",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-156",
+      "file": "images/2025-seasons/2025-seasons-156.jpg",
+      "title": "2025 Seasons #156",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-157",
+      "file": "images/2025-seasons/2025-seasons-157.jpg",
+      "title": "2025 Seasons #157",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-158",
+      "file": "images/2025-seasons/2025-seasons-158.jpg",
+      "title": "2025 Seasons #158",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-159",
+      "file": "images/2025-seasons/2025-seasons-159.jpg",
+      "title": "2025 Seasons #159",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-160",
+      "file": "images/2025-seasons/2025-seasons-160.jpg",
+      "title": "2025 Seasons #160",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-161",
+      "file": "images/2025-seasons/2025-seasons-161.jpg",
+      "title": "2025 Seasons #161",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-162",
+      "file": "images/2025-seasons/2025-seasons-162.jpg",
+      "title": "2025 Seasons #162",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-163",
+      "file": "images/2025-seasons/2025-seasons-163.jpg",
+      "title": "2025 Seasons #163",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-164",
+      "file": "images/2025-seasons/2025-seasons-164.jpg",
+      "title": "2025 Seasons #164",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-165",
+      "file": "images/2025-seasons/2025-seasons-165.jpg",
+      "title": "2025 Seasons #165",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-166",
+      "file": "images/2025-seasons/2025-seasons-166.jpg",
+      "title": "2025 Seasons #166",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "savannah-2026",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-167",
+      "file": "images/2025-seasons/2025-seasons-167.jpg",
+      "title": "2025 Seasons #167",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-168",
+      "file": "images/2025-seasons/2025-seasons-168.jpg",
+      "title": "2025 Seasons #168",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-169",
+      "file": "images/2025-seasons/2025-seasons-169.jpg",
+      "title": "2025 Seasons #169",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-170",
+      "file": "images/2025-seasons/2025-seasons-170.jpg",
+      "title": "2025 Seasons #170",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-171",
+      "file": "images/2025-seasons/2025-seasons-171.jpg",
+      "title": "2025 Seasons #171",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-172",
+      "file": "images/2025-seasons/2025-seasons-172.jpg",
+      "title": "2025 Seasons #172",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-173",
+      "file": "images/2025-seasons/2025-seasons-173.jpg",
+      "title": "2025 Seasons #173",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-174",
+      "file": "images/2025-seasons/2025-seasons-174.jpg",
+      "title": "2025 Seasons #174",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-175",
+      "file": "images/2025-seasons/2025-seasons-175.jpg",
+      "title": "2025 Seasons #175",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-176",
+      "file": "images/2025-seasons/2025-seasons-176.jpg",
+      "title": "2025 Seasons #176",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-177",
+      "file": "images/2025-seasons/2025-seasons-177.jpg",
+      "title": "2025 Seasons #177",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-178",
+      "file": "images/2025-seasons/2025-seasons-178.jpg",
+      "title": "2025 Seasons #178",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "the-light-unseen",
+        "process": "mixed"
+      }
+    },
+    {
+      "id": "20-179",
+      "file": "images/2025-seasons/2025-seasons-179.jpg",
+      "title": "2025 Seasons #179",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-180",
+      "file": "images/2025-seasons/2025-seasons-180.jpg",
+      "title": "2025 Seasons #180",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-181",
+      "file": "images/2025-seasons/2025-seasons-181.jpg",
+      "title": "2025 Seasons #181",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-182",
+      "file": "images/2025-seasons/2025-seasons-182.jpg",
+      "title": "2025 Seasons #182",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-183",
+      "file": "images/2025-seasons/2025-seasons-183.jpg",
+      "title": "2025 Seasons #183",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-184",
+      "file": "images/2025-seasons/2025-seasons-184.jpg",
+      "title": "2025 Seasons #184",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-185",
+      "file": "images/2025-seasons/2025-seasons-185.jpg",
+      "title": "2025 Seasons #185",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-186",
+      "file": "images/2025-seasons/2025-seasons-186.jpg",
+      "title": "2025 Seasons #186",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-187",
+      "file": "images/2025-seasons/2025-seasons-187.jpg",
+      "title": "2025 Seasons #187",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-188",
+      "file": "images/2025-seasons/2025-seasons-188.jpg",
+      "title": "2025 Seasons #188",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-189",
+      "file": "images/2025-seasons/2025-seasons-189.jpg",
+      "title": "2025 Seasons #189",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-190",
+      "file": "images/2025-seasons/2025-seasons-190.jpg",
+      "title": "2025 Seasons #190",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-191",
+      "file": "images/2025-seasons/2025-seasons-191.jpg",
+      "title": "2025 Seasons #191",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-192",
+      "file": "images/2025-seasons/2025-seasons-192.jpg",
+      "title": "2025 Seasons #192",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-193",
+      "file": "images/2025-seasons/2025-seasons-193.jpg",
+      "title": "2025 Seasons #193",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-194",
+      "file": "images/2025-seasons/2025-seasons-194.jpg",
+      "title": "2025 Seasons #194",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-195",
+      "file": "images/2025-seasons/2025-seasons-195.jpg",
+      "title": "2025 Seasons #195",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-196",
+      "file": "images/2025-seasons/2025-seasons-196.jpg",
+      "title": "2025 Seasons #196",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-197",
+      "file": "images/2025-seasons/2025-seasons-197.jpg",
+      "title": "2025 Seasons #197",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-198",
+      "file": "images/2025-seasons/2025-seasons-198.jpg",
+      "title": "2025 Seasons #198",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-199",
+      "file": "images/2025-seasons/2025-seasons-199.jpg",
+      "title": "2025 Seasons #199",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-201",
+      "file": "images/2025-seasons/2025-seasons-201.jpg",
+      "title": "2025 Seasons #201",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "new-england"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-202",
+      "file": "images/2025-seasons/2025-seasons-202.jpg",
+      "title": "2025 Seasons #202",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "new-england"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-203",
+      "file": "images/2025-seasons/2025-seasons-203.jpg",
+      "title": "2025 Seasons #203",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "new-england"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-204",
+      "file": "images/2025-seasons/2025-seasons-204.jpg",
+      "title": "2025 Seasons #204",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "new-england"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-205",
+      "file": "images/2025-seasons/2025-seasons-205.jpg",
+      "title": "2025 Seasons #205",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "new-england"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-206",
+      "file": "images/2025-seasons/2025-seasons-206.jpg",
+      "title": "2025 Seasons #206",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-207",
+      "file": "images/2025-seasons/2025-seasons-207.jpg",
+      "title": "2025 Seasons #207",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-208",
+      "file": "images/2025-seasons/2025-seasons-208.jpg",
+      "title": "2025 Seasons #208",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "portraits",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-209",
+      "file": "images/2025-seasons/2025-seasons-209.jpg",
+      "title": "2025 Seasons #209",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-210",
+      "file": "images/2025-seasons/2025-seasons-210.jpg",
+      "title": "2025 Seasons #210",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-211",
+      "file": "images/2025-seasons/2025-seasons-211.jpg",
+      "title": "2025 Seasons #211",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "unknown",
+        "format": "4x5",
+        "camera": "horseman-45fa",
+        "location": [
+          "new-england"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    }
+  ]
+}
