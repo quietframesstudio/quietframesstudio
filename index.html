@@ -10,6 +10,13 @@
 <meta property="og:url" content="https://quietframesstudio.com">
 <meta property="og:title" content="Quiet Frames Studio — Film Photography">
 <meta property="og:description" content="Fine art film photography by Michael J McConnell. Limited edition archival prints available.">
+<meta property="og:image" content="https://quietframesstudio.com/images/lomo-purple-series/lomo-purple-series-004.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quiet Frames Studio — Film Photography">
+<meta name="twitter:description" content="Fine art film photography by Michael J McConnell. Limited edition archival prints available.">
+<meta name="twitter:image" content="https://quietframesstudio.com/images/lomo-purple-series/lomo-purple-series-004.jpg">
 <title>Quiet Frames Studio — Film Photography</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1075,13 +1082,21 @@ function updateNavActive(view) {
 function updateSEO(route) {
   let title = 'Quiet Frames Studio — Film Photography';
   let desc  = 'Fine art film photography by Michael J McConnell. Limited edition archival prints available.';
+  let image = 'https://quietframesstudio.com/images/lomo-purple-series/lomo-purple-series-004.jpg'; // default image
 
   if (route.view === 'series' && GALLERY_DATA) {
     const s = GALLERY_DATA.series.find(x => x.id === route.id);
-    if (s) { title = `${s.title} — Quiet Frames Studio`; desc = s.description || desc; }
+    if (s) {
+      title = `${s.title} — Quiet Frames Studio`;
+      desc = s.description || desc;
+      if (s.cover) image = 'https://quietframesstudio.com/' + s.cover;
+    }
   } else if (route.view === 'photo' && GALLERY_DATA) {
     const p = GALLERY_DATA.photos.find(x => x.id === route.id);
-    if (p) { title = `${p.title} — Quiet Frames Studio`; }
+    if (p) {
+      title = `${p.title} — Quiet Frames Studio`;
+      if (p.file) image = 'https://quietframesstudio.com/' + p.file;
+    }
   } else if (route.view === 'collect') {
     title = 'Collect Prints — Quiet Frames Studio';
     desc  = 'Limited edition archival fine art prints on Hahnemühle Photo Rag. Produced from original film scans, crafted with care and precision.';
@@ -1098,6 +1113,10 @@ function updateSEO(route) {
   if (ogDesc) ogDesc.content = desc;
   const ogUrl = document.querySelector('meta[property="og:url"]');
   if (ogUrl) ogUrl.content = 'https://quietframesstudio.com' + (window.location.hash || '');
+  const ogImage = document.querySelector('meta[property="og:image"]');
+  if (ogImage) ogImage.content = image;
+  const twitterImage = document.querySelector('meta[name="twitter:image"]');
+  if (twitterImage) twitterImage.content = image;
 }
 
 window.addEventListener('hashchange', route);
