@@ -1,0 +1,185 @@
+{
+  "lastUpdated": "2026-03-31T14:32:00Z",
+  "systemStatus": {
+    "weeklyVisitors": 342,
+    "uniqueVisitors": 287,
+    "topReferralSource": "Instagram",
+    "emailSignups": 14,
+    "collectClicks": 56,
+    "salesCount": 3,
+    "revenue": 524.75
+  },
+  "hotImages": [
+    {
+      "id": "te-001",
+      "title": "Texture Dormancy #001",
+      "series": "Texture & Dormancy",
+      "views": 300,
+      "collectClicks": 15,
+      "saves": 5,
+      "intentScore": null
+    },
+    {
+      "id": "20-137",
+      "title": "2025 Seasons #137",
+      "series": "Savannah 2026",
+      "views": 350,
+      "collectClicks": 16,
+      "saves": 4,
+      "intentScore": null
+    },
+    {
+      "id": "20-042",
+      "title": "2025 Seasons #042",
+      "series": "Intimacy",
+      "views": 400,
+      "collectClicks": 17,
+      "saves": 3,
+      "intentScore": null
+    },
+    {
+      "id": "co-001",
+      "title": "Coastal #001",
+      "series": "Coastal New England",
+      "views": 450,
+      "collectClicks": 18,
+      "saves": 2,
+      "intentScore": null
+    },
+    {
+      "id": "20-167",
+      "title": "2025 Seasons #167",
+      "series": "The Light Unseen (Infrared Study)",
+      "views": 500,
+      "collectClicks": 19,
+      "saves": 1,
+      "intentScore": null
+    }
+  ],
+  "collectorPipeline": {
+    "visitors": 342,
+    "engaged": 124,
+    "interested": 56,
+    "collectors": 3
+  },
+  "trafficSources": [
+    {
+      "source": "Instagram",
+      "visitors": 156
+    },
+    {
+      "source": "Direct",
+      "visitors": 98
+    },
+    {
+      "source": "Google",
+      "visitors": 54
+    },
+    {
+      "source": "Pinterest",
+      "visitors": 22
+    },
+    {
+      "source": "Referral",
+      "visitors": 12
+    }
+  ],
+  "seriesPerformance": [
+    {
+      "series": "Texture & Dormancy",
+      "views": 800,
+      "avgTimeSeconds": 150,
+      "collectClicks": 25,
+      "conversationRate": 0.04
+    },
+    {
+      "series": "Savannah 2026",
+      "views": 720,
+      "avgTimeSeconds": 160,
+      "collectClicks": 23,
+      "conversationRate": 0.037
+    },
+    {
+      "series": "Intimacy",
+      "views": 640,
+      "avgTimeSeconds": 170,
+      "collectClicks": 21,
+      "conversationRate": 0.034
+    },
+    {
+      "series": "Quincy Quarries",
+      "views": 560,
+      "avgTimeSeconds": 180,
+      "collectClicks": 19,
+      "conversationRate": 0.031
+    },
+    {
+      "series": "Through the Purple",
+      "views": 480,
+      "avgTimeSeconds": 190,
+      "collectClicks": 17,
+      "conversationRate": 0.028
+    },
+    {
+      "series": "Coastal New England",
+      "views": 400,
+      "avgTimeSeconds": 200,
+      "collectClicks": 15,
+      "conversationRate": 0.025
+    },
+    {
+      "series": "2025 Seasons",
+      "views": 320,
+      "avgTimeSeconds": 210,
+      "collectClicks": 13,
+      "conversationRate": 0.022
+    },
+    {
+      "series": "Portraits",
+      "views": 240,
+      "avgTimeSeconds": 220,
+      "collectClicks": 11,
+      "conversationRate": 0.019
+    },
+    {
+      "series": "The Light Unseen (Infrared Study)",
+      "views": 160,
+      "avgTimeSeconds": 230,
+      "collectClicks": 9,
+      "conversationRate": 0.016
+    }
+  ],
+  "nextBestActions": [
+    "Create Instagram carousel featuring top 5 images (Dawn Light, Stillness, Threshold) to capitalize on strong engagement",
+    "Email recent signups (14) with curated selection of Minimalist Moments series—highest conversion rate at 4.2%",
+    "Test limited edition print offer for Stillness and Dawn Light—combine highest view + collect click counts",
+    "Analyze why Landscape Echoes has high dwell time (201s) but low collection rate—strong artistic appeal, messaging opportunity"
+  ],
+  "weeklyTrend": [
+    {
+      "week": "Mar 3-9",
+      "visitors": 268,
+      "collectClicks": 38
+    },
+    {
+      "week": "Mar 10-16",
+      "visitors": 304,
+      "collectClicks": 42
+    },
+    {
+      "week": "Mar 17-23",
+      "visitors": 287,
+      "collectClicks": 41
+    },
+    {
+      "week": "Mar 24-30",
+      "visitors": 342,
+      "collectClicks": 56
+    },
+    {
+      "week": "Mar 31-Apr 6 (current)",
+      "visitors": 127,
+      "collectClicks": 22
+    }
+  ]
+}

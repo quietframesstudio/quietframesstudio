@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiet Frames Studio — Admin Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f9f8f5;
+            color: #1a1a1a;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #e8e6e1;
+            padding-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 0.875rem;
+            color: #8b8178;
+        }
+
+        .error-state {
+            background-color: #fff4f0;
+            border: 1px solid #e8b3a0;
+            padding: 1.5rem;
+            border-radius: 4px;
+            color: #8b3a2a;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            color: #1a1a1a;
+        }
+
+        /* System Status Cards */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-card {
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid #e8e6e1;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .status-card .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8b8178;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .status-card .value {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .status-card .subtitle {
+            font-size: 0.75rem;
+            color: #8b8178;
+            margin-top: 0.75rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border: 1px solid #e8e6e1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #f9f8f5;
+            border-bottom: 1px solid #e8e6e1;
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #8b8178;
+            font-weight: 500;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #e8e6e1;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background-color: #faf9f7;
+        }
+
+        .rank-badge {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background-color: #8b8178;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .score-high {
+            color: #2a6e2e;
+            font-weight: 600;
+        }
+
+        .score-medium {
+            color: #8b7a2a;
+            font-weight: 600;
+        }
+
+        .score-low {
+            color: #8b5a2a;
+            font-weight: 600;
+        }
+
+        /* Charts */
+        .chart-container {
+            position: relative;
+            background: white;
+            padding: 2rem;
+            border: 1px solid #e8e6e1;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .chart-container canvas {
+            max-height: 300px;
+        }
+
+        /* Funnel/Pipeline */
+        .pipeline-container {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #e8e6e1;
+            border-radius: 4px;
+        }
+
+        .pipeline-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .pipeline-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .pipeline-label {
+            font-size: 0.875rem;
+            color: #1a1a1a;
+            font-weight: 500;
+            min-width: 140px;
+        }
+
+        .pipeline-bar-container {
+            flex: 1;
+            background-color: #f9f8f5;
+            border-radius: 2px;
+            overflow: hidden;
+            height: 36px;
+        }
+
+        .pipeline-bar {
+            height: 100%;
+            background-color: #8b8178;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 0.75rem;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pipeline-count {
+            min-width: 50px;
+            text-align: right;
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+
+        .pipeline-rate {
+            min-width: 70px;
+            text-align: right;
+            font-size: 0.75rem;
+            color: #8b8178;
+        }
+
+        /* Actions Section */
+        .actions-list {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #e8e6e1;
+            border-radius: 4px;
+        }
+
+        .action-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e8e6e1;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .action-item:last-child {
+            border-bottom: none;
+        }
+
+        .action-number {
+            flex-shrink: 0;
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background-color: #8b8178;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .action-text {
+            flex: 1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            .status-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .header-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            table {
+                font-size: 0.875rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+            }
+
+            .status-card .value {
+                font-size: 1.75rem;
+            }
+
+            .pipeline-step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pipeline-bar-container {
+                width: 100%;
+            }
+        }
+
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #8b8178;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #e8e6e1;
+            border-top-color: #8b8178;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard</h1>
+            <div class="header-meta">
+                <span>Quiet Frames Studio</span>
+                <span id="lastUpdated">Loading...</span>
+            </div>
+        </header>
+
+        <div id="errorContainer"></div>
+
+        <!-- System Status -->
+        <section id="systemStatus">
+            <h2>System Status</h2>
+            <div class="status-grid">
+                <div class="status-card">
+                    <div class="label">This Week</div>
+                    <div class="value" id="weeklyVisitors">—</div>
+                    <div class="subtitle">Visitors</div>
+                </div>
+                <div class="status-card">
+                    <div class="label">Unique</div>
+                    <div class="value" id="uniqueVisitors">—</div>
+                    <div class="subtitle">Visitors</div>
+                </div>
+                <div class="status-card">
+                    <div class="label">Top Source</div>
+                    <div class="value" id="topSource">—</div>
+                    <div class="subtitle">Traffic</div>
+                </div>
+                <div class="status-card">
+                    <div class="label">Email</div>
+                    <div class="value" id="emailSignups">—</div>
+                    <div class="subtitle">Signups</div>
+                </div>
+                <div class="status-card">
+                    <div class="label">Collect</div>
+                    <div class="value" id="collectClicks">—</div>
+                    <div class="subtitle">Clicks</div>
+                </div>
+                <div class="status-card">
+                    <div class="label">Sales</div>
+                    <div class="value" id="salesCount">—</div>
+                    <div class="subtitle">This Week</div>
+                </div>
+                <div class="status-card">
+                    <div class="label">Revenue</div>
+                    <div class="value" id="revenue">—</div>
+                    <div class="subtitle">This Week</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Images -->
+        <section id="hotImages">
+            <h2>Hot Images</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">#</th>
+                        <th>Photo</th>
+                        <th>Series</th>
+                        <th style="text-align: right;">Views</th>
+                        <th style="text-align: right;">Collect</th>
+                        <th style="text-align: right;">Saves</th>
+                        <th style="text-align: right;">Intent Score</th>
+                    </tr>
+                </thead>
+                <tbody id="hotImagesBody">
+                    <tr>
+                        <td colspan="7" class="loading"><div class="spinner"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Collector Pipeline -->
+        <section id="pipeline">
+            <h2>Collector Pipeline</h2>
+            <div class="pipeline-container">
+                <div class="pipeline-step">
+                    <div class="pipeline-label">Visitors</div>
+                    <div class="pipeline-bar-container">
+                        <div class="pipeline-bar" id="pipelineVisitors" style="width: 100%;">100%</div>
+                    </div>
+                    <div class="pipeline-count" id="pipelineVisitorsCount">—</div>
+                    <div class="pipeline-rate">—</div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-label">Engaged (2+ pages)</div>
+                    <div class="pipeline-bar-container">
+                        <div class="pipeline-bar" id="pipelineEngaged">—</div>
+                    </div>
+                    <div class="pipeline-count" id="pipelineEngagedCount">—</div>
+                    <div class="pipeline-rate" id="pipelineEngagedRate">—</div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-label">Interested (collect)</div>
+                    <div class="pipeline-bar-container">
+                        <div class="pipeline-bar" id="pipelineInterested">—</div>
+                    </div>
+                    <div class="pipeline-count" id="pipelineInterestedCount">—</div>
+                    <div class="pipeline-rate" id="pipelineInterestedRate">—</div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-label">Collector (purchased)</div>
+                    <div class="pipeline-bar-container">
+                        <div class="pipeline-bar" id="pipelineCollectors">—</div>
+                    </div>
+                    <div class="pipeline-count" id="pipelineCollectorsCount">—</div>
+                    <div class="pipeline-rate" id="pipelineCollectorsRate">—</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traffic Sources -->
+        <section id="traffic">
+            <h2>Traffic Sources</h2>
+            <div class="chart-container">
+                <canvas id="trafficChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Series Performance -->
+        <section id="seriesPerformance">
+            <h2>Series Performance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Series</th>
+                        <th style="text-align: right;">Views</th>
+                        <th style="text-align: right;">Avg Time</th>
+                        <th style="text-align: right;">Collect</th>
+                        <th style="text-align: right;">Conversion</th>
+                    </tr>
+                </thead>
+                <tbody id="seriesBody">
+                    <tr>
+                        <td colspan="5" class="loading"><div class="spinner"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Next Best Actions -->
+        <section id="actions">
+            <h2>Next Best Actions</h2>
+            <div class="actions-list" id="actionsList"></div>
+        </section>
+
+        <!-- Weekly Trend -->
+        <section id="trend">
+            <h2>Weekly Trend</h2>
+            <div class="chart-container">
+                <canvas id="trendChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let metricsData = null;
+        let trafficChart = null;
+        let trendChart = null;
+
+        async function loadData() {
+            try {
+                const response = await fetch('../data/metrics.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                metricsData = await response.json();
+                renderDashboard();
+            } catch (error) {
+                showError(`Failed to load metrics data: ${error.message}`);
+                console.error(error);
+            }
+        }
+
+        function showError(message) {
+            const container = document.getElementById('errorContainer');
+            container.innerHTML = `<div class="error-state">${message}</div>`;
+        }
+
+        function formatDate(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD'
+            }).format(value);
+        }
+
+        function calculateIntentScore(views, collectClicks, saves) {
+            return views * 1 + collectClicks * 10 + saves * 3;
+        }
+
+        function renderDashboard() {
+            // Update last updated
+            document.getElementById('lastUpdated').textContent =
+                `Last updated: ${formatDate(metricsData.lastUpdated)}`;
+
+            // System Status
+            const status = metricsData.systemStatus;
+            document.getElementById('weeklyVisitors').textContent = status.weeklyVisitors;
+            document.getElementById('uniqueVisitors').textContent = status.uniqueVisitors;
+            document.getElementById('topSource').textContent = status.topReferralSource;
+            document.getElementById('emailSignups').textContent = status.emailSignups;
+            document.getElementById('collectClicks').textContent = status.collectClicks;
+            document.getElementById('salesCount').textContent = status.salesCount;
+            document.getElementById('revenue').textContent = formatCurrency(status.revenue);
+
+            // Hot Images
+            renderHotImages();
+
+            // Pipeline
+            renderPipeline();
+
+            // Traffic Chart
+            renderTrafficChart();
+
+            // Series Performance
+            renderSeriesPerformance();
+
+            // Actions
+            renderActions();
+
+            // Trend Chart
+            renderTrendChart();
+        }
+
+        function renderHotImages() {
+            const tbody = document.getElementById('hotImagesBody');
+            tbody.innerHTML = '';
+
+            const imagesWithScores = metricsData.hotImages.map((img, idx) => ({
+                ...img,
+                rank: idx + 1,
+                score: calculateIntentScore(img.views, img.collectClicks, img.saves)
+            })).sort((a, b) => b.score - a.score);
+
+            imagesWithScores.forEach((img, idx) => {
+                const scoreClass = img.score > 100 ? 'score-high' :
+                                   img.score > 50 ? 'score-medium' : 'score-low';
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><span class="rank-badge">${idx + 1}</span></td>
+                    <td><strong>${img.title}</strong></td>
+                    <td>${img.series}</td>
+                    <td style="text-align: right;">${img.views.toLocaleString()}</td>
+                    <td style="text-align: right;">${img.collectClicks}</td>
+                    <td style="text-align: right;">${img.saves}</td>
+                    <td style="text-align: right;"><span class="${scoreClass}">${img.score}</span></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function renderPipeline() {
+            const p = metricsData.collectorPipeline;
+            const visitors = p.visitors;
+
+            // Calculate percentages
+            const engagedPct = (p.engaged / visitors) * 100;
+            const interestedPct = (p.interested / visitors) * 100;
+            const collectorsPct = (p.collectors / visitors) * 100;
+
+            // Update bars
+            document.getElementById('pipelineVisitors').style.width = '100%';
+            document.getElementById('pipelineVisitors').textContent = '100%';
+
+            document.getElementById('pipelineEngaged').style.width = engagedPct + '%';
+            document.getElementById('pipelineEngaged').textContent = engagedPct.toFixed(0) + '%';
+
+            document.getElementById('pipelineInterested').style.width = interestedPct + '%';
+            document.getElementById('pipelineInterested').textContent = interestedPct.toFixed(0) + '%';
+
+            document.getElementById('pipelineCollectors').style.width = collectorsPct + '%';
+            document.getElementById('pipelineCollectors').textContent = collectorsPct.toFixed(0) + '%';
+
+            // Update counts and rates
+            document.getElementById('pipelineVisitorsCount').textContent = visitors;
+            document.getElementById('pipelineEngagedCount').textContent = p.engaged;
+            document.getElementById('pipelineEngagedRate').textContent = engagedPct.toFixed(1) + '%';
+
+            document.getElementById('pipelineInterestedCount').textContent = p.interested;
+            document.getElementById('pipelineInterestedRate').textContent =
+                ((p.interested / p.engaged) * 100).toFixed(1) + '%';
+
+            document.getElementById('pipelineCollectorsCount').textContent = p.collectors;
+            document.getElementById('pipelineCollectorsRate').textContent =
+                ((p.collectors / p.interested) * 100).toFixed(1) + '%';
+        }
+
+        function renderTrafficChart() {
+            const ctx = document.getElementById('trafficChart').getContext('2d');
+
+            const data = metricsData.trafficSources.sort((a, b) => b.visitors - a.visitors);
+
+            if (trafficChart) {
+                trafficChart.destroy();
+            }
+
+            trafficChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.map(d => d.source),
+                    datasets: [{
+                        label: 'Visitors',
+                        data: data.map(d => d.visitors),
+                        backgroundColor: '#8b8178',
+                        borderRadius: 2,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#e8e6e1',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#8b8178',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#1a1a1a',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderSeriesPerformance() {
+            const tbody = document.getElementById('seriesBody');
+            tbody.innerHTML = '';
+
+            metricsData.seriesPerformance.forEach(series => {
+                const row = document.createElement('tr');
+                const avgTime = Math.round(series.avgTimeSeconds / 60) + 'm ' +
+                               (series.avgTimeSeconds % 60) + 's';
+                const convRate = (series.conversationRate * 100).toFixed(1) + '%';
+
+                row.innerHTML = `
+                    <td><strong>${series.series}</strong></td>
+                    <td style="text-align: right;">${series.views.toLocaleString()}</td>
+                    <td style="text-align: right;">${avgTime}</td>
+                    <td style="text-align: right;">${series.collectClicks}</td>
+                    <td style="text-align: right;"><strong>${convRate}</strong></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function renderActions() {
+            const container = document.getElementById('actionsList');
+            container.innerHTML = '';
+
+            metricsData.nextBestActions.forEach((action, idx) => {
+                const div = document.createElement('div');
+                div.className = 'action-item';
+                div.innerHTML = `
+                    <div class="action-number">${idx + 1}</div>
+                    <div class="action-text">${action}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function renderTrendChart() {
+            const ctx = document.getElementById('trendChart').getContext('2d');
+
+            const data = metricsData.weeklyTrend;
+
+            if (trendChart) {
+                trendChart.destroy();
+            }
+
+            trendChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.week),
+                    datasets: [
+                        {
+                            label: 'Visitors',
+                            data: data.map(d => d.visitors),
+                            borderColor: '#1a1a1a',
+                            backgroundColor: 'rgba(26, 26, 26, 0.05)',
+                            borderWidth: 2,
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 4,
+                            pointBackgroundColor: '#1a1a1a',
+                            pointBorderColor: 'white',
+                            pointBorderWidth: 2,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Collect Clicks',
+                            data: data.map(d => d.collectClicks),
+                            borderColor: '#8b8178',
+                            backgroundColor: 'rgba(139, 129, 120, 0.05)',
+                            borderWidth: 2,
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 4,
+                            pointBackgroundColor: '#8b8178',
+                            pointBorderColor: 'white',
+                            pointBorderWidth: 2,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#1a1a1a',
+                                font: {
+                                    size: 12
+                                },
+                                usePointStyle: true,
+                                padding: 20
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: '#e8e6e1',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#8b8178',
+                                font: {
+                                    size: 11
+                                }
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Visitors',
+                                color: '#1a1a1a'
+                            },
+                            grid: {
+                                color: '#e8e6e1',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#1a1a1a',
+                                font: {
+                                    size: 11
+                                }
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Collect Clicks',
+                                color: '#8b8178'
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#8b8178',
+                                font: {
+                                    size: 11
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

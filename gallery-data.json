@@ -79,7 +79,9 @@
           "new-england",
           "massachusetts"
         ]
-      }
+      },
+      "curatorial": "A study in winter's essential forms across New England. Shot on Ilford FP4 medium format, this work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape\u2014where tone and surface become the primary subjects. What emerges is a visual vocabulary of repose: the grain of frost on wood, the geometry of bare branches, the tonal weight of overcast light against dark earth. Each image treats winter not as absence, but as clarity.",
+      "collectorNote": "These photographs exist at the intersection of formal restraint and material sensitivity\u2014medium format film architecture yields a tonal range and permanence that digital capture cannot match."
     },
     {
       "id": "savannah-2026",
@@ -99,7 +101,9 @@
         "location": [
           "savannah"
         ]
-      }
+      },
+      "curatorial": "Savannah's streets, facades, and human gestures emerge across multiple film stocks\u2014a deliberate heterogeneity that acknowledges the city itself as palimpsest. Between architectural formalism and the spontaneity of street encounter, the work traces layered histories embedded in the American South. Colors shift, grains vary, and emotional temperature fluctuates; the inconsistency becomes the point, refusing false coherence in favor of the complex visual grammar of lived place.",
+      "collectorNote": "Shot across varied film stocks without aesthetic apology, these photographs prioritize documentary presence over artistic consistency\u2014a rarity in contemporary fine art practice."
     },
     {
       "id": "intimacy",
@@ -116,7 +120,9 @@
         "film": "mixed",
         "format": "mixed",
         "location": []
-      }
+      },
+      "curatorial": "Genuine human connection unfolding unscripted in public spaces, captured across mixed formats and film stocks. Rather than subordinate emotional content to technical consistency, the work preserves fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby. The varying film stocks and formats become transparent\u2014tools in service of presence rather than style\u2014allowing the human moment to assert priority over the medium's material signature.",
+      "collectorNote": "These photographs embrace aesthetic variability as philosophical choice\u2014technical inconsistency in service of emotional authenticity, a demanding and deliberate position in portraiture."
     },
     {
       "id": "quincy-quarries",
@@ -137,7 +143,9 @@
           "quincy",
           "massachusetts"
         ]
-      }
+      },
+      "curatorial": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100 in 35mm, the work emphasizes the sculptural quality of abandoned infrastructure\u2014meditations on entropy where destruction becomes the subject of aesthetic contemplation. The sharp color separation and saturation of Ektar renders these spaces with the precision of geological cross-section, revealing the violent geometry beneath overgrowth and water reflection.",
+      "collectorNote": "The technical specificity of Ektar color film\u2014chosen deliberately for this landscape\u2014creates a visual register impossible to replicate digitally, binding the work's meaning to its material origin."
     },
     {
       "id": "lomo-purple-series",
@@ -157,7 +165,9 @@
         "location": [
           "massachusetts"
         ]
-      }
+      },
+      "curatorial": "Lomography Purple film exchanges the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion as technical failure, the work embraces it\u2014elevating the material properties of the film itself as subject. The result is simultaneously documentary and dreamlike: recognizable parks and Massachusetts landscapes reappear as themselves and as something else entirely, their familiar forms made strange by a chemical intervention.",
+      "collectorNote": "These photographs foreground process and material accident as aesthetic content\u2014the film's inherent characteristics become inseparable from meaning, a rare example of constraint generating depth."
     },
     {
       "id": "coastal",
@@ -178,7 +188,9 @@
           "coastal-ne",
           "new-england"
         ]
-      }
+      },
+      "curatorial": "The New England littoral in black and white: solid granite against changeable light and water. Shot on Ilford HP5 in 35mm, the work finds the tonal richness of coastal atmosphere, where salt spray and moisture soften definition into something between permanence and impermanence. The tonal gradations resist both the harshness of pure contrast and the diffusion of overexposed light, instead occupying a space of subtle discriminations where the eye must attend carefully to reveal structure.",
+      "collectorNote": "Ilford HP5's tonal character and grain structure are inseparable from what these images are able to say\u2014the film's particular response to coastal light and moisture cannot be simulated."
     },
     {
       "id": "2025-seasons",
@@ -199,7 +211,9 @@
         "location": [
           "new-england"
         ]
-      }
+      },
+      "curatorial": "A year-long document spanning three film formats\u201435mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, with individual frames accumulating into a portrait of time itself rather than discrete moments. The intentional shift between formats embodies different ways of seeing: the quickness of 35mm, the stability of medium format, the deliberation required by large format. Together they form a temporal and optical argument about sustained attention.",
+      "collectorNote": "This series's formal orchestration\u2014intentional format shifts across a full year\u2014demonstrates a commitment to process and temporal depth rarely undertaken in contemporary photography."
     },
     {
       "id": "portraits",
@@ -216,7 +230,9 @@
         "film": "mixed",
         "format": "mixed",
         "location": []
-      }
+      },
+      "curatorial": "The human face approached with the same deliberation applied to landscape\u2014a formal study in light, geometry, and presence. Each image respects the subject's opacity, offering portraiture as observation rather than revelation. These photographs resist the psychological penetration often expected of portrait work, instead allowing the face to remain an object of aesthetic consideration, its formal properties granted priority over narrative or emotional disclosure.",
+      "collectorNote": "The restraint of approach\u2014the refusal to psychologize\u2014makes these images challenging and singular in contemporary portraiture, where psychological legibility is typically demanded."
     },
     {
       "id": "the-light-unseen",
@@ -234,7 +250,9 @@
         "film": "infrared",
         "format": "mixed",
         "location": []
-      }
+      },
+      "curatorial": "Infrared film renders the invisible visible\u2014vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light. The infrared spectrum transforms the landscape into something between documentation and abstraction, where recognizable topography persists but loses its conventional meaning. Tone and form become primary; color disappears entirely.",
+      "collectorNote": "Infrared photography requires film stocks and technical protocols becoming scarcer in a digital age\u2014these prints represent a working knowledge of an increasingly archival process."
     }
   ],
   "filterGroups": [
