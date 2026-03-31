@@ -520,7 +520,7 @@ html[data-theme="dark"] nav {
   font-size: 11px; color: var(--ink-mid);
   font-family: 'Cormorant Garamond', serif; font-style: italic;
 }
-.size-option-edition { font-size: 9.5px; color: var(--ink-light); letter-spacing: 0.06em; }
+.size-option-edition { font-size: 9px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
 .collect-note {
   font-size: 10.5px; color: var(--ink-light); line-height: 1.65;
   margin-bottom: 20px; letter-spacing: 0.01em;
@@ -1378,6 +1378,7 @@ function renderPhoto(app, id) {
     onclick="selectSize(this)">
   <div class="size-option-radio"></div>
   <span class="size-option-label">${ps.label}</span>
+  <span class="size-option-edition">Edition of ${ps.edition}</span>
   <span class="size-option-price">$${ps.price}</span>
 </button>`).join('');
 

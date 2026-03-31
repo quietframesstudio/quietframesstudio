@@ -1,185 +1,104 @@
 {
-  "lastUpdated": "2026-03-31T14:32:00Z",
+  "lastUpdated": "2026-03-31T19:00:00Z",
   "systemStatus": {
-    "weeklyVisitors": 342,
-    "uniqueVisitors": 287,
-    "topReferralSource": "Instagram",
-    "emailSignups": 14,
-    "collectClicks": 56,
-    "salesCount": 3,
-    "revenue": 524.75
+    "weeklyVisitors": 0,
+    "uniqueVisitors": 0,
+    "topReferralSource": "Awaiting data",
+    "emailSignups": 0,
+    "collectClicks": 0,
+    "salesCount": 0,
+    "revenue": 0
   },
-  "hotImages": [
-    {
-      "id": "te-001",
-      "title": "Texture Dormancy #001",
-      "series": "Texture & Dormancy",
-      "views": 300,
-      "collectClicks": 15,
-      "saves": 5,
-      "intentScore": null
-    },
-    {
-      "id": "20-137",
-      "title": "2025 Seasons #137",
-      "series": "Savannah 2026",
-      "views": 350,
-      "collectClicks": 16,
-      "saves": 4,
-      "intentScore": null
-    },
-    {
-      "id": "20-042",
-      "title": "2025 Seasons #042",
-      "series": "Intimacy",
-      "views": 400,
-      "collectClicks": 17,
-      "saves": 3,
-      "intentScore": null
-    },
-    {
-      "id": "co-001",
-      "title": "Coastal #001",
-      "series": "Coastal New England",
-      "views": 450,
-      "collectClicks": 18,
-      "saves": 2,
-      "intentScore": null
-    },
-    {
-      "id": "20-167",
-      "title": "2025 Seasons #167",
-      "series": "The Light Unseen (Infrared Study)",
-      "views": 500,
-      "collectClicks": 19,
-      "saves": 1,
-      "intentScore": null
-    }
-  ],
+  "hotImages": [],
   "collectorPipeline": {
-    "visitors": 342,
-    "engaged": 124,
-    "interested": 56,
-    "collectors": 3
+    "visitors": 0,
+    "engaged": 0,
+    "interested": 0,
+    "collectors": 0
   },
   "trafficSources": [
     {
-      "source": "Instagram",
-      "visitors": 156
-    },
-    {
-      "source": "Direct",
-      "visitors": 98
-    },
-    {
-      "source": "Google",
-      "visitors": 54
-    },
-    {
-      "source": "Pinterest",
-      "visitors": 22
-    },
-    {
-      "source": "Referral",
-      "visitors": 12
+      "source": "Awaiting first Plausible report",
+      "visitors": 0
     }
   ],
   "seriesPerformance": [
     {
       "series": "Texture & Dormancy",
-      "views": 800,
-      "avgTimeSeconds": 150,
-      "collectClicks": 25,
-      "conversationRate": 0.04
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     },
     {
       "series": "Savannah 2026",
-      "views": 720,
-      "avgTimeSeconds": 160,
-      "collectClicks": 23,
-      "conversationRate": 0.037
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     },
     {
       "series": "Intimacy",
-      "views": 640,
-      "avgTimeSeconds": 170,
-      "collectClicks": 21,
-      "conversationRate": 0.034
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     },
     {
       "series": "Quincy Quarries",
-      "views": 560,
-      "avgTimeSeconds": 180,
-      "collectClicks": 19,
-      "conversationRate": 0.031
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     },
     {
       "series": "Through the Purple",
-      "views": 480,
-      "avgTimeSeconds": 190,
-      "collectClicks": 17,
-      "conversationRate": 0.028
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     },
     {
       "series": "Coastal New England",
-      "views": 400,
-      "avgTimeSeconds": 200,
-      "collectClicks": 15,
-      "conversationRate": 0.025
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     },
     {
       "series": "2025 Seasons",
-      "views": 320,
-      "avgTimeSeconds": 210,
-      "collectClicks": 13,
-      "conversationRate": 0.022
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     },
     {
       "series": "Portraits",
-      "views": 240,
-      "avgTimeSeconds": 220,
-      "collectClicks": 11,
-      "conversationRate": 0.019
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     },
     {
       "series": "The Light Unseen (Infrared Study)",
-      "views": 160,
-      "avgTimeSeconds": 230,
-      "collectClicks": 9,
-      "conversationRate": 0.016
+      "views": 0,
+      "avgTimeSeconds": 0,
+      "collectClicks": 0,
+      "conversationRate": 0
     }
   ],
   "nextBestActions": [
-    "Create Instagram carousel featuring top 5 images (Dawn Light, Stillness, Threshold) to capitalize on strong engagement",
-    "Email recent signups (14) with curated selection of Minimalist Moments series—highest conversion rate at 4.2%",
-    "Test limited edition print offer for Stillness and Dawn Light—combine highest view + collect click counts",
-    "Analyze why Landscape Echoes has high dwell time (201s) but low collection rate—strong artistic appeal, messaging opportunity"
+    "Stripe is live — test the full purchase flow end-to-end (browse → select size → Stripe checkout → confirmation)",
+    "Begin consistent Instagram posting (3–4 posts/week) to drive first traffic to the site",
+    "Verify Plausible tracking survived the Cloudflare migration — check your Plausible dashboard for live visitor data",
+    "Share the site link in 2–3 film photography communities (r/analog, Photrio, film photography Discord servers)",
+    "First Plausible weekly email arrives next Monday — dashboard data will populate after that"
   ],
   "weeklyTrend": [
     {
-      "week": "Mar 3-9",
-      "visitors": 268,
-      "collectClicks": 38
-    },
-    {
-      "week": "Mar 10-16",
-      "visitors": 304,
-      "collectClicks": 42
-    },
-    {
-      "week": "Mar 17-23",
-      "visitors": 287,
-      "collectClicks": 41
-    },
-    {
-      "week": "Mar 24-30",
-      "visitors": 342,
-      "collectClicks": 56
-    },
-    {
-      "week": "Mar 31-Apr 6 (current)",
-      "visitors": 127,
-      "collectClicks": 22
+      "week": "Mar 31-Apr 6",
+      "visitors": 0,
+      "collectClicks": 0
     }
   ]
 }
