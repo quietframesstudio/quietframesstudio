@@ -3,9 +3,9 @@
     "version": "1.0",
     "site": "Quiet Frames Studio",
     "photographer": "Michael J McConnell",
-    "updated": "2026-03-29",
+    "updated": "2026-03-31",
     "note": "This file is the source of truth for all portfolio content. The upload skill updates it automatically.",
-    "photosAdded": 236
+    "photosAdded": 247
   },
   "settings": {
     "featuredSeriesIds": [
@@ -21,7 +21,7 @@
     "printSizes": [
       {
         "id": "8x10",
-        "label": "8 × 10\"",
+        "label": "8 \u00d7 10\"",
         "price": 75,
         "edition": 25,
         "stripeUrl": "https://buy.stripe.com/bJe14h5KI7ht1ds8o42kw00",
@@ -30,7 +30,7 @@
       },
       {
         "id": "16x20",
-        "label": "16 × 20\"",
+        "label": "16 \u00d7 20\"",
         "price": 150,
         "edition": 25,
         "stripeUrl": "https://buy.stripe.com/9B614h0qocBN9JY9s82kw01",
@@ -39,7 +39,7 @@
       },
       {
         "id": "24x30",
-        "label": "24 × 30\"",
+        "label": "24 \u00d7 30\"",
         "price": 300,
         "edition": 15,
         "stripeUrl": "https://buy.stripe.com/aFa7sFb5245h7BQ0VC2kw02",
@@ -48,7 +48,7 @@
       },
       {
         "id": "20x24",
-        "label": "20 × 24\" (Premium)",
+        "label": "20 \u00d7 24\" (Premium)",
         "price": 425,
         "edition": 10,
         "stripeUrl": "https://buy.stripe.com/eVq00d0qofNZ4pE33K2kw03",
@@ -56,14 +56,14 @@
         "stripePriceId": "price_1TGO3H9kczdEn9JNYdYYX9ny"
       }
     ],
-    "printMedium": "Hahnemühle Photo Rag 308gsm · Archival pigment",
+    "printMedium": "Hahnem\u00fchle Photo Rag 308gsm \u00b7 Archival pigment",
     "printNote": "Each print is signed and numbered. Editions are strictly limited."
   },
   "series": [
     {
       "id": "texture-dormancy",
       "title": "Texture & Dormancy",
-      "subtitle": "Winter — New England, 2025",
+      "subtitle": "Winter \u2014 New England, 2025",
       "description": "Winter landscapes and still forms shot across New England in late 2025. Organic textures, bare structure, quiet light.",
       "featured": true,
       "cover": "images/texture-dormancy/texture-dormancy-001.jpg",
@@ -84,7 +84,7 @@
     {
       "id": "savannah-2026",
       "title": "Savannah 2026",
-      "subtitle": "Savannah, GA — Early 2026",
+      "subtitle": "Savannah, GA \u2014 Early 2026",
       "description": "Street life and architecture in the American South. Shot across multiple film stocks.",
       "featured": true,
       "cover": "",
@@ -104,17 +104,17 @@
     {
       "id": "intimacy",
       "title": "Intimacy",
-      "subtitle": "Portraits — Medium Format",
+      "subtitle": "Portraits \u2014 Medium Format",
       "description": "An observation of intimate moments shared in public spaces among complete strangers.",
       "featured": true,
       "cover": "images/2025-seasons/2025-seasons-042.jpg",
-      "photoCount": 5,
+      "photoCount": 16,
       "tags": {
         "subject": [
           "portrait"
         ],
-        "film": "portra-400",
-        "format": "6x7",
+        "film": "mixed",
+        "format": "mixed",
         "location": []
       }
     },
@@ -142,8 +142,8 @@
     {
       "id": "lomo-purple-series",
       "title": "Through the Purple",
-      "subtitle": "Lomography Purple — Parks & Outdoor",
-      "description": "Shot on Lomography Purple, a film that swaps the green channel for violet — grass and foliage render in purple and magenta. An unmistakable, otherworldly palette.",
+      "subtitle": "Lomography Purple \u2014 Parks & Outdoor",
+      "description": "Shot on Lomography Purple, a film that swaps the green channel for violet \u2014 grass and foliage render in purple and magenta. An unmistakable, otherworldly palette.",
       "featured": false,
       "cover": "images/lomo-purple-series/lomo-purple-series-001.jpg",
       "photoCount": 10,
@@ -163,7 +163,7 @@
       "id": "sfx-infrared",
       "title": "SFX Infrared",
       "subtitle": "Ilford SFX with red filter",
-      "description": "Ilford SFX with a deep red filter — foliage rendered white, skies near black. A different kind of seeing.",
+      "description": "Ilford SFX with a deep red filter \u2014 foliage rendered white, skies near black. A different kind of seeing.",
       "featured": false,
       "cover": "",
       "photoCount": 0,
@@ -201,7 +201,7 @@
       "id": "2025-seasons",
       "title": "2025 Seasons",
       "subtitle": "A year of shooting",
-      "description": "A year-long study shot on 35mm, medium format, and 4×5 large format across New England and beyond.",
+      "description": "A year-long study shot on 35mm, medium format, and 4\u00d75 large format across New England and beyond.",
       "featured": false,
       "cover": "images/2025-seasons/2025-seasons-010.jpg",
       "photoCount": 134,
@@ -349,15 +349,15 @@
         },
         {
           "id": "6x7",
-          "label": "6×7 Medium Format"
+          "label": "6\u00d77 Medium Format"
         },
         {
           "id": "6x9",
-          "label": "6×9 Medium Format"
+          "label": "6\u00d79 Medium Format"
         },
         {
           "id": "4x5",
-          "label": "4×5 Large Format"
+          "label": "4\u00d75 Large Format"
         }
       ]
     },
@@ -4736,6 +4736,244 @@
         "location": [
           "new-england"
         ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-011",
+      "file": "images/intimacy/intimacy-011.jpg",
+      "title": "Intimacy #11",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-012",
+      "file": "images/intimacy/intimacy-012.jpg",
+      "title": "Intimacy #12",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-013",
+      "file": "images/intimacy/intimacy-013.jpg",
+      "title": "Intimacy #13",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "portrait",
+          "street"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-014",
+      "file": "images/intimacy/intimacy-014.jpg",
+      "title": "Intimacy #14",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-015",
+      "file": "images/intimacy/intimacy-015.jpg",
+      "title": "Intimacy #15",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape"
+        ],
+        "film": "superia-400",
+        "format": "6x9",
+        "camera": "fuji-gw690ii",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-016",
+      "file": "images/intimacy/intimacy-016.jpg",
+      "title": "Intimacy #16",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-017",
+      "file": "images/intimacy/intimacy-017.jpg",
+      "title": "Intimacy #17",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "portrait",
+          "street"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-018",
+      "file": "images/intimacy/intimacy-018.jpg",
+      "title": "Intimacy #18",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-019",
+      "file": "images/intimacy/intimacy-019.jpg",
+      "title": "Intimacy #19",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "portrait",
+          "street"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-020",
+      "file": "images/intimacy/intimacy-020.jpg",
+      "title": "Intimacy #20",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-021",
+      "file": "images/intimacy/intimacy-021.jpg",
+      "title": "Intimacy #21",
+      "date": "2026-03",
+      "orientation": "square",
+      "tags": {
+        "subject": [
+          "portrait",
+          "street"
+        ],
+        "film": "mixed",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [],
         "series": "intimacy",
         "process": "bw"
       }
