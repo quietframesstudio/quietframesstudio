@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiet Frames Studio — Admin Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <style>
         * {
             margin: 0;
@@ -354,10 +355,64 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
+
+        /* Auth gate styles */
+        #auth-gate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        #auth-gate h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 300;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        #auth-gate p {
+            color: #8b8178;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        #auth-gate button {
+            background: #1a1a1a;
+            color: #f9f8f5;
+            border: none;
+            padding: 12px 32px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        #auth-gate button:hover { opacity: 0.8; }
+        #dashboard-content { display: none; }
+        #logout-btn {
+            background: none;
+            border: 1px solid #e8e6e1;
+            color: #8b8178;
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            letter-spacing: 0.05em;
+            font-family: 'Inter', sans-serif;
+        }
+        #logout-btn:hover { border-color: #1a1a1a; color: #1a1a1a; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- Auth gate: shown when not logged in -->
+    <div id="auth-gate">
+        <h1>Quiet Frames Studio</h1>
+        <p>Admin Dashboard — Authentication Required</p>
+        <button onclick="netlifyIdentity.open()">Sign In</button>
+    </div>
+
+    <!-- Dashboard: hidden until authenticated -->
+    <div id="dashboard-content" class="container">
         <header>
             <h1>Dashboard</h1>
             <div class="header-meta">
@@ -877,8 +932,46 @@
             });
         }
 
-        // Load data on page load
-        document.addEventListener('DOMContentLoaded', loadData);
+        // Load data on page load — only called after auth
+        function initDashboard() { loadData(); }
+    </script>
+
+    <!-- Netlify Identity auth controller -->
+    <script>
+        const authGate = document.getElementById('auth-gate');
+        const dashboardContent = document.getElementById('dashboard-content');
+
+        function showDashboard(user) {
+            authGate.style.display = 'none';
+            dashboardContent.style.display = 'block';
+            // Add logout button to header
+            const headerMeta = document.querySelector('.header-meta');
+            if (headerMeta && !document.getElementById('logout-btn')) {
+                const btn = document.createElement('button');
+                btn.id = 'logout-btn';
+                btn.textContent = 'Sign Out';
+                btn.onclick = function() { netlifyIdentity.logout(); };
+                headerMeta.appendChild(btn);
+            }
+            initDashboard();
+        }
+
+        function showLogin() {
+            authGate.style.display = 'flex';
+            dashboardContent.style.display = 'none';
+        }
+
+        // Check if already logged in
+        const currentUser = netlifyIdentity.currentUser();
+        if (currentUser) {
+            showDashboard(currentUser);
+        } else {
+            showLogin();
+        }
+
+        // Listen for login/logout events
+        netlifyIdentity.on('login', function(user) { showDashboard(user); });
+        netlifyIdentity.on('logout', function() { showLogin(); });
     </script>
 </body>
 </html>
