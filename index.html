@@ -1002,7 +1002,7 @@ function updateSEO(route) {
     if (p) { title = `${p.title} — Quiet Frames Studio`; }
   } else if (route.view === 'collect') {
     title = 'Collect Prints — Quiet Frames Studio';
-    desc  = 'Limited edition archival fine art prints on Hahnemühle Photo Rag. Signed and numbered.';
+    desc  = 'Limited edition archival fine art prints on Hahnemühle Photo Rag. Produced from original film scans, crafted with care and precision.';
   } else if (route.view === 'about') {
     title = 'About — Quiet Frames Studio';
   }
@@ -1296,7 +1296,7 @@ function renderPhoto(app, id) {
 </button>`).join('');
 
   const printMedium = (d.settings && d.settings.printMedium) || 'Archival pigment on fine art paper';
-  const printNote   = (d.settings && d.settings.printNote)   || 'Each print is signed and numbered.';
+  const printNote   = (d.settings && d.settings.printNote)   || 'Archival-quality prints from original film scans.';
   const contactEmail = (d.settings && d.settings.contactEmail) || 'm.mcconnell3191@gmail.com';
 
   const prevNextHtml = (prevPhoto || nextPhoto) ? `
@@ -1390,8 +1390,8 @@ function renderCollect(app) {
   <div class="print-spec-size">${ps.label}</div>
   <div class="print-spec-divider"></div>
   <div class="print-spec-price">$${ps.price}</div>
-  <div class="print-spec-edition">Edition of ${ps.edition} · Signed &amp; numbered</div>
-  ${ps.stripeUrl ? `<div class="print-spec-cta">Purchase →</div>` : ''}
+  <div class="print-spec-edition">Edition of ${ps.edition} · Limited archival print</div>
+  ${ps.stripeUrl ? `<div class="print-spec-cta">Collect →</div>` : ''}
 </div>`).join('');
 
   const collectEmail = encodeURIComponent('Print Inquiry — Quiet Frames Studio');
@@ -1403,7 +1403,7 @@ function renderCollect(app) {
     <h1 class="collect-page-title">Collect a <em>Print</em></h1>
     <div class="collect-page-intro">
       <p>All prints are made on Hahnemühle Photo Rag 308gsm using archival pigment inks — the same paper used by museum collections and fine art institutions worldwide.</p>
-      <p>Each print is personally signed and numbered by the photographer. Editions are strictly limited and will not be reprinted once sold through.</p>
+      <p>Archival-quality prints produced from original film scans, crafted with care and precision. Editions are strictly limited and will not be reprinted once sold through.</p>
     </div>
   </div>
 
@@ -1414,8 +1414,8 @@ function renderCollect(app) {
       <h2 class="collect-process-title">The Print Process</h2>
       <div class="collect-process-body">
         <p>Every print begins as an analog negative — hand-developed in my home darkroom. The negatives are scanned on an Epson V700 at full resolution and processed using Negative Lab Pro, preserving the grain, tone, and character of the original film.</p>
-        <p>Prints are produced at a professional fine art lab on Hahnemühle Photo Rag 308gsm — a 100% cotton rag paper with a warm, matte surface that suits the analog aesthetic of the work. No glossy finishes, no digital sharpening. The prints look like what they are: film photographs.</p>
-        <p>I inspect and hand-sign every print before it ships. If you receive a print with any defect, I will replace it.</p>
+        <p>Prints are professionally produced on Hahnemühle Photo Rag 308gsm — a 100% cotton rag paper with a warm, matte surface that suits the analog aesthetic of the work. No glossy finishes, no digital sharpening. The prints look like what they are: film photographs.</p>
+        <p>Each edition is strictly limited — once an edition sells through, that image will not be reprinted. If you receive a print with any defect, I will replace it.</p>
       </div>
     </div>
     <div class="collect-specs-list">
@@ -1436,8 +1436,8 @@ function renderCollect(app) {
         <span class="collect-spec-value">100+ year archival rating</span>
       </div>
       <div class="collect-spec-item">
-        <span class="collect-spec-label">Signature</span>
-        <span class="collect-spec-value">Hand-signed &amp; numbered by photographer</span>
+        <span class="collect-spec-label">Edition</span>
+        <span class="collect-spec-value">Strictly limited · Will not be reprinted</span>
       </div>
       <div class="collect-spec-item">
         <span class="collect-spec-label">Framing</span>
