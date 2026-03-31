@@ -413,12 +413,13 @@
 
     <!-- Dashboard: hidden until authenticated -->
     <div id="dashboard-content" class="container">
-        <header>
+        <header style="position: relative;">
             <h1>Dashboard</h1>
             <div class="header-meta">
                 <span>Quiet Frames Studio</span>
                 <span id="lastUpdated">Loading...</span>
             </div>
+            <button id="logout-btn" onclick="netlifyIdentity.logout()" style="position:absolute;top:1rem;right:0;">Sign Out</button>
         </header>
 
         <div id="errorContainer"></div>
@@ -942,23 +943,19 @@
         const dashboardContent = document.getElementById('dashboard-content');
 
         function showDashboard(user) {
+            // Close the Identity widget modal if it's open
+            netlifyIdentity.close();
             authGate.style.display = 'none';
             dashboardContent.style.display = 'block';
-            // Add logout button to header
-            const headerMeta = document.querySelector('.header-meta');
-            if (headerMeta && !document.getElementById('logout-btn')) {
-                const btn = document.createElement('button');
-                btn.id = 'logout-btn';
-                btn.textContent = 'Sign Out';
-                btn.onclick = function() { netlifyIdentity.logout(); };
-                headerMeta.appendChild(btn);
-            }
             initDashboard();
         }
 
         function showLogin() {
             authGate.style.display = 'flex';
             dashboardContent.style.display = 'none';
+            // Remove logout button if it exists
+            const btn = document.getElementById('logout-btn');
+            if (btn) btn.remove();
         }
 
         // Check if already logged in
@@ -971,7 +968,7 @@
 
         // Listen for login/logout events
         netlifyIdentity.on('login', function(user) { showDashboard(user); });
-        netlifyIdentity.on('logout', function() { showLogin(); });
+        netlifyIdentity.on('logout', function() { window.location.reload(); });
     </script>
 </body>
 </html>
