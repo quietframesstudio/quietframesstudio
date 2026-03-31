@@ -87,7 +87,7 @@
       "subtitle": "Savannah, GA \u2014 Early 2026",
       "description": "Street life and architecture in the American South. Shot across multiple film stocks.",
       "featured": true,
-      "cover": "",
+      "cover": "images/2025-seasons/2025-seasons-138.jpg",
       "photoCount": 28,
       "tags": {
         "subject": [
@@ -160,23 +160,6 @@
       }
     },
     {
-      "id": "sfx-infrared",
-      "title": "SFX Infrared",
-      "subtitle": "Ilford SFX with red filter",
-      "description": "Ilford SFX with a deep red filter \u2014 foliage rendered white, skies near black. A different kind of seeing.",
-      "featured": false,
-      "cover": "",
-      "photoCount": 0,
-      "tags": {
-        "subject": [
-          "landscape"
-        ],
-        "film": "sfx",
-        "format": "35mm",
-        "location": []
-      }
-    },
-    {
       "id": "coastal",
       "title": "Coastal New England",
       "subtitle": "New England Coastline",
@@ -224,7 +207,7 @@
       "subtitle": "",
       "description": "",
       "featured": false,
-      "cover": "",
+      "cover": "images/2025-seasons/2025-seasons-052.jpg",
       "photoCount": 2,
       "tags": {
         "subject": [
@@ -241,7 +224,7 @@
       "subtitle": "",
       "description": "",
       "featured": false,
-      "cover": "",
+      "cover": "images/2025-seasons/2025-seasons-170.jpg",
       "photoCount": 12,
       "tags": {
         "subject": [
