@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiet Frames Studio — Admin Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Auth handled by Cloudflare Access (Zero Trust) at the edge -->
     <style>
         * {
             margin: 0;
@@ -404,14 +404,7 @@
     </style>
 </head>
 <body>
-    <!-- Auth gate: shown when not logged in -->
-    <div id="auth-gate">
-        <h1>Quiet Frames Studio</h1>
-        <p>Admin Dashboard — Authentication Required</p>
-        <button onclick="netlifyIdentity.open()">Sign In</button>
-    </div>
-
-    <!-- Dashboard: hidden until authenticated -->
+    <!-- Dashboard: protected by Cloudflare Access at the edge -->
     <div id="dashboard-content" class="container">
         <header style="position: relative;">
             <h1>Dashboard</h1>
@@ -419,7 +412,7 @@
                 <span>Quiet Frames Studio</span>
                 <span id="lastUpdated">Loading...</span>
             </div>
-            <button id="logout-btn" onclick="netlifyIdentity.logout()" style="position:absolute;top:1rem;right:0;">Sign Out</button>
+            <a href="/.cloudflare-access/logout" id="logout-btn" style="position:absolute;top:1rem;right:0;text-decoration:none;padding:0.5rem 1rem;border:1px solid #ccc;border-radius:4px;color:#333;">Sign Out</a>
         </header>
 
         <div id="errorContainer"></div>
@@ -937,38 +930,10 @@
         function initDashboard() { loadData(); }
     </script>
 
-    <!-- Netlify Identity auth controller -->
+    <!-- Cloudflare Access handles auth at the edge — init dashboard directly -->
     <script>
-        const authGate = document.getElementById('auth-gate');
-        const dashboardContent = document.getElementById('dashboard-content');
-
-        function showDashboard(user) {
-            // Close the Identity widget modal if it's open
-            netlifyIdentity.close();
-            authGate.style.display = 'none';
-            dashboardContent.style.display = 'block';
-            initDashboard();
-        }
-
-        function showLogin() {
-            authGate.style.display = 'flex';
-            dashboardContent.style.display = 'none';
-            // Remove logout button if it exists
-            const btn = document.getElementById('logout-btn');
-            if (btn) btn.remove();
-        }
-
-        // Check if already logged in
-        const currentUser = netlifyIdentity.currentUser();
-        if (currentUser) {
-            showDashboard(currentUser);
-        } else {
-            showLogin();
-        }
-
-        // Listen for login/logout events
-        netlifyIdentity.on('login', function(user) { showDashboard(user); });
-        netlifyIdentity.on('logout', function() { window.location.reload(); });
+        document.getElementById('dashboard-content').style.display = 'block';
+        initDashboard();
     </script>
 </body>
 </html>

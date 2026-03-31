@@ -15,13 +15,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-<!-- Netlify Identity: catch invite/recovery tokens and redirect to dashboard -->
-<script>
-  if (window.location.hash && window.location.hash.match(/#invite_token|#confirmation_token|#recovery_token/)) {
-    window.location.href = '/admin/dashboard.html' + window.location.hash;
-  }
-</script>
-
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-8lg4czwOySo8PUdgQ4SMs.js"></script>
 <script>
@@ -962,12 +955,6 @@ footer {
 <!-- App -->
 <main id="app"></main>
 
-<!-- Hidden form for Netlify Forms detection (required for SPA) -->
-<form name="email-signup" method="POST" class="email-form-hidden" data-netlify="true">
-  <input type="email" name="email" required>
-  <input type="hidden" name="form-name" value="email-signup">
-</form>
-
 <!-- Footer (always visible) -->
 <footer id="site-footer">
   <div class="footer-logo">Quiet Frames Studio</div>
@@ -976,11 +963,10 @@ footer {
     <li><a href="#/collect" onclick="navigate('/collect')">Collect</a></li>
     <li><a href="mailto:m.mcconnell3191@gmail.com" id="ft-contact">Contact</a></li>
   </ul>
-  <form name="email-signup" method="POST" class="email-signup-form" data-netlify="true" onsubmit="handleEmailSignup(event)">
-    <input type="hidden" name="form-name" value="email-signup">
+  <form class="email-signup-form" onsubmit="handleEmailSignup(event)">
     <div class="email-signup-label">Private access to new releases and studio notes</div>
     <div class="email-signup-inputs">
-      <input type="email" name="email" placeholder="your@email.com" required>
+      <input type="email" name="email_address" placeholder="your@email.com" required>
       <button type="submit">Subscribe</button>
     </div>
   </form>
@@ -1720,27 +1706,34 @@ function closeMobileNav() {
 function handleEmailSignup(event) {
   event.preventDefault();
   const form = event.target;
-  const email = form.querySelector('input[name="email"]').value;
+  const email = form.querySelector('input[name="email_address"]').value;
+  const btn = form.querySelector('button[type="submit"]');
 
   // Track the email signup event
   trackEvent('Email Signup', { email: email });
 
-  // Submit the form to Netlify
-  fetch('/', {
+  // Disable button during submission
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  // Submit to Kit (formerly ConvertKit) form API
+  fetch('https://app.kit.com/forms/9271423/subscriptions', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(new FormData(form)).toString()
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email_address: email })
   })
-  .then(() => {
-    // Clear the input and show success feedback
-    form.querySelector('input[name="email"]').value = '';
-    form.querySelector('button[type="submit"]').textContent = 'Thanks!';
-    setTimeout(() => {
-      form.querySelector('button[type="submit"]').textContent = 'Subscribe';
-    }, 2000);
+  .then(res => {
+    if (!res.ok) throw new Error('Subscription failed');
+    form.querySelector('input[name="email_address"]').value = '';
+    btn.textContent = 'Thanks!';
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = 'Subscribe'; }, 2000);
   })
   .catch(err => {
     console.error('Form submission error:', err);
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = 'Subscribe'; }, 3000);
   });
 }
 
