@@ -22,38 +22,38 @@
       {
         "id": "8x10",
         "label": "8 \u00d7 10\"",
-        "price": 75,
+        "price": 195,
         "edition": 25,
-        "stripeUrl": "https://buy.stripe.com/bJe14h5KI7ht1ds8o42kw00",
+        "stripeUrl": "https://buy.stripe.com/8x2dR31us1X99JYawc2kw04",
         "stripeProductId": "prod_UErmKzBMDhecnD",
-        "stripePriceId": "price_1TGO3D9kczdEn9JNtKxAiqd1"
+        "stripePriceId": "price_1TLilQ9kczdEn9JNghQ3a3QQ"
       },
       {
         "id": "16x20",
         "label": "16 \u00d7 20\"",
-        "price": 150,
+        "price": 325,
         "edition": 25,
-        "stripeUrl": "https://buy.stripe.com/9B614h0qocBN9JY9s82kw01",
+        "stripeUrl": "https://buy.stripe.com/4gMaER6OM7htcWa5bS2kw05",
         "stripeProductId": "prod_UErmpGhn46WA4V",
-        "stripePriceId": "price_1TGO3E9kczdEn9JNJr8ql9Oa"
+        "stripePriceId": "price_1TLilR9kczdEn9JN5aVZQWbt"
       },
       {
         "id": "24x30",
         "label": "24 \u00d7 30\"",
-        "price": 300,
+        "price": 475,
         "edition": 15,
-        "stripeUrl": "https://buy.stripe.com/aFa7sFb5245h7BQ0VC2kw02",
+        "stripeUrl": "https://buy.stripe.com/cNi6oBb52cBN2hwdIo2kw06",
         "stripeProductId": "prod_UErmbtuVK6xT3K",
-        "stripePriceId": "price_1TGO3G9kczdEn9JNOu9SYPco"
+        "stripePriceId": "price_1TLilS9kczdEn9JNKeUhJpU9"
       },
       {
         "id": "20x24",
         "label": "20 \u00d7 24\" (Premium)",
-        "price": 425,
+        "price": 595,
         "edition": 10,
-        "stripeUrl": "https://buy.stripe.com/eVq00d0qofNZ4pE33K2kw03",
+        "stripeUrl": "https://buy.stripe.com/3cI8wJc967hte0e9s82kw07",
         "stripeProductId": "prod_UErmV9vEloNxv7",
-        "stripePriceId": "price_1TGO3H9kczdEn9JNYdYYX9ny"
+        "stripePriceId": "price_1TLilT9kczdEn9JN98xfynhp"
       }
     ],
     "printMedium": "Hahnem\u00fchle Photo Rag 308gsm \u00b7 Archival pigment",
