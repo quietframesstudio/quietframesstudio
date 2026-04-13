@@ -1780,7 +1780,7 @@ function applySettings(d) {
 // ═══════════════════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════════════════
-fetch('gallery-data.json')
+fetch('/gallery-data.json')
   .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
   .then(data => {
     GALLERY_DATA = data;
