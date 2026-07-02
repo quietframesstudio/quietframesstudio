@@ -36,6 +36,7 @@
       "@id": "https://quietframesstudio.com/#photographer",
       "name": "Michael J McConnell",
       "jobTitle": "Film Photographer",
+      "image": "https://quietframesstudio.com/images/2025-seasons/2025-seasons-100.jpg",
       "description": "Analog photographer working across 35mm, medium format, and 4×5 large format film. Based outside Boston, Massachusetts.",
       "url": "https://quietframesstudio.com/about",
       "email": "mailto:hello@quietframesstudio.com",
@@ -769,6 +770,13 @@ html[data-theme="dark"] nav {
   font-size: clamp(36px, 4.5vw, 60px); font-weight: 300; line-height: 1.08;
 }
 .about-headline em { font-style: italic; color: var(--accent); }
+.about-portrait { margin-top: 40px; max-width: 320px; }
+.about-portrait img { width: 100%; filter: grayscale(0.1); }
+.about-portrait figcaption {
+  margin-top: 10px;
+  font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-light);
+}
 .about-right { padding: 80px 52px; display: flex; flex-direction: column; justify-content: center; }
 .about-body  { font-size: 14.5px; line-height: 1.88; color: var(--ink-mid); max-width: 520px; }
 .about-body p + p { margin-top: 18px; }
@@ -1831,10 +1839,17 @@ function renderAbout(app) {
   const s = d.settings || {};
   const igUrl = s.instagramUrl || '#';
 
+  const portrait = s.aboutPortrait ? `
+    <figure class="about-portrait">
+      <img src="${imgUrl(s.aboutPortrait)}" alt="Michael J McConnell, self-portrait with rangefinder" loading="lazy">
+      <figcaption>Self-portrait, 35mm</figcaption>
+    </figure>` : '';
+
   app.innerHTML = `
 <div class="about-view">
   <div class="about-left">
     <h1 class="about-headline">Shooting<br><em>film</em><br>slowly.</h1>
+    ${portrait}
   </div>
   <div class="about-right">
     <div class="about-body">

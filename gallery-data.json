@@ -3,9 +3,9 @@
     "version": "1.0",
     "site": "Quiet Frames Studio",
     "photographer": "Michael J McConnell",
-    "updated": "2026-03-31",
+    "updated": "2026-07-02",
     "note": "This file is the source of truth for all portfolio content. The upload skill updates it automatically.",
-    "photosAdded": 247
+    "photosAdded": 259
   },
   "settings": {
     "featuredSeriesIds": [
@@ -21,7 +21,7 @@
     "printSizes": [
       {
         "id": "8x10",
-        "label": "8 \u00d7 10\"",
+        "label": "8 × 10\"",
         "price": 195,
         "edition": 25,
         "stripeUrl": "https://buy.stripe.com/8x2dR31us1X99JYawc2kw04",
@@ -30,7 +30,7 @@
       },
       {
         "id": "16x20",
-        "label": "16 \u00d7 20\"",
+        "label": "16 × 20\"",
         "price": 325,
         "edition": 25,
         "stripeUrl": "https://buy.stripe.com/4gMaER6OM7htcWa5bS2kw05",
@@ -39,7 +39,7 @@
       },
       {
         "id": "24x30",
-        "label": "24 \u00d7 30\"",
+        "label": "24 × 30\"",
         "price": 475,
         "edition": 15,
         "stripeUrl": "https://buy.stripe.com/cNi6oBb52cBN2hwdIo2kw06",
@@ -48,7 +48,7 @@
       },
       {
         "id": "20x24",
-        "label": "20 \u00d7 24\" (Premium)",
+        "label": "20 × 24\" (Premium)",
         "price": 595,
         "edition": 10,
         "stripeUrl": "https://buy.stripe.com/3cI8wJc967hte0e9s82kw07",
@@ -56,15 +56,16 @@
         "stripePriceId": "price_1TLilT9kczdEn9JN98xfynhp"
       }
     ],
-    "printMedium": "Hahnem\u00fchle Photo Rag 308gsm \u00b7 Archival pigment",
-    "printNote": "Archival-quality prints produced from original film scans, crafted with care and precision. Editions are strictly limited to preserve fine art value."
+    "printMedium": "Hahnemühle Photo Rag 308gsm · Archival pigment",
+    "printNote": "Archival-quality prints produced from original film scans, crafted with care and precision. Editions are strictly limited to preserve fine art value.",
+    "aboutPortrait": "images/2025-seasons/2025-seasons-100.jpg"
   },
   "series": [
     {
       "id": "texture-dormancy",
       "title": "Texture & Dormancy",
-      "subtitle": "Winter \u2014 New England, 2025",
-      "description": "A study in winter\u2019s essential forms across New England. Shot on Ilford FP4, the work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape\u2014where tone and surface become the primary subjects.",
+      "subtitle": "Winter — New England, 2025",
+      "description": "A study in winter’s essential forms across New England. Shot on Ilford FP4, the work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape—where tone and surface become the primary subjects.",
       "featured": true,
       "cover": "images/texture-dormancy/texture-dormancy-001.jpg",
       "photoCount": 19,
@@ -80,14 +81,14 @@
           "massachusetts"
         ]
       },
-      "curatorial": "A study in winter's essential forms across New England. Shot on Ilford FP4 medium format, this work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape\u2014where tone and surface become the primary subjects. What emerges is a visual vocabulary of repose: the grain of frost on wood, the geometry of bare branches, the tonal weight of overcast light against dark earth. Each image treats winter not as absence, but as clarity.",
-      "collectorNote": "These photographs exist at the intersection of formal restraint and material sensitivity\u2014medium format film architecture yields a tonal range and permanence that digital capture cannot match."
+      "curatorial": "A study in winter's essential forms across New England. Shot on Ilford FP4 medium format, this work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape—where tone and surface become the primary subjects. What emerges is a visual vocabulary of repose: the grain of frost on wood, the geometry of bare branches, the tonal weight of overcast light against dark earth. Each image treats winter not as absence, but as clarity.",
+      "collectorNote": "These photographs exist at the intersection of formal restraint and material sensitivity—medium format film architecture yields a tonal range and permanence that digital capture cannot match."
     },
     {
       "id": "savannah-2026",
       "title": "Savannah 2026",
-      "subtitle": "Savannah, GA \u2014 Early 2026",
-      "description": "A portrait of Savannah, Georgia\u2014its streets, facades, and human gestures captured across multiple film stocks. The work moves between architectural formalism and the spontaneity of street life, tracing the layered history embedded in the American South.",
+      "subtitle": "Savannah, GA — Early 2026",
+      "description": "A portrait of Savannah, Georgia—its streets, facades, and human gestures captured across multiple film stocks. The work moves between architectural formalism and the spontaneity of street life, tracing the layered history embedded in the American South.",
       "featured": true,
       "cover": "images/2025-seasons/2025-seasons-138.jpg",
       "photoCount": 28,
@@ -102,17 +103,17 @@
           "savannah"
         ]
       },
-      "curatorial": "Savannah's streets, facades, and human gestures emerge across multiple film stocks\u2014a deliberate heterogeneity that acknowledges the city itself as palimpsest. Between architectural formalism and the spontaneity of street encounter, the work traces layered histories embedded in the American South. Colors shift, grains vary, and emotional temperature fluctuates; the inconsistency becomes the point, refusing false coherence in favor of the complex visual grammar of lived place.",
-      "collectorNote": "Shot across varied film stocks without aesthetic apology, these photographs prioritize documentary presence over artistic consistency\u2014a rarity in contemporary fine art practice."
+      "curatorial": "Savannah's streets, facades, and human gestures emerge across multiple film stocks—a deliberate heterogeneity that acknowledges the city itself as palimpsest. Between architectural formalism and the spontaneity of street encounter, the work traces layered histories embedded in the American South. Colors shift, grains vary, and emotional temperature fluctuates; the inconsistency becomes the point, refusing false coherence in favor of the complex visual grammar of lived place.",
+      "collectorNote": "Shot across varied film stocks without aesthetic apology, these photographs prioritize documentary presence over artistic consistency—a rarity in contemporary fine art practice."
     },
     {
       "id": "intimacy",
       "title": "Intimacy",
-      "subtitle": "Portraits \u2014 Medium Format",
-      "description": "Moments of genuine human connection unfolding unscripted in public spaces. Shot across formats, the series trades technical consistency for emotional authenticity\u2014preserving fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby.",
+      "subtitle": "Portraits — Medium Format",
+      "description": "Moments of genuine human connection unfolding unscripted in public spaces. Shot across formats, the series trades technical consistency for emotional authenticity—preserving fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby.",
       "featured": true,
       "cover": "images/2025-seasons/2025-seasons-042.jpg",
-      "photoCount": 16,
+      "photoCount": 19,
       "tags": {
         "subject": [
           "portrait"
@@ -121,14 +122,14 @@
         "format": "mixed",
         "location": []
       },
-      "curatorial": "Genuine human connection unfolding unscripted in public spaces, captured across mixed formats and film stocks. Rather than subordinate emotional content to technical consistency, the work preserves fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby. The varying film stocks and formats become transparent\u2014tools in service of presence rather than style\u2014allowing the human moment to assert priority over the medium's material signature.",
-      "collectorNote": "These photographs embrace aesthetic variability as philosophical choice\u2014technical inconsistency in service of emotional authenticity, a demanding and deliberate position in portraiture."
+      "curatorial": "Genuine human connection unfolding unscripted in public spaces, captured across mixed formats and film stocks. Rather than subordinate emotional content to technical consistency, the work preserves fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby. The varying film stocks and formats become transparent—tools in service of presence rather than style—allowing the human moment to assert priority over the medium's material signature.",
+      "collectorNote": "These photographs embrace aesthetic variability as philosophical choice—technical inconsistency in service of emotional authenticity, a demanding and deliberate position in portraiture."
     },
     {
       "id": "quincy-quarries",
       "title": "Quincy Quarries",
       "subtitle": "Quincy, MA",
-      "description": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100, the work emphasizes the sculptural quality of abandoned infrastructure\u2014meditations on entropy where destruction becomes the subject of aesthetic contemplation.",
+      "description": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100, the work emphasizes the sculptural quality of abandoned infrastructure—meditations on entropy where destruction becomes the subject of aesthetic contemplation.",
       "featured": false,
       "cover": "images/quincy-quarries/quincy-quarries-001.jpg",
       "photoCount": 11,
@@ -144,17 +145,17 @@
           "massachusetts"
         ]
       },
-      "curatorial": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100 in 35mm, the work emphasizes the sculptural quality of abandoned infrastructure\u2014meditations on entropy where destruction becomes the subject of aesthetic contemplation. The sharp color separation and saturation of Ektar renders these spaces with the precision of geological cross-section, revealing the violent geometry beneath overgrowth and water reflection.",
-      "collectorNote": "The technical specificity of Ektar color film\u2014chosen deliberately for this landscape\u2014creates a visual register impossible to replicate digitally, binding the work's meaning to its material origin."
+      "curatorial": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100 in 35mm, the work emphasizes the sculptural quality of abandoned infrastructure—meditations on entropy where destruction becomes the subject of aesthetic contemplation. The sharp color separation and saturation of Ektar renders these spaces with the precision of geological cross-section, revealing the violent geometry beneath overgrowth and water reflection.",
+      "collectorNote": "The technical specificity of Ektar color film—chosen deliberately for this landscape—creates a visual register impossible to replicate digitally, binding the work's meaning to its material origin."
     },
     {
       "id": "lomo-purple-series",
       "title": "Through the Purple",
-      "subtitle": "Lomography Purple \u2014 Parks & Outdoor",
-      "description": "Lomography Purple swaps the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion, the work embraces it\u2014elevating the material properties of the film itself as subject, producing landscapes that feel simultaneously documentary and dreamlike.",
+      "subtitle": "Lomography Purple — Parks & Outdoor",
+      "description": "Lomography Purple swaps the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion, the work embraces it—elevating the material properties of the film itself as subject, producing landscapes that feel simultaneously documentary and dreamlike.",
       "featured": false,
       "cover": "images/lomo-purple-series/lomo-purple-series-001.jpg",
-      "photoCount": 10,
+      "photoCount": 11,
       "tags": {
         "subject": [
           "landscape",
@@ -166,14 +167,14 @@
           "massachusetts"
         ]
       },
-      "curatorial": "Lomography Purple film exchanges the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion as technical failure, the work embraces it\u2014elevating the material properties of the film itself as subject. The result is simultaneously documentary and dreamlike: recognizable parks and Massachusetts landscapes reappear as themselves and as something else entirely, their familiar forms made strange by a chemical intervention.",
-      "collectorNote": "These photographs foreground process and material accident as aesthetic content\u2014the film's inherent characteristics become inseparable from meaning, a rare example of constraint generating depth."
+      "curatorial": "Lomography Purple film exchanges the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion as technical failure, the work embraces it—elevating the material properties of the film itself as subject. The result is simultaneously documentary and dreamlike: recognizable parks and Massachusetts landscapes reappear as themselves and as something else entirely, their familiar forms made strange by a chemical intervention.",
+      "collectorNote": "These photographs foreground process and material accident as aesthetic content—the film's inherent characteristics become inseparable from meaning, a rare example of constraint generating depth."
     },
     {
       "id": "coastal",
       "title": "Coastal New England",
       "subtitle": "New England Coastline",
-      "description": "The New England littoral in black and white\u2014solid granite against changeable light and water. Shot on Ilford HP5, the work finds the tonal richness of coastal atmosphere, where salt spray and moisture soften definition into something between permanence and impermanence.",
+      "description": "The New England littoral in black and white—solid granite against changeable light and water. Shot on Ilford HP5, the work finds the tonal richness of coastal atmosphere, where salt spray and moisture soften definition into something between permanence and impermanence.",
       "featured": false,
       "cover": "images/coastal/coastal-001.jpg",
       "photoCount": 15,
@@ -190,16 +191,16 @@
         ]
       },
       "curatorial": "The New England littoral in black and white: solid granite against changeable light and water. Shot on Ilford HP5 in 35mm, the work finds the tonal richness of coastal atmosphere, where salt spray and moisture soften definition into something between permanence and impermanence. The tonal gradations resist both the harshness of pure contrast and the diffusion of overexposed light, instead occupying a space of subtle discriminations where the eye must attend carefully to reveal structure.",
-      "collectorNote": "Ilford HP5's tonal character and grain structure are inseparable from what these images are able to say\u2014the film's particular response to coastal light and moisture cannot be simulated."
+      "collectorNote": "Ilford HP5's tonal character and grain structure are inseparable from what these images are able to say—the film's particular response to coastal light and moisture cannot be simulated."
     },
     {
       "id": "2025-seasons",
       "title": "2025 Seasons",
       "subtitle": "A year of shooting",
-      "description": "A year-long document spanning three film formats\u201435mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, where individual frames accumulate into a portrait of time itself.",
+      "description": "A year-long document spanning three film formats—35mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, where individual frames accumulate into a portrait of time itself.",
       "featured": false,
       "cover": "images/2025-seasons/2025-seasons-010.jpg",
-      "photoCount": 134,
+      "photoCount": 142,
       "tags": {
         "subject": [
           "landscape",
@@ -212,14 +213,14 @@
           "new-england"
         ]
       },
-      "curatorial": "A year-long document spanning three film formats\u201435mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, with individual frames accumulating into a portrait of time itself rather than discrete moments. The intentional shift between formats embodies different ways of seeing: the quickness of 35mm, the stability of medium format, the deliberation required by large format. Together they form a temporal and optical argument about sustained attention.",
-      "collectorNote": "This series's formal orchestration\u2014intentional format shifts across a full year\u2014demonstrates a commitment to process and temporal depth rarely undertaken in contemporary photography."
+      "curatorial": "A year-long document spanning three film formats—35mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, with individual frames accumulating into a portrait of time itself rather than discrete moments. The intentional shift between formats embodies different ways of seeing: the quickness of 35mm, the stability of medium format, the deliberation required by large format. Together they form a temporal and optical argument about sustained attention.",
+      "collectorNote": "This series's formal orchestration—intentional format shifts across a full year—demonstrates a commitment to process and temporal depth rarely undertaken in contemporary photography."
     },
     {
       "id": "portraits",
       "title": "Portraits",
       "subtitle": "",
-      "description": "The human face approached with the same deliberation applied to landscape\u2014a formal study in light, geometry, and presence. Each image respects the subject\u2019s opacity, offering portraiture as observation rather than revelation.",
+      "description": "The human face approached with the same deliberation applied to landscape—a formal study in light, geometry, and presence. Each image respects the subject’s opacity, offering portraiture as observation rather than revelation.",
       "featured": false,
       "cover": "images/2025-seasons/2025-seasons-052.jpg",
       "photoCount": 2,
@@ -231,14 +232,14 @@
         "format": "mixed",
         "location": []
       },
-      "curatorial": "The human face approached with the same deliberation applied to landscape\u2014a formal study in light, geometry, and presence. Each image respects the subject's opacity, offering portraiture as observation rather than revelation. These photographs resist the psychological penetration often expected of portrait work, instead allowing the face to remain an object of aesthetic consideration, its formal properties granted priority over narrative or emotional disclosure.",
-      "collectorNote": "The restraint of approach\u2014the refusal to psychologize\u2014makes these images challenging and singular in contemporary portraiture, where psychological legibility is typically demanded."
+      "curatorial": "The human face approached with the same deliberation applied to landscape—a formal study in light, geometry, and presence. Each image respects the subject's opacity, offering portraiture as observation rather than revelation. These photographs resist the psychological penetration often expected of portrait work, instead allowing the face to remain an object of aesthetic consideration, its formal properties granted priority over narrative or emotional disclosure.",
+      "collectorNote": "The restraint of approach—the refusal to psychologize—makes these images challenging and singular in contemporary portraiture, where psychological legibility is typically demanded."
     },
     {
       "id": "the-light-unseen",
       "title": "The Light Unseen (Infrared Study)",
       "subtitle": "",
-      "description": "Infrared film renders the invisible visible\u2014vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light.",
+      "description": "Infrared film renders the invisible visible—vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light.",
       "featured": false,
       "cover": "images/2025-seasons/2025-seasons-170.jpg",
       "photoCount": 12,
@@ -251,8 +252,8 @@
         "format": "mixed",
         "location": []
       },
-      "curatorial": "Infrared film renders the invisible visible\u2014vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light. The infrared spectrum transforms the landscape into something between documentation and abstraction, where recognizable topography persists but loses its conventional meaning. Tone and form become primary; color disappears entirely.",
-      "collectorNote": "Infrared photography requires film stocks and technical protocols becoming scarcer in a digital age\u2014these prints represent a working knowledge of an increasingly archival process."
+      "curatorial": "Infrared film renders the invisible visible—vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light. The infrared spectrum transforms the landscape into something between documentation and abstraction, where recognizable topography persists but loses its conventional meaning. Tone and form become primary; color disappears entirely.",
+      "collectorNote": "Infrared photography requires film stocks and technical protocols becoming scarcer in a digital age—these prints represent a working knowledge of an increasingly archival process."
     }
   ],
   "filterGroups": [
@@ -350,15 +351,15 @@
         },
         {
           "id": "6x7",
-          "label": "6\u00d77 Medium Format"
+          "label": "6×7 Medium Format"
         },
         {
           "id": "6x9",
-          "label": "6\u00d79 Medium Format"
+          "label": "6×9 Medium Format"
         },
         {
           "id": "4x5",
-          "label": "4\u00d75 Large Format"
+          "label": "4×5 Large Format"
         }
       ]
     },
@@ -505,6 +506,176 @@
           "massachusetts"
         ],
         "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-010",
+      "file": "images/intimacy/intimacy-010.jpg",
+      "title": "Fire Lane, First Snow",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-009",
+      "file": "images/intimacy/intimacy-009.jpg",
+      "title": "Expired Meters",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "still-life"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-114",
+      "file": "images/2025-seasons/2025-seasons-114.jpg",
+      "title": "Dashboard Still Life",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-031",
+      "file": "images/2025-seasons/2025-seasons-031.jpg",
+      "title": "Floodlights, Off-Season",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-041",
+      "file": "images/2025-seasons/2025-seasons-041.jpg",
+      "title": "Ring the Bell If You Love Dogs",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "still-life"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-003",
+      "file": "images/intimacy/intimacy-003.jpg",
+      "title": "Winter Garden Ascent",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "architecture",
+          "street"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-005",
+      "file": "images/intimacy/intimacy-005.jpg",
+      "title": "The Old Elm, Boston Common",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-004",
+      "file": "images/intimacy/intimacy-004.jpg",
+      "title": "Parkman Bandstand, Autumn",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
         "process": "color"
       }
     },
@@ -1112,6 +1283,26 @@
       }
     },
     {
+      "id": "lo-006",
+      "file": "images/lomo-purple-series/lomo-purple-series-006.jpg",
+      "title": "Canopy in Violet",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
       "id": "lo-001",
       "file": "images/lomo-purple-series/lomo-purple-series-001.jpg",
       "title": "Lomo Purple Series #001",
@@ -1373,6 +1564,68 @@
         ],
         "series": "2025-seasons",
         "process": "bw"
+      }
+    },
+    {
+      "id": "int-002",
+      "file": "images/intimacy/intimacy-002.jpg",
+      "title": "The Toy Mower, October",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-155",
+      "file": "images/2025-seasons/2025-seasons-155.jpg",
+      "title": "Hotel Light Study II",
+      "date": "2026-03",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "still-life",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-154",
+      "file": "images/2025-seasons/2025-seasons-154.jpg",
+      "title": "Hotel Light Study I",
+      "date": "2026-03",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "still-life",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "intimacy",
+        "process": "color"
       }
     },
     {
