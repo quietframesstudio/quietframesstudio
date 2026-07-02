@@ -1,0 +1,521 @@
+{
+  "_meta": {
+    "source": "Adobe Lightroom API (asset_search, entityScope=LightroomAsset)",
+    "catalogId": "c248bae599dc4456a483be34bc661ee8",
+    "discovered": "2026-07-02",
+    "note": "Frames scanned May-June 2026, newer than all published site content. renditionUrl pattern: https://photos.adobe.io/v2/catalogs/{catalogId}/assets/{id}/renditions/thumbnail2x (auth-gated; needs Adobe Lightroom asset entitlement).",
+    "count": 85
+  },
+  "assets": [
+    {
+      "id": "626c56c9deba4477bcc6b7302857496f",
+      "frame": "3214",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "bbf096fc8f7849fa8e3014a3d8ec5bb2",
+      "frame": "3233",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "f99c2cc32c3d4de69d87c615d475a1b7",
+      "frame": "3232",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "294c0026ae394fc7b35e285fe8dd9c72",
+      "frame": "3230",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "bf98decd7856417f98a1278f90d1fdfc",
+      "frame": "3219",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "33fd281f23924df1a14435ba2e52de2b",
+      "frame": "3217",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "1291ade5080f443cbc0659b02a77af0d",
+      "frame": "3215",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "71e3c005cbd14cb3a720cd13369261b9",
+      "frame": "3227",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "da51545f44e64c8cb97138a6e16ccfb7",
+      "frame": "3238",
+      "captureDate": "2026-05-12",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "dfe35d3dfe9e42f89a42c8e15be1bca6",
+      "frame": "3243",
+      "captureDate": "2026-05-17",
+      "orientation": "vertical"
+    },
+    {
+      "id": "50e050931a9845f0af1a1032aeaca451",
+      "frame": "3212",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "a3ff450c45514aedbbb35bb9a7fcd532",
+      "frame": "3179",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "beb8b11693eb4c098ac569284632cb47",
+      "frame": "3173",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "afc384cc58ba4e87916f8339d0f44826",
+      "frame": "3211",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "7398504cc1dc4ec9baba68e2e8b6d5df",
+      "frame": "3208",
+      "captureDate": "2026-06-02",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "aa5c7c96a57040d7b690922c6119b86b",
+      "frame": "3172",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "79223efddd97417abb7c284524f8ece9",
+      "frame": "3201",
+      "captureDate": "2026-05-09",
+      "orientation": "square"
+    },
+    {
+      "id": "29b97071bb8b43109533311f7c3b5428",
+      "frame": "3195",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "e983b188fe7e4e9fb6dfa9a767a815a4",
+      "frame": "3193",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "e9848ba02e96417d8ab6c1c5a62cfc38",
+      "frame": "3192",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "57cf18032bce441ba6ba4c1cf1e08ed1",
+      "frame": "3196",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "11f1d36731774cd5ba94253b656ffc34",
+      "frame": "3210",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "70aaf1d02e6a49e6887d5bf1a8e2b44c",
+      "frame": "3221",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "26b4a67acb684e73ae57ae83333aec9d",
+      "frame": "3241b",
+      "captureDate": "2026-06-02",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "10010e1ea0254f74be4dbaf417f3aba1",
+      "frame": "3187",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "0b6fe5f80f6a452091a09d12956c696c",
+      "frame": "3170",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "92f7eb4b49764cabbb39b9c0bb2058f7",
+      "frame": "3168",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "56ad0013b4344ef590a79a486820cd6e",
+      "frame": "3169",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "517b39f81e4c4ee69d7006f3db8be991",
+      "frame": "3240",
+      "captureDate": "2026-05-12",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "e720a420912e4901910874f4f973fe5b",
+      "frame": "3235",
+      "captureDate": "2026-05-10",
+      "orientation": "vertical"
+    },
+    {
+      "id": "b8fbf89047494251a534f99b69568a1b",
+      "frame": "3234",
+      "captureDate": "2026-05-10",
+      "orientation": "vertical"
+    },
+    {
+      "id": "0e059f724f4e43f4af530bfe6a898243",
+      "frame": "3194",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "7d977660f7244137aa66e42f9c662ef3",
+      "frame": "3191",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "e317d3c79e1a45598199e68dd0b70f6d",
+      "frame": "3182",
+      "captureDate": "2026-05-09",
+      "orientation": "square"
+    },
+    {
+      "id": "690fab24332444f793aaa010940e6ee2",
+      "frame": "3175",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "840891bdcb4f4d1f8ae1bc81e09c0aa5",
+      "frame": "3239",
+      "captureDate": "2026-05-12",
+      "orientation": "vertical"
+    },
+    {
+      "id": "0eb77dcbf81942f281968e5abd273406",
+      "frame": "3163",
+      "captureDate": "2026-05-08",
+      "orientation": "vertical"
+    },
+    {
+      "id": "6ce3fbb51c3c4ef2916e2cd9d16f6faa",
+      "frame": "3228",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "78d3a79d35c3483a9185b354dca27544",
+      "frame": "3226",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "d61e8f372f3942cfb927b8d493b0b6f9",
+      "frame": "3229",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "e1aa3aacdb034073ae0b203e23524406",
+      "frame": "3218",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "8d62e955aa984e019af2625180b3bd12",
+      "frame": "3216",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "c207536f53054d49a0a44556f2eeba18",
+      "frame": "3177",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "24ad34c0bf2c44bb915434bd83741045",
+      "frame": "3174",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "be40a9df9508465c9b6cf0b63f08e77a",
+      "frame": "3178",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "a3195800cc4b45bb8be086a2bd4ebd2a",
+      "frame": "3181",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "6d34064b2af6456fa179c011faee1fa1",
+      "frame": "3180",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "566188253c3844f09f2ea3fd7f25ef8e",
+      "frame": "3185",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "d041f61665b74ab881a57a40f8a4be8b",
+      "frame": "3209",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "05243792677b484791d1943e13664d2c",
+      "frame": "3245",
+      "captureDate": "2026-05-17",
+      "orientation": "vertical"
+    },
+    {
+      "id": "0dc40f194cf14ad1ae86cc50e144454a",
+      "frame": "3190",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "df0eaf1d205b4076afa3ecd279aa18ae",
+      "frame": "3165",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "6bf352b4c0344340abbc980b613f2a52",
+      "frame": "3242",
+      "captureDate": "2026-05-12",
+      "orientation": "square"
+    },
+    {
+      "id": "8c0df3739d134b3cbe2c860e3cd38fd0",
+      "frame": "3161",
+      "captureDate": "2026-05-08",
+      "orientation": "vertical"
+    },
+    {
+      "id": "f895918995ec4ce7b9dc809813dd8ae1",
+      "frame": "3207",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "4ef4fc71290a49e2adf2559bd82e530f",
+      "frame": "3205",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "77361f6d4e274f48bfcdd1e97cd96fd0",
+      "frame": "3206",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "05703e31ae5b440aa17048278b0dc36c",
+      "frame": "3171",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "59c7e532c97145f4990de5f845176d8b",
+      "frame": "3167",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "b3db6465ebb3426582819176c4463fab",
+      "frame": "3164",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "49c230262f1e4c64811f441b5c2cec27",
+      "frame": "3200",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "f3836fa6625e4ae798712a380582499a",
+      "frame": "3198",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "594bfdb06ead402d8d31cabee095aa52",
+      "frame": "3197",
+      "captureDate": "2026-05-09",
+      "orientation": "vertical"
+    },
+    {
+      "id": "f51614f61dd04932921e4aa83a826314",
+      "frame": "3189",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "1bd238d2aa034ca298992c9d4dddd99f",
+      "frame": "3188",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "3065bd8232ac4f0f866c6442e590b756",
+      "frame": "3202",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "6ac2504fc1e7410896d099c91abae458",
+      "frame": "3203",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "a1320661ffae4b5580fd91fa82140ade",
+      "frame": "3204",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "47da194b493d4279a10963dc4ecf8f3d",
+      "frame": "3213",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "f73cd9a89202470299b1636bcb231904",
+      "frame": "3222",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "00659fb5c1e844cebfee0218727860d4",
+      "frame": "3241",
+      "captureDate": "2026-05-12",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "d7ebf6bcc0d84b0a9045ec2c9df8e0e0",
+      "frame": "3237",
+      "captureDate": "2026-05-10",
+      "orientation": "vertical"
+    },
+    {
+      "id": "4db7de3baf4241de9f3601973b7d018b",
+      "frame": "3236",
+      "captureDate": "2026-05-10",
+      "orientation": "vertical"
+    },
+    {
+      "id": "1f408f63d242449e8e515079e94dcb5d",
+      "frame": "3186",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "a4d5f177d7c44d7483c119e9226f3b9d",
+      "frame": "3166",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "84db01b31cdd4973b3190f02f3a8c482",
+      "frame": "3176",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "0eb2b3a416e64f5e85dec530379ce4ee",
+      "frame": "3223",
+      "captureDate": "2026-05-09",
+      "orientation": "square"
+    },
+    {
+      "id": "6184b9cee3d049b691816d8931636f94",
+      "frame": "3199",
+      "captureDate": "2026-05-09",
+      "orientation": "square"
+    },
+    {
+      "id": "84b94fb9faed4ebe948434e77d5d0871",
+      "frame": "3184",
+      "captureDate": "2026-05-09",
+      "orientation": "vertical"
+    },
+    {
+      "id": "bf8d2989b83147549674f30391d21e15",
+      "frame": "3183",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "e4fb1419d0d74c6793d42f6badfaf62e",
+      "frame": "3231",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "231d5f5b862843e18aaf2502bcab8a43",
+      "frame": "3224",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "0797e79fb30b4a979c33a5c635c31d2c",
+      "frame": "3225",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "1eb0a46feb9c4d16ada0cbf52b150737",
+      "frame": "3220",
+      "captureDate": "2026-05-09",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "277696b5c4374e82b5979872db326f4c",
+      "frame": "3244",
+      "captureDate": "2026-05-17",
+      "orientation": "vertical"
+    }
+  ]
+}
