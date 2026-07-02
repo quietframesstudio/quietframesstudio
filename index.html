@@ -608,6 +608,13 @@ html[data-theme="dark"] nav {
   font-size: 10px; color: var(--ink-light); text-align: center;
   margin-top: 12px; letter-spacing: 0.04em;
 }
+.collect-email-link {
+  display: block; text-align: center; margin-top: 10px;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-light); border-bottom: none;
+  transition: color 0.2s;
+}
+.collect-email-link:hover { color: var(--ink); }
 
 .photo-prev-next {
   display: flex; justify-content: space-between; align-items: center;
@@ -1733,6 +1740,10 @@ function renderPhoto(app, id) {
       <p class="collect-contact-note">
         You'll be connected with the photographer directly.
       </p>
+      <a class="collect-email-link"
+         href="mailto:${contactEmail}?subject=${encodeURIComponent('Print Inquiry — ' + (photo.title || 'Untitled'))}&body=${encodeURIComponent('Hi,\n\nI\'m interested in collecting a print of “' + (photo.title || 'this photograph') + '”' + ((ser||{}).title ? ' from the ' + ser.title + ' series' : '') + '. Could you send me details on sizes and availability?\n\nThank you.')}">
+        Prefer email? Inquire directly →
+      </a>
     </div>
 
     ${prevNextHtml}
