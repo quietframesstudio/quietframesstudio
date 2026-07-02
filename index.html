@@ -343,6 +343,39 @@ html[data-theme="dark"] nav {
   padding: 2px 7px; border-radius: 1px;
 }
 
+/* ── VIEW: HOME RECENT ───────────────────────────────────────────────── */
+.home-recent { padding: 0 52px 96px; }
+.recent-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 3px; background: var(--border-lt);
+  border: 3px solid var(--border-lt);
+}
+.recent-item {
+  position: relative; display: block; overflow: hidden;
+  aspect-ratio: 4/5; background: var(--bg-alt);
+}
+.recent-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.recent-item:hover img { transform: scale(1.06); }
+.recent-item-title {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 24px 12px 10px;
+  background: linear-gradient(to top, rgba(10,8,6,0.65), transparent);
+  color: rgba(240,233,219,0.9);
+  font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  opacity: 0; transition: opacity 0.3s;
+}
+.recent-item:hover .recent-item-title { opacity: 1; }
+@media (max-width: 960px) {
+  .home-recent { padding: 0 24px 72px; }
+  .recent-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .recent-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ── VIEW: GALLERY (series list / work) ──────────────────────────────── */
 .gallery-view { padding: 52px 52px 96px; }
 .gallery-view-header { margin-bottom: 52px; }
@@ -1414,7 +1447,25 @@ function renderHome(app) {
   <div class="featured-grid">${cardHtml}</div>
 </section>` : '';
 
-  app.innerHTML = heroHtml + featuredBlock + processStrip();
+  // Recently added photographs — fresh work sells; lead with it
+  const recentIds = s.recentPhotoIds || [];
+  const recent = recentIds.map(id => (d.photos || []).find(p => p.id === id)).filter(Boolean).slice(0, 6);
+  const recentBlock = recent.length > 0 ? `
+<section class="home-recent">
+  <div class="section-header">
+    <span class="section-label">Recently Added</span>
+    <a class="section-link" href="/work" onclick="return go('/work')">Browse the work →</a>
+  </div>
+  <div class="recent-grid">
+    ${recent.map(p => `
+    <a class="recent-item${p.orientation === 'landscape' ? ' landscape' : ''}" href="/photo/${p.id}" onclick="return go('/photo/${p.id}')" aria-label="${p.title}">
+      ${thumbImg(p.file, p.title)}
+      <span class="recent-item-title">${p.title}</span>
+    </a>`).join('')}
+  </div>
+</section>` : '';
+
+  app.innerHTML = heroHtml + featuredBlock + recentBlock + processStrip();
 }
 
 function seriesTags(ser) {

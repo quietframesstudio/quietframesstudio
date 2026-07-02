@@ -58,7 +58,21 @@
     ],
     "printMedium": "Hahnemühle Photo Rag 308gsm · Archival pigment",
     "printNote": "Archival-quality prints produced from original film scans, crafted with care and precision. Editions are strictly limited to preserve fine art value.",
-    "aboutPortrait": "images/2025-seasons/2025-seasons-100.jpg"
+    "aboutPortrait": "images/2025-seasons/2025-seasons-100.jpg",
+    "recentPhotoIds": [
+      "int-004",
+      "int-005",
+      "20-154",
+      "20-155",
+      "int-010",
+      "lo-006",
+      "20-031",
+      "int-002",
+      "int-009",
+      "20-114",
+      "int-003",
+      "20-041"
+    ]
   },
   "series": [
     {
