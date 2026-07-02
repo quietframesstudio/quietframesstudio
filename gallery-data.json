@@ -3,15 +3,15 @@
     "version": "1.0",
     "site": "Quiet Frames Studio",
     "photographer": "Michael J McConnell",
-    "updated": "2026-03-31",
+    "updated": "2026-07-02",
     "note": "This file is the source of truth for all portfolio content. The upload skill updates it automatically.",
-    "photosAdded": 247
+    "photosAdded": 352
   },
   "settings": {
     "featuredSeriesIds": [
-      "texture-dormancy",
-      "intimacy",
-      "coastal"
+      "boston-quietly",
+      "october-country",
+      "texture-dormancy"
     ],
     "archiveLabel": "Archive",
     "contactEmail": "hello@quietframesstudio.com",
@@ -21,7 +21,7 @@
     "printSizes": [
       {
         "id": "8x10",
-        "label": "8 \u00d7 10\"",
+        "label": "8 × 10\"",
         "price": 195,
         "edition": 25,
         "stripeUrl": "https://buy.stripe.com/8x2dR31us1X99JYawc2kw04",
@@ -30,7 +30,7 @@
       },
       {
         "id": "16x20",
-        "label": "16 \u00d7 20\"",
+        "label": "16 × 20\"",
         "price": 325,
         "edition": 25,
         "stripeUrl": "https://buy.stripe.com/4gMaER6OM7htcWa5bS2kw05",
@@ -39,7 +39,7 @@
       },
       {
         "id": "24x30",
-        "label": "24 \u00d7 30\"",
+        "label": "24 × 30\"",
         "price": 475,
         "edition": 15,
         "stripeUrl": "https://buy.stripe.com/cNi6oBb52cBN2hwdIo2kw06",
@@ -48,7 +48,7 @@
       },
       {
         "id": "20x24",
-        "label": "20 \u00d7 24\" (Premium)",
+        "label": "20 × 24\" (Premium)",
         "price": 595,
         "edition": 10,
         "stripeUrl": "https://buy.stripe.com/3cI8wJc967hte0e9s82kw07",
@@ -56,15 +56,113 @@
         "stripePriceId": "price_1TLilT9kczdEn9JN98xfynhp"
       }
     ],
-    "printMedium": "Hahnem\u00fchle Photo Rag 308gsm \u00b7 Archival pigment",
-    "printNote": "Archival-quality prints produced from original film scans, crafted with care and precision. Editions are strictly limited to preserve fine art value."
+    "printMedium": "Hahnemühle Photo Rag 308gsm · Archival pigment",
+    "printNote": "Archival-quality prints produced from original film scans, crafted with care and precision. Editions are strictly limited to preserve fine art value.",
+    "aboutPortrait": "images/2025-seasons/2025-seasons-100.jpg",
+    "recentPhotoIds": [
+      "bq-2786",
+      "oc-1257",
+      "ht-2385",
+      "bl-3198",
+      "sa-2875",
+      "lo-3222",
+      "bq-1714",
+      "oc-1687",
+      "ht-1737",
+      "bl-3545",
+      "qu-911",
+      "int-1211"
+    ]
   },
   "series": [
     {
+      "id": "bloom",
+      "title": "Bloom",
+      "subtitle": "Spring studies — 2026",
+      "description": "Tulip beds at full tilt and close studies of what came home in a jar — gerberas in low key, a feather, a pocket watch. The macro end of a film habit.",
+      "featured": false,
+      "cover": "images/bloom/3198.jpg",
+      "photoCount": 16,
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "location": [
+          "massachusetts"
+        ]
+      }
+    },
+    {
+      "id": "harbor-towns",
+      "title": "Harbor Towns",
+      "subtitle": "Marblehead & Cape Neddick — Off-season",
+      "description": "Working harbors after the crowds leave: lobster traps stacked behind barn doors, a skiff alone on still water, Nubble Light against November wires. Black and white 35mm.",
+      "featured": false,
+      "cover": "images/harbor-towns/2385.jpg",
+      "photoCount": 12,
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ]
+      }
+    },
+    {
+      "id": "october-country",
+      "title": "October Country",
+      "subtitle": "Autumn — New England, 2025",
+      "description": "Farm fields gone quiet, ponds turning red at the edges, gold overhead on every walk. A season that never lasts long enough, kept on color negative film.",
+      "featured": true,
+      "cover": "images/october-country/1257.jpg",
+      "photoCount": 14,
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "location": [
+          "new-england"
+        ]
+      }
+    },
+    {
+      "id": "boston-quietly",
+      "title": "Boston, Quietly",
+      "subtitle": "Winter — Boston, 2026",
+      "description": "The city between moments — snow at the library steps, steam rising through brick sidewalks, North End signs at dusk, and the plazas of Back Bay emptied by the cold. Shot on 35mm black and white and CineStill through a Boston winter.",
+      "featured": true,
+      "cover": "images/boston-quietly/1714.jpg",
+      "photoCount": 20,
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "location": [
+          "boston",
+          "massachusetts"
+        ]
+      }
+    },
+    {
       "id": "texture-dormancy",
       "title": "Texture & Dormancy",
-      "subtitle": "Winter \u2014 New England, 2025",
-      "description": "A study in winter\u2019s essential forms across New England. Shot on Ilford FP4, the work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape\u2014where tone and surface become the primary subjects.",
+      "subtitle": "Winter — New England, 2025",
+      "description": "A study in winter’s essential forms across New England. Shot on Ilford FP4, the work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape—where tone and surface become the primary subjects.",
       "featured": true,
       "cover": "images/texture-dormancy/texture-dormancy-001.jpg",
       "photoCount": 19,
@@ -80,17 +178,17 @@
           "massachusetts"
         ]
       },
-      "curatorial": "A study in winter's essential forms across New England. Shot on Ilford FP4 medium format, this work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape\u2014where tone and surface become the primary subjects. What emerges is a visual vocabulary of repose: the grain of frost on wood, the geometry of bare branches, the tonal weight of overcast light against dark earth. Each image treats winter not as absence, but as clarity.",
-      "collectorNote": "These photographs exist at the intersection of formal restraint and material sensitivity\u2014medium format film architecture yields a tonal range and permanence that digital capture cannot match."
+      "curatorial": "A study in winter's essential forms across New England. Shot on Ilford FP4 medium format, this work isolates bare structure, organic texture, and the quiet geometry of a sleeping landscape—where tone and surface become the primary subjects. What emerges is a visual vocabulary of repose: the grain of frost on wood, the geometry of bare branches, the tonal weight of overcast light against dark earth. Each image treats winter not as absence, but as clarity.",
+      "collectorNote": "These photographs exist at the intersection of formal restraint and material sensitivity—medium format film architecture yields a tonal range and permanence that digital capture cannot match."
     },
     {
       "id": "savannah-2026",
       "title": "Savannah 2026",
-      "subtitle": "Savannah, GA \u2014 Early 2026",
-      "description": "A portrait of Savannah, Georgia\u2014its streets, facades, and human gestures captured across multiple film stocks. The work moves between architectural formalism and the spontaneity of street life, tracing the layered history embedded in the American South.",
+      "subtitle": "Savannah, GA — Early 2026",
+      "description": "A portrait of Savannah, Georgia—its streets, facades, and human gestures captured across multiple film stocks. The work moves between architectural formalism and the spontaneity of street life, tracing the layered history embedded in the American South.",
       "featured": true,
       "cover": "images/2025-seasons/2025-seasons-138.jpg",
-      "photoCount": 28,
+      "photoCount": 36,
       "tags": {
         "subject": [
           "street",
@@ -102,17 +200,17 @@
           "savannah"
         ]
       },
-      "curatorial": "Savannah's streets, facades, and human gestures emerge across multiple film stocks\u2014a deliberate heterogeneity that acknowledges the city itself as palimpsest. Between architectural formalism and the spontaneity of street encounter, the work traces layered histories embedded in the American South. Colors shift, grains vary, and emotional temperature fluctuates; the inconsistency becomes the point, refusing false coherence in favor of the complex visual grammar of lived place.",
-      "collectorNote": "Shot across varied film stocks without aesthetic apology, these photographs prioritize documentary presence over artistic consistency\u2014a rarity in contemporary fine art practice."
+      "curatorial": "Savannah's streets, facades, and human gestures emerge across multiple film stocks—a deliberate heterogeneity that acknowledges the city itself as palimpsest. Between architectural formalism and the spontaneity of street encounter, the work traces layered histories embedded in the American South. Colors shift, grains vary, and emotional temperature fluctuates; the inconsistency becomes the point, refusing false coherence in favor of the complex visual grammar of lived place.",
+      "collectorNote": "Shot across varied film stocks without aesthetic apology, these photographs prioritize documentary presence over artistic consistency—a rarity in contemporary fine art practice."
     },
     {
       "id": "intimacy",
       "title": "Intimacy",
-      "subtitle": "Portraits \u2014 Medium Format",
-      "description": "Moments of genuine human connection unfolding unscripted in public spaces. Shot across formats, the series trades technical consistency for emotional authenticity\u2014preserving fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby.",
+      "subtitle": "Portraits — Medium Format",
+      "description": "Moments of genuine human connection unfolding unscripted in public spaces. Shot across formats, the series trades technical consistency for emotional authenticity—preserving fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby.",
       "featured": true,
       "cover": "images/2025-seasons/2025-seasons-042.jpg",
-      "photoCount": 16,
+      "photoCount": 25,
       "tags": {
         "subject": [
           "portrait"
@@ -121,17 +219,17 @@
         "format": "mixed",
         "location": []
       },
-      "curatorial": "Genuine human connection unfolding unscripted in public spaces, captured across mixed formats and film stocks. Rather than subordinate emotional content to technical consistency, the work preserves fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby. The varying film stocks and formats become transparent\u2014tools in service of presence rather than style\u2014allowing the human moment to assert priority over the medium's material signature.",
-      "collectorNote": "These photographs embrace aesthetic variability as philosophical choice\u2014technical inconsistency in service of emotional authenticity, a demanding and deliberate position in portraiture."
+      "curatorial": "Genuine human connection unfolding unscripted in public spaces, captured across mixed formats and film stocks. Rather than subordinate emotional content to technical consistency, the work preserves fleeting gestures, shared glances, and the quiet vulnerability that passes unnoticed by those nearby. The varying film stocks and formats become transparent—tools in service of presence rather than style—allowing the human moment to assert priority over the medium's material signature.",
+      "collectorNote": "These photographs embrace aesthetic variability as philosophical choice—technical inconsistency in service of emotional authenticity, a demanding and deliberate position in portraiture."
     },
     {
       "id": "quincy-quarries",
       "title": "Quincy Quarries",
       "subtitle": "Quincy, MA",
-      "description": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100, the work emphasizes the sculptural quality of abandoned infrastructure\u2014meditations on entropy where destruction becomes the subject of aesthetic contemplation.",
+      "description": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100, the work emphasizes the sculptural quality of abandoned infrastructure—meditations on entropy where destruction becomes the subject of aesthetic contemplation.",
       "featured": false,
       "cover": "images/quincy-quarries/quincy-quarries-001.jpg",
-      "photoCount": 11,
+      "photoCount": 17,
       "tags": {
         "subject": [
           "landscape",
@@ -144,17 +242,17 @@
           "massachusetts"
         ]
       },
-      "curatorial": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100 in 35mm, the work emphasizes the sculptural quality of abandoned infrastructure\u2014meditations on entropy where destruction becomes the subject of aesthetic contemplation. The sharp color separation and saturation of Ektar renders these spaces with the precision of geological cross-section, revealing the violent geometry beneath overgrowth and water reflection.",
-      "collectorNote": "The technical specificity of Ektar color film\u2014chosen deliberately for this landscape\u2014creates a visual register impossible to replicate digitally, binding the work's meaning to its material origin."
+      "curatorial": "Granite pits transformed by time into accidental lakes and monuments to industrial ambition. Photographed on Kodak Ektar 100 in 35mm, the work emphasizes the sculptural quality of abandoned infrastructure—meditations on entropy where destruction becomes the subject of aesthetic contemplation. The sharp color separation and saturation of Ektar renders these spaces with the precision of geological cross-section, revealing the violent geometry beneath overgrowth and water reflection.",
+      "collectorNote": "The technical specificity of Ektar color film—chosen deliberately for this landscape—creates a visual register impossible to replicate digitally, binding the work's meaning to its material origin."
     },
     {
       "id": "lomo-purple-series",
       "title": "Through the Purple",
-      "subtitle": "Lomography Purple \u2014 Parks & Outdoor",
-      "description": "Lomography Purple swaps the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion, the work embraces it\u2014elevating the material properties of the film itself as subject, producing landscapes that feel simultaneously documentary and dreamlike.",
+      "subtitle": "Lomography Purple — Parks & Outdoor",
+      "description": "Lomography Purple swaps the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion, the work embraces it—elevating the material properties of the film itself as subject, producing landscapes that feel simultaneously documentary and dreamlike.",
       "featured": false,
       "cover": "images/lomo-purple-series/lomo-purple-series-001.jpg",
-      "photoCount": 10,
+      "photoCount": 17,
       "tags": {
         "subject": [
           "landscape",
@@ -166,17 +264,17 @@
           "massachusetts"
         ]
       },
-      "curatorial": "Lomography Purple film exchanges the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion as technical failure, the work embraces it\u2014elevating the material properties of the film itself as subject. The result is simultaneously documentary and dreamlike: recognizable parks and Massachusetts landscapes reappear as themselves and as something else entirely, their familiar forms made strange by a chemical intervention.",
-      "collectorNote": "These photographs foreground process and material accident as aesthetic content\u2014the film's inherent characteristics become inseparable from meaning, a rare example of constraint generating depth."
+      "curatorial": "Lomography Purple film exchanges the green channel for violet, rendering the natural world in impossible hues. Rather than fighting this distortion as technical failure, the work embraces it—elevating the material properties of the film itself as subject. The result is simultaneously documentary and dreamlike: recognizable parks and Massachusetts landscapes reappear as themselves and as something else entirely, their familiar forms made strange by a chemical intervention.",
+      "collectorNote": "These photographs foreground process and material accident as aesthetic content—the film's inherent characteristics become inseparable from meaning, a rare example of constraint generating depth."
     },
     {
       "id": "coastal",
       "title": "Coastal New England",
       "subtitle": "New England Coastline",
-      "description": "The New England littoral in black and white\u2014solid granite against changeable light and water. Shot on Ilford HP5, the work finds the tonal richness of coastal atmosphere, where salt spray and moisture soften definition into something between permanence and impermanence.",
+      "description": "The New England littoral in black and white—solid granite against changeable light and water. Shot on Ilford HP5, the work finds the tonal richness of coastal atmosphere, where salt spray and moisture soften definition into something between permanence and impermanence.",
       "featured": false,
       "cover": "images/coastal/coastal-001.jpg",
-      "photoCount": 15,
+      "photoCount": 18,
       "tags": {
         "subject": [
           "coastal",
@@ -190,16 +288,16 @@
         ]
       },
       "curatorial": "The New England littoral in black and white: solid granite against changeable light and water. Shot on Ilford HP5 in 35mm, the work finds the tonal richness of coastal atmosphere, where salt spray and moisture soften definition into something between permanence and impermanence. The tonal gradations resist both the harshness of pure contrast and the diffusion of overexposed light, instead occupying a space of subtle discriminations where the eye must attend carefully to reveal structure.",
-      "collectorNote": "Ilford HP5's tonal character and grain structure are inseparable from what these images are able to say\u2014the film's particular response to coastal light and moisture cannot be simulated."
+      "collectorNote": "Ilford HP5's tonal character and grain structure are inseparable from what these images are able to say—the film's particular response to coastal light and moisture cannot be simulated."
     },
     {
       "id": "2025-seasons",
       "title": "2025 Seasons",
       "subtitle": "A year of shooting",
-      "description": "A year-long document spanning three film formats\u201435mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, where individual frames accumulate into a portrait of time itself.",
+      "description": "A year-long document spanning three film formats—35mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, where individual frames accumulate into a portrait of time itself.",
       "featured": false,
       "cover": "images/2025-seasons/2025-seasons-010.jpg",
-      "photoCount": 134,
+      "photoCount": 142,
       "tags": {
         "subject": [
           "landscape",
@@ -212,14 +310,14 @@
           "new-england"
         ]
       },
-      "curatorial": "A year-long document spanning three film formats\u201435mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, with individual frames accumulating into a portrait of time itself rather than discrete moments. The intentional shift between formats embodies different ways of seeing: the quickness of 35mm, the stability of medium format, the deliberation required by large format. Together they form a temporal and optical argument about sustained attention.",
-      "collectorNote": "This series's formal orchestration\u2014intentional format shifts across a full year\u2014demonstrates a commitment to process and temporal depth rarely undertaken in contemporary photography."
+      "curatorial": "A year-long document spanning three film formats—35mm for immediacy, medium format for presence, large format for contemplation. The work traces the rhythm of landscape and light across twelve months, with individual frames accumulating into a portrait of time itself rather than discrete moments. The intentional shift between formats embodies different ways of seeing: the quickness of 35mm, the stability of medium format, the deliberation required by large format. Together they form a temporal and optical argument about sustained attention.",
+      "collectorNote": "This series's formal orchestration—intentional format shifts across a full year—demonstrates a commitment to process and temporal depth rarely undertaken in contemporary photography."
     },
     {
       "id": "portraits",
       "title": "Portraits",
       "subtitle": "",
-      "description": "The human face approached with the same deliberation applied to landscape\u2014a formal study in light, geometry, and presence. Each image respects the subject\u2019s opacity, offering portraiture as observation rather than revelation.",
+      "description": "The human face approached with the same deliberation applied to landscape—a formal study in light, geometry, and presence. Each image respects the subject’s opacity, offering portraiture as observation rather than revelation.",
       "featured": false,
       "cover": "images/2025-seasons/2025-seasons-052.jpg",
       "photoCount": 2,
@@ -231,17 +329,17 @@
         "format": "mixed",
         "location": []
       },
-      "curatorial": "The human face approached with the same deliberation applied to landscape\u2014a formal study in light, geometry, and presence. Each image respects the subject's opacity, offering portraiture as observation rather than revelation. These photographs resist the psychological penetration often expected of portrait work, instead allowing the face to remain an object of aesthetic consideration, its formal properties granted priority over narrative or emotional disclosure.",
-      "collectorNote": "The restraint of approach\u2014the refusal to psychologize\u2014makes these images challenging and singular in contemporary portraiture, where psychological legibility is typically demanded."
+      "curatorial": "The human face approached with the same deliberation applied to landscape—a formal study in light, geometry, and presence. Each image respects the subject's opacity, offering portraiture as observation rather than revelation. These photographs resist the psychological penetration often expected of portrait work, instead allowing the face to remain an object of aesthetic consideration, its formal properties granted priority over narrative or emotional disclosure.",
+      "collectorNote": "The restraint of approach—the refusal to psychologize—makes these images challenging and singular in contemporary portraiture, where psychological legibility is typically demanded."
     },
     {
       "id": "the-light-unseen",
       "title": "The Light Unseen (Infrared Study)",
       "subtitle": "",
-      "description": "Infrared film renders the invisible visible\u2014vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light.",
+      "description": "Infrared film renders the invisible visible—vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light.",
       "featured": false,
       "cover": "images/2025-seasons/2025-seasons-170.jpg",
-      "photoCount": 12,
+      "photoCount": 14,
       "tags": {
         "subject": [
           "landscape",
@@ -251,8 +349,8 @@
         "format": "mixed",
         "location": []
       },
-      "curatorial": "Infrared film renders the invisible visible\u2014vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light. The infrared spectrum transforms the landscape into something between documentation and abstraction, where recognizable topography persists but loses its conventional meaning. Tone and form become primary; color disappears entirely.",
-      "collectorNote": "Infrared photography requires film stocks and technical protocols becoming scarcer in a digital age\u2014these prints represent a working knowledge of an increasingly archival process."
+      "curatorial": "Infrared film renders the invisible visible—vegetation fluoresces white, skies deepen, and familiar landscapes become strange. Shot across medium and large format, the work produces a parallel world that exists alongside ordinary seeing but obeys different laws of light. The infrared spectrum transforms the landscape into something between documentation and abstraction, where recognizable topography persists but loses its conventional meaning. Tone and form become primary; color disappears entirely.",
+      "collectorNote": "Infrared photography requires film stocks and technical protocols becoming scarcer in a digital age—these prints represent a working knowledge of an increasingly archival process."
     }
   ],
   "filterGroups": [
@@ -350,15 +448,15 @@
         },
         {
           "id": "6x7",
-          "label": "6\u00d77 Medium Format"
+          "label": "6×7 Medium Format"
         },
         {
           "id": "6x9",
-          "label": "6\u00d79 Medium Format"
+          "label": "6×9 Medium Format"
         },
         {
           "id": "4x5",
-          "label": "4\u00d75 Large Format"
+          "label": "4×5 Large Format"
         }
       ]
     },
@@ -398,6 +496,138 @@
     }
   ],
   "photos": [
+    {
+      "id": "qu-917",
+      "file": "images/quincy-quarries/917.jpg",
+      "title": "Quarry Meadow",
+      "date": "2026-06",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "qu-914",
+      "file": "images/quincy-quarries/914.jpg",
+      "title": "Two on the Ridge",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "qu-911",
+      "file": "images/quincy-quarries/911.jpg",
+      "title": "Quarry Wall, Medellín",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "qu-1056",
+      "file": "images/quincy-quarries/1056.jpg",
+      "title": "Pink Ledge",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "qu-1046",
+      "file": "images/quincy-quarries/1046.jpg",
+      "title": "Graffiti Blocks, Blue Sky",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "qu-1043",
+      "file": "images/quincy-quarries/1043.jpg",
+      "title": "Quarry Wall in Color",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "quincy",
+          "massachusetts"
+        ],
+        "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
     {
       "id": "qu-001",
       "file": "images/quincy-quarries/quincy-quarries-001.jpg",
@@ -505,6 +735,176 @@
           "massachusetts"
         ],
         "series": "quincy-quarries",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-010",
+      "file": "images/intimacy/intimacy-010.jpg",
+      "title": "Fire Lane, First Snow",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-009",
+      "file": "images/intimacy/intimacy-009.jpg",
+      "title": "Expired Meters",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "still-life"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-114",
+      "file": "images/2025-seasons/2025-seasons-114.jpg",
+      "title": "Dashboard Still Life",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-031",
+      "file": "images/2025-seasons/2025-seasons-031.jpg",
+      "title": "Floodlights, Off-Season",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "landscape"
+        ],
+        "film": "hp5",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "20-041",
+      "file": "images/2025-seasons/2025-seasons-041.jpg",
+      "title": "Ring the Bell If You Love Dogs",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "still-life"
+        ],
+        "film": "unknown",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-003",
+      "file": "images/intimacy/intimacy-003.jpg",
+      "title": "Winter Garden Ascent",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "architecture",
+          "street"
+        ],
+        "film": "unknown",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-005",
+      "file": "images/intimacy/intimacy-005.jpg",
+      "title": "The Old Elm, Boston Common",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-004",
+      "file": "images/intimacy/intimacy-004.jpg",
+      "title": "Parkman Bandstand, Autumn",
+      "date": "2026-01",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "architecture"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "2025-seasons",
         "process": "color"
       }
     },
@@ -1112,6 +1512,146 @@
       }
     },
     {
+      "id": "lo-3222",
+      "file": "images/lomo-purple-series/3222.jpg",
+      "title": "Lake Sunset in Violet",
+      "date": "2026-04",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-2335",
+      "file": "images/lomo-purple-series/2335.jpg",
+      "title": "Roots and Squirrels",
+      "date": "2026-04",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-2331",
+      "file": "images/lomo-purple-series/2331.jpg",
+      "title": "Frozen Lagoon, Violet",
+      "date": "2026-04",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-2330",
+      "file": "images/lomo-purple-series/2330.jpg",
+      "title": "Public Garden in Violet",
+      "date": "2026-04",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-1427",
+      "file": "images/lomo-purple-series/1427.jpg",
+      "title": "Purple Path, Lone Walker",
+      "date": "2026-04",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-1426",
+      "file": "images/lomo-purple-series/1426.jpg",
+      "title": "Dead Tree in Violet",
+      "date": "2026-04",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
+      "id": "lo-006",
+      "file": "images/lomo-purple-series/lomo-purple-series-006.jpg",
+      "title": "Canopy in Violet",
+      "date": "2026-01",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "lomo-purple",
+        "format": "6x7",
+        "camera": "pentax-67",
+        "location": [
+          "new-england"
+        ],
+        "series": "lomo-purple-series",
+        "process": "lomo-purple"
+      }
+    },
+    {
       "id": "lo-001",
       "file": "images/lomo-purple-series/lomo-purple-series-001.jpg",
       "title": "Lomo Purple Series #001",
@@ -1376,6 +1916,188 @@
       }
     },
     {
+      "id": "int-1890",
+      "file": "images/intimacy/1890.jpg",
+      "title": "The Bubble Mower",
+      "date": "2026-04",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-2933",
+      "file": "images/intimacy/2933.jpg",
+      "title": "Hotel Light Study III",
+      "date": "2026-04",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "still-life"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-2051",
+      "file": "images/intimacy/2051.jpg",
+      "title": "At the Door, First Snow",
+      "date": "2026-04",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "still-life"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-3456",
+      "file": "images/intimacy/3456.jpg",
+      "title": "Window Cat, Morning",
+      "date": "2026-04",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-1369",
+      "file": "images/intimacy/1369.jpg",
+      "title": "Cat in the Doorway",
+      "date": "2026-04",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "int-1211",
+      "file": "images/intimacy/1211.jpg",
+      "title": "The Dog Waits",
+      "date": "2026-04",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "int-002",
+      "file": "images/intimacy/intimacy-002.jpg",
+      "title": "The Toy Mower, October",
+      "date": "2026-03",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life"
+        ],
+        "film": "ektar-100",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-155",
+      "file": "images/2025-seasons/2025-seasons-155.jpg",
+      "title": "Hotel Light Study II",
+      "date": "2026-03",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "still-life",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
+      "id": "20-154",
+      "file": "images/2025-seasons/2025-seasons-154.jpg",
+      "title": "Hotel Light Study I",
+      "date": "2026-03",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "still-life",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "unknown",
+        "camera": "unknown",
+        "location": [
+          "new-england"
+        ],
+        "series": "intimacy",
+        "process": "color"
+      }
+    },
+    {
       "id": "20-042",
       "file": "images/2025-seasons/2025-seasons-042.jpg",
       "title": "2025 Seasons #042",
@@ -1479,6 +2201,69 @@
           "new-england"
         ],
         "series": "2025-seasons",
+        "process": "color"
+      }
+    },
+    {
+      "id": "co-3485",
+      "file": "images/coastal/3485.jpg",
+      "title": "The Old Pier",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "coastal",
+        "process": "color"
+      }
+    },
+    {
+      "id": "co-3484",
+      "file": "images/coastal/3484.jpg",
+      "title": "Seaweed Line",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "coastal",
+        "process": "color"
+      }
+    },
+    {
+      "id": "co-3472",
+      "file": "images/coastal/3472.jpg",
+      "title": "Ledges, Low Tide",
+      "date": "2026-06",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england",
+          "coastal-ne"
+        ],
+        "series": "coastal",
         "process": "color"
       }
     },
@@ -3862,6 +4647,182 @@
       }
     },
     {
+      "id": "sa-2926",
+      "file": "images/savannah-2026/2926.jpg",
+      "title": "Factors Row, Morning",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "savannah",
+          "georgia"
+        ],
+        "series": "savannah-2026",
+        "process": "color"
+      }
+    },
+    {
+      "id": "sa-2924",
+      "file": "images/savannah-2026/2924.jpg",
+      "title": "River Street Cobbles",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "savannah",
+          "georgia"
+        ],
+        "series": "savannah-2026",
+        "process": "color"
+      }
+    },
+    {
+      "id": "sa-2912",
+      "file": "images/savannah-2026/2912.jpg",
+      "title": "Tavern Bricks, Night",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "savannah",
+          "georgia"
+        ],
+        "series": "savannah-2026",
+        "process": "color"
+      }
+    },
+    {
+      "id": "sa-2909",
+      "file": "images/savannah-2026/2909.jpg",
+      "title": "White Tower Through Oaks",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "savannah",
+          "georgia"
+        ],
+        "series": "savannah-2026",
+        "process": "color"
+      }
+    },
+    {
+      "id": "sa-2895",
+      "file": "images/savannah-2026/2895.jpg",
+      "title": "Footbridge, Factors Walk",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "savannah",
+          "georgia"
+        ],
+        "series": "savannah-2026",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "sa-2892",
+      "file": "images/savannah-2026/2892.jpg",
+      "title": "Live Oaks and Moss",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "savannah",
+          "georgia"
+        ],
+        "series": "savannah-2026",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "sa-2890",
+      "file": "images/savannah-2026/2890.jpg",
+      "title": "Porch, Savannah Brick",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "savannah",
+          "georgia"
+        ],
+        "series": "savannah-2026",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "sa-2875",
+      "file": "images/savannah-2026/2875.jpg",
+      "title": "River Street, After Hours",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "savannah",
+          "georgia"
+        ],
+        "series": "savannah-2026",
+        "process": "bw"
+      }
+    },
+    {
       "id": "20-137",
       "file": "images/2025-seasons/2025-seasons-137.jpg",
       "title": "2025 Seasons #137",
@@ -4419,6 +5380,48 @@
         ],
         "series": "savannah-2026",
         "process": "mixed"
+      }
+    },
+    {
+      "id": "lu-2974",
+      "file": "images/the-light-unseen/2974.jpg",
+      "title": "Willow, Glowing",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "sfx",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "the-light-unseen",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "lu-2973",
+      "file": "images/the-light-unseen/2973.jpg",
+      "title": "Pond in Infrared",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape"
+        ],
+        "film": "sfx",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "the-light-unseen",
+        "process": "bw"
       }
     },
     {
@@ -5537,6 +6540,1352 @@
         ],
         "series": "2025-seasons",
         "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2786",
+      "file": "images/boston-quietly/2786.jpg",
+      "title": "Boston Public Library, First Snow",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bq-2543",
+      "file": "images/boston-quietly/2543.jpg",
+      "title": "Passage, Winter Scaffolding",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2547",
+      "file": "images/boston-quietly/2547.jpg",
+      "title": "Two Towers, Back Bay",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2289",
+      "file": "images/boston-quietly/2289.jpg",
+      "title": "Bell in Hand, Union Street",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bq-2293",
+      "file": "images/boston-quietly/2293.jpg",
+      "title": "Fire Escapes, North End",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bq-2305",
+      "file": "images/boston-quietly/2305.jpg",
+      "title": "Mike's Pastry, Hanover Street",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2307",
+      "file": "images/boston-quietly/2307.jpg",
+      "title": "The Face on Carmelina's",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2311",
+      "file": "images/boston-quietly/2311.jpg",
+      "title": "Alley Lamp, North End",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2971",
+      "file": "images/boston-quietly/2971.jpg",
+      "title": "Colonnade, Christian Science Plaza",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2976",
+      "file": "images/boston-quietly/2976.jpg",
+      "title": "The Mother Church Dome",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2979",
+      "file": "images/boston-quietly/2979.jpg",
+      "title": "Reflecting Pool, February",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2984",
+      "file": "images/boston-quietly/2984.jpg",
+      "title": "Bowfront in Winter Light",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2985",
+      "file": "images/boston-quietly/2985.jpg",
+      "title": "Brick Alley, Late Sun",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2372",
+      "file": "images/boston-quietly/2372.jpg",
+      "title": "Steam, Boylston Street",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-2371",
+      "file": "images/boston-quietly/2371.jpg",
+      "title": "Love Locks",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-1714",
+      "file": "images/boston-quietly/1714.jpg",
+      "title": "Lagoon Bridge, Public Garden",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-1713",
+      "file": "images/boston-quietly/1713.jpg",
+      "title": "Japanese Lantern, Public Garden",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bq-1896",
+      "file": "images/boston-quietly/1896.jpg",
+      "title": "Winter Garden, Looking Up",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bq-1920",
+      "file": "images/boston-quietly/1920.jpg",
+      "title": "Parkman Bandstand, Skyline",
+      "date": "2026-02",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bq-2345",
+      "file": "images/boston-quietly/2345.jpg",
+      "title": "Stairs Closed (Green Line)",
+      "date": "2026-02",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "street",
+          "architecture"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "boston",
+          "massachusetts"
+        ],
+        "series": "boston-quietly",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1247",
+      "file": "images/october-country/1247.jpg",
+      "title": "Red Maple, Split Rail",
+      "date": "2025-10",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1249",
+      "file": "images/october-country/1249.jpg",
+      "title": "Wagon Wheels, October",
+      "date": "2025-10",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1250",
+      "file": "images/october-country/1250.jpg",
+      "title": "Farmstead in Color",
+      "date": "2025-10",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1257",
+      "file": "images/october-country/1257.jpg",
+      "title": "The Pond Turns",
+      "date": "2025-10",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1258",
+      "file": "images/october-country/1258.jpg",
+      "title": "Sycamore, Streamside",
+      "date": "2025-10",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1260",
+      "file": "images/october-country/1260.jpg",
+      "title": "Glacial Erratic, Leaf-Fall",
+      "date": "2025-10",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1272",
+      "file": "images/october-country/1272.jpg",
+      "title": "Boardwalk Through the Marsh",
+      "date": "2025-10",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1273",
+      "file": "images/october-country/1273.jpg",
+      "title": "Winterberry",
+      "date": "2025-10",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1687",
+      "file": "images/october-country/1687.jpg",
+      "title": "Gold Overhead",
+      "date": "2025-10",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1689",
+      "file": "images/october-country/1689.jpg",
+      "title": "The Yellow Woods",
+      "date": "2025-10",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1699",
+      "file": "images/october-country/1699.jpg",
+      "title": "Stone Tower, Blue Sky",
+      "date": "2025-10",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-1925",
+      "file": "images/october-country/1925.jpg",
+      "title": "Old Elm, Late October",
+      "date": "2025-10",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-875",
+      "file": "images/october-country/875.jpg",
+      "title": "Barn Light, Golden Hour",
+      "date": "2025-10",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "oc-878",
+      "file": "images/october-country/878.jpg",
+      "title": "Field of Wheels",
+      "date": "2025-10",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "new-england"
+        ],
+        "series": "october-country",
+        "process": "color"
+      }
+    },
+    {
+      "id": "ht-2378",
+      "file": "images/harbor-towns/2378.jpg",
+      "title": "Harbor Reflections, Marblehead",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-2380",
+      "file": "images/harbor-towns/2380.jpg",
+      "title": "Gull on the Hoist",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-2385",
+      "file": "images/harbor-towns/2385.jpg",
+      "title": "Skiff at Rest",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-2389",
+      "file": "images/harbor-towns/2389.jpg",
+      "title": "Breakwater Stones",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-2391",
+      "file": "images/harbor-towns/2391.jpg",
+      "title": "Lobster Traps, Through the Door",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-2392",
+      "file": "images/harbor-towns/2392.jpg",
+      "title": "Buoys on the Shack",
+      "date": "2025-12",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-2394",
+      "file": "images/harbor-towns/2394.jpg",
+      "title": "Off-Season Chairs",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-2403",
+      "file": "images/harbor-towns/2403.jpg",
+      "title": "Cairn, Pebble Beach",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-1730",
+      "file": "images/harbor-towns/1730.jpg",
+      "title": "Nubble Light I",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-1736",
+      "file": "images/harbor-towns/1736.jpg",
+      "title": "Rigging Lines, Cape Neddick",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-1737",
+      "file": "images/harbor-towns/1737.jpg",
+      "title": "Nubble Light II",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "ht-1742",
+      "file": "images/harbor-towns/1742.jpg",
+      "title": "Dog Walker, Long Sands",
+      "date": "2025-12",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "landscape",
+          "street"
+        ],
+        "film": "hp5",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "marblehead",
+          "york-maine",
+          "new-england"
+        ],
+        "series": "harbor-towns",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bl-3172",
+      "file": "images/bloom/3172.jpg",
+      "title": "Tulip Riot",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3194",
+      "file": "images/bloom/3194.jpg",
+      "title": "Pink Tulips, Looking Up",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3198",
+      "file": "images/bloom/3198.jpg",
+      "title": "Red Rank and File",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3199",
+      "file": "images/bloom/3199.jpg",
+      "title": "Tulips Against Blue",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3249",
+      "file": "images/bloom/3249.jpg",
+      "title": "Wisteria in May",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3382",
+      "file": "images/bloom/3382.jpg",
+      "title": "Gerbera, Center Study",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bl-3385",
+      "file": "images/bloom/3385.jpg",
+      "title": "Gerbera in Low Key",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bl-3418",
+      "file": "images/bloom/3418.jpg",
+      "title": "Coneflower",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "bw"
+      }
+    },
+    {
+      "id": "bl-3540",
+      "file": "images/bloom/3540.jpg",
+      "title": "Sunflower on Blue",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3545",
+      "file": "images/bloom/3545.jpg",
+      "title": "Blue Flag Iris",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3549",
+      "file": "images/bloom/3549.jpg",
+      "title": "White Rose on Blue",
+      "date": "2026-05",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3551",
+      "file": "images/bloom/3551.jpg",
+      "title": "Petal Abstract, Violet",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3561",
+      "file": "images/bloom/3561.jpg",
+      "title": "Feather, Barbs",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3562",
+      "file": "images/bloom/3562.jpg",
+      "title": "The Pocket Watch",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3572",
+      "file": "images/bloom/3572.jpg",
+      "title": "Sunflower, Dried",
+      "date": "2026-05",
+      "orientation": "landscape",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
+      }
+    },
+    {
+      "id": "bl-3573",
+      "file": "images/bloom/3573.jpg",
+      "title": "Tulip, Flame Study",
+      "date": "2026-05",
+      "orientation": "portrait",
+      "tags": {
+        "subject": [
+          "still-life",
+          "nature"
+        ],
+        "film": "mixed",
+        "format": "35mm",
+        "camera": "canon-ae1",
+        "location": [
+          "massachusetts"
+        ],
+        "series": "bloom",
+        "process": "color"
       }
     }
   ]
