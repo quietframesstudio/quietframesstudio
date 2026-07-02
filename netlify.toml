@@ -1,0 +1,33 @@
+# Netlify configuration (used by Netlify deploy previews).
+#
+# Production runs on Cloudflare Pages, where SPA fallback for clean URLs is
+# automatic (no 404.html present) and functions/ renders per-page meta for
+# /photo/* and /gallery/*. Cloudflare ignores this file.
+#
+# Netlify has no automatic SPA fallback, so the clean URLs need explicit
+# rewrites here. Rules are scoped (not /*) so real files are never shadowed.
+
+[[redirects]]
+  from = "/work"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/collect"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/photo/*"
+  to = "/index.html"
+  status = 200
