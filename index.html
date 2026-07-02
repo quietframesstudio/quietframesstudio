@@ -17,7 +17,36 @@
 <meta name="twitter:title" content="Quiet Frames Studio — Film Photography">
 <meta name="twitter:description" content="Fine art film photography by Michael J McConnell. Limited edition archival prints available.">
 <meta name="twitter:image" content="https://quietframesstudio.com/images/lomo-purple-series/lomo-purple-series-004.jpg">
+<link rel="canonical" href="https://quietframesstudio.com/" id="canonical-link">
 <title>Quiet Frames Studio — Film Photography</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://quietframesstudio.com/#website",
+      "url": "https://quietframesstudio.com/",
+      "name": "Quiet Frames Studio",
+      "description": "Fine art film photography by Michael J McConnell. Limited edition archival prints available.",
+      "publisher": { "@id": "https://quietframesstudio.com/#photographer" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://quietframesstudio.com/#photographer",
+      "name": "Michael J McConnell",
+      "jobTitle": "Film Photographer",
+      "description": "Analog photographer working across 35mm, medium format, and 4×5 large format film. Based outside Boston, Massachusetts.",
+      "url": "https://quietframesstudio.com/about",
+      "email": "mailto:hello@quietframesstudio.com",
+      "sameAs": ["https://instagram.com/quietframesphotos"],
+      "knowsAbout": ["film photography", "analog photography", "darkroom development", "medium format photography", "large format photography", "archival pigment printing"],
+      "address": { "@type": "PostalAddress", "addressRegion": "MA", "addressCountry": "US" }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json" id="route-jsonld">null</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
@@ -624,6 +653,27 @@ html[data-theme="dark"] nav {
 .collect-spec-item:last-child { border-bottom: none; }
 .collect-spec-label { color: var(--ink-light); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
 .collect-spec-value { color: var(--ink-mid); text-align: right; }
+.collect-faq {
+  max-width: 680px; margin-bottom: 64px;
+  padding-top: 56px; border-top: 1px solid var(--border);
+}
+.collect-faq .collect-process-title { margin-bottom: 24px; }
+.faq-item { border-bottom: 1px solid var(--border-lt); }
+.faq-q {
+  cursor: pointer; padding: 16px 0;
+  font-size: 13px; color: var(--ink); letter-spacing: 0.02em;
+  list-style: none; position: relative; padding-right: 28px;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after {
+  content: '+'; position: absolute; right: 4px; top: 14px;
+  color: var(--ink-light); font-size: 15px; transition: transform 0.2s;
+}
+.faq-item[open] .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  font-size: 13px; line-height: 1.8; color: var(--ink-mid);
+  padding: 0 0 18px; max-width: 600px;
+}
 .collect-cta-block {
   text-align: center; padding: 64px 0 0; border-top: 1px solid var(--border);
 }
@@ -936,12 +986,12 @@ footer {
 
 <!-- Nav -->
 <nav>
-  <a href="#/" class="logo" onclick="navigate('/')">Quiet <em>Frames</em> Studio</a>
+  <a href="/" class="logo" onclick="return go('/')">Quiet <em>Frames</em> Studio</a>
   <div class="nav-right">
     <ul class="nav-links" id="nav-links">
-      <li><a href="#/work"    onclick="navigate('/work')"    id="nav-work">Work</a></li>
-      <li><a href="#/about"   onclick="navigate('/about')"   id="nav-about">About</a></li>
-      <li><a href="#/collect" onclick="navigate('/collect')" id="nav-collect-link">Collect</a></li>
+      <li><a href="/work"    onclick="return go('/work')"    id="nav-work">Work</a></li>
+      <li><a href="/about"   onclick="return go('/about')"   id="nav-about">About</a></li>
+      <li><a href="/collect" onclick="return go('/collect')" id="nav-collect-link">Collect</a></li>
     </ul>
     <button class="nav-collect-btn" onclick="navigate('/collect')">Collect Prints</button>
     <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">☀️</button>
@@ -953,21 +1003,35 @@ footer {
 
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobile-nav">
-  <a href="#/work"    onclick="navigate('/work');closeMobileNav()">Work</a>
-  <a href="#/about"   onclick="navigate('/about');closeMobileNav()">About</a>
-  <a href="#/collect" onclick="navigate('/collect');closeMobileNav()">Collect</a>
+  <a href="/work"    onclick="closeMobileNav();return go('/work')">Work</a>
+  <a href="/about"   onclick="closeMobileNav();return go('/about')">About</a>
+  <a href="/collect" onclick="closeMobileNav();return go('/collect')">Collect</a>
   <a href="mailto:m.mcconnell3191@gmail.com" id="mobile-contact">Contact</a>
 </div>
 
 <!-- App -->
-<main id="app"></main>
+<main id="app">
+  <noscript>
+    <div style="padding:80px 52px;max-width:640px">
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:300">Quiet Frames Studio</h1>
+      <p>Fine art film photography by Michael J McConnell — 35mm, medium format, and 4×5 large format work from New England. Limited edition archival prints on Hahnemühle Photo Rag are available to collect.</p>
+      <p>This gallery requires JavaScript. You can also reach us directly:</p>
+      <ul>
+        <li><a href="/work">Browse all series</a></li>
+        <li><a href="/collect">Collect prints</a></li>
+        <li><a href="/about">About the photographer</a></li>
+        <li><a href="mailto:hello@quietframesstudio.com">hello@quietframesstudio.com</a></li>
+      </ul>
+    </div>
+  </noscript>
+</main>
 
 <!-- Footer (always visible) -->
 <footer id="site-footer">
   <div class="footer-logo">Quiet Frames Studio</div>
   <ul class="footer-links">
     <li><a href="https://instagram.com/quietframesphotos" target="_blank" rel="noopener" id="ft-insta">Instagram</a></li>
-    <li><a href="#/collect" onclick="navigate('/collect')">Collect</a></li>
+    <li><a href="/collect" onclick="return go('/collect')">Collect</a></li>
     <li><a href="mailto:m.mcconnell3191@gmail.com" id="ft-contact">Contact</a></li>
   </ul>
   <form class="email-signup-form" onsubmit="handleEmailSignup(event)">
@@ -1021,6 +1085,46 @@ function fl(id) { return FILM_LABELS[id]   || id || ''; }
 function fmt(id){ return FORMAT_LABELS[id]  || id || ''; }
 function cam(id){ return CAMERA_LABELS[id]  || id || ''; }
 
+// Grid views load a ~900px derivative instead of the full scan.
+// If a thumb is missing (e.g. freshly uploaded photo), fall back to the full file.
+// Paths must be absolute: clean URLs like /gallery/x would break relative srcs.
+function imgUrl(file) {
+  return file.startsWith('/') ? file : '/' + file;
+}
+function thumbOf(file) {
+  return imgUrl(file).replace(/^\/(images\/[^/]+)\//, '/$1/thumbs/');
+}
+function thumbImg(file, alt, loading) {
+  return `<img src="${thumbOf(file)}" alt="${alt}" loading="${loading || 'lazy'}" onerror="this.onerror=null;this.src='${imgUrl(file)}'">`;
+}
+
+const COLLECT_FAQS = [
+  {
+    q: 'What paper are the prints made on?',
+    a: 'Every print is produced on Hahnemühle Photo Rag 308gsm, a 100% cotton rag paper with a warm matte surface, using archival pigment inks rated for 100+ years of display life.'
+  },
+  {
+    q: 'Are the prints limited editions?',
+    a: 'Yes. Each size is offered in a strictly limited edition. Once an edition sells through, that image will not be reprinted in that size — ever.'
+  },
+  {
+    q: 'How are the photographs made?',
+    a: 'Every image begins as an analog negative — 35mm, medium format, or 4×5 large format film — hand-developed in the photographer’s home darkroom, then scanned at full resolution from the original negative. No digital sharpening or AI processing.'
+  },
+  {
+    q: 'How long does delivery take?',
+    a: 'Prints are produced to order and typically ship within 7–10 business days. All prints ship flat-packed or rolled in archival tubes, insured and tracked.'
+  },
+  {
+    q: 'What if my print arrives damaged?',
+    a: 'Any print that arrives with a defect or shipping damage is replaced at no cost. Just reply to your order confirmation with a photo of the issue.'
+  },
+  {
+    q: 'Can I get a size that isn’t listed?',
+    a: 'Yes — custom sizes and framing are available on request. Email hello@quietframesstudio.com with the image and size you have in mind.'
+  }
+];
+
 // ───────────────────────────────────────────────────────────────────────
 // ANALYTICS HELPER
 // ───────────────────────────────────────────────────────────────────────
@@ -1031,15 +1135,25 @@ function trackEvent(eventName, props = {}) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════
-// ROUTER
+// ROUTER — clean URLs via History API (Cloudflare Pages serves index.html
+// for unknown paths, so /gallery/x and /photo/x work on direct load).
+// Legacy #/ URLs are transparently upgraded to real paths.
 // ═══════════════════════════════════════════════════════════════════════
 function navigate(path) {
-  window.location.hash = '#' + path;
+  if (window.location.pathname !== path) {
+    history.pushState({}, '', path);
+  }
+  route();
+}
+
+// For inline onclick on <a> tags: navigate SPA-style, suppress full reload
+function go(path) {
+  navigate(path);
+  return false;
 }
 
 function getRoute() {
-  const hash = window.location.hash || '#/';
-  const path  = hash.replace(/^#/, '') || '/';
+  const path  = window.location.pathname || '/';
   const parts = path.split('/').filter(Boolean);
   if (parts.length === 0) return { view: 'home' };
   if (parts[0] === 'work')    return { view: 'work' };
@@ -1079,47 +1193,165 @@ function updateNavActive(view) {
   if (el) el.classList.add('active');
 }
 
+const SITE_URL = 'https://quietframesstudio.com';
+
+function photoDescription(p) {
+  const tags = p.tags || {};
+  const bits = [];
+  if (tags.film && tags.film !== 'unknown') bits.push('Shot on ' + fl(tags.film));
+  if (tags.format && tags.format !== 'unknown') bits.push(fmt(tags.format));
+  if ((tags.location || []).length) bits.push(tags.location.map(l => l.replace(/-/g, ' ')).join(', '));
+  const detail = bits.length ? ` ${bits.join(' · ')}.` : '';
+  return `${p.title} — fine art film photograph by Michael J McConnell.${detail} Limited edition archival print available.`;
+}
+
+function routeJsonLd(route) {
+  const d = GALLERY_DATA;
+  if (!d) return null;
+  const printSizes = (d.settings && d.settings.printSizes) || [];
+
+  if (route.view === 'photo') {
+    const p = d.photos.find(x => x.id === route.id);
+    if (!p) return null;
+    const ser = d.series.find(s => s.id === (p.tags || {}).series);
+    const url = `${SITE_URL}/photo/${p.id}`;
+    return {
+      '@context': 'https://schema.org',
+      '@type': ['VisualArtwork', 'Product'],
+      '@id': url,
+      name: p.title,
+      url: url,
+      image: `${SITE_URL}/${p.file}`,
+      description: photoDescription(p),
+      creator: { '@id': `${SITE_URL}/#photographer` },
+      brand: { '@type': 'Brand', name: 'Quiet Frames Studio' },
+      artMedium: 'Archival pigment print on Hahnemühle Photo Rag 308gsm',
+      artform: 'Film photography',
+      artworkSurface: 'Cotton rag paper',
+      dateCreated: p.date || undefined,
+      isPartOf: ser ? { '@type': 'CreativeWorkSeries', name: ser.title, url: `${SITE_URL}/gallery/${ser.id}` } : undefined,
+      offers: printSizes.map(ps => ({
+        '@type': 'Offer',
+        name: `${p.title} — ${ps.label} limited edition print`,
+        price: String(ps.price),
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+        url: url,
+        seller: { '@id': `${SITE_URL}/#photographer` }
+      }))
+    };
+  }
+
+  if (route.view === 'series') {
+    const s = d.series.find(x => x.id === route.id);
+    if (!s) return null;
+    const photos = (d.photos || []).filter(p => (p.tags && p.tags.series) === s.id);
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      '@id': `${SITE_URL}/gallery/${s.id}`,
+      name: `${s.title} — Quiet Frames Studio`,
+      url: `${SITE_URL}/gallery/${s.id}`,
+      description: s.description || undefined,
+      creator: { '@id': `${SITE_URL}/#photographer` },
+      hasPart: photos.slice(0, 30).map(p => ({
+        '@type': 'VisualArtwork',
+        name: p.title,
+        url: `${SITE_URL}/photo/${p.id}`,
+        image: `${SITE_URL}/${p.file}`
+      }))
+    };
+  }
+
+  if (route.view === 'collect') {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: COLLECT_FAQS.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a }
+      }))
+    };
+  }
+
+  if (route.view === 'about') {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'ProfilePage',
+      '@id': `${SITE_URL}/about`,
+      url: `${SITE_URL}/about`,
+      name: 'About — Quiet Frames Studio',
+      mainEntity: { '@id': `${SITE_URL}/#photographer` }
+    };
+  }
+
+  return null;
+}
+
 function updateSEO(route) {
-  let title = 'Quiet Frames Studio — Film Photography';
-  let desc  = 'Fine art film photography by Michael J McConnell. Limited edition archival prints available.';
-  let image = 'https://quietframesstudio.com/images/lomo-purple-series/lomo-purple-series-004.jpg'; // default image
+  let title = 'Quiet Frames Studio — Film Photography by Michael J McConnell';
+  let desc  = 'Fine art film photography by Michael J McConnell. 35mm, medium format, and large format work from New England. Limited edition archival prints available.';
+  let image = SITE_URL + '/images/lomo-purple-series/lomo-purple-series-004.jpg'; // default image
 
   if (route.view === 'series' && GALLERY_DATA) {
     const s = GALLERY_DATA.series.find(x => x.id === route.id);
     if (s) {
-      title = `${s.title} — Quiet Frames Studio`;
+      title = `${s.title} — Film Photography Series | Quiet Frames Studio`;
       desc = s.description || desc;
-      if (s.cover) image = 'https://quietframesstudio.com/' + s.cover;
+      if (s.cover) image = SITE_URL + '/' + s.cover;
     }
   } else if (route.view === 'photo' && GALLERY_DATA) {
     const p = GALLERY_DATA.photos.find(x => x.id === route.id);
     if (p) {
-      title = `${p.title} — Quiet Frames Studio`;
-      if (p.file) image = 'https://quietframesstudio.com/' + p.file;
+      title = `${p.title} — Limited Edition Film Print | Quiet Frames Studio`;
+      desc = photoDescription(p);
+      if (p.file) image = SITE_URL + '/' + p.file;
     }
+  } else if (route.view === 'work') {
+    title = 'The Work — All Series | Quiet Frames Studio';
+    desc  = 'Browse all film photography series by Michael J McConnell — 35mm, medium format, and 4×5 large format work from New England and beyond.';
   } else if (route.view === 'collect') {
-    title = 'Collect Prints — Quiet Frames Studio';
-    desc  = 'Limited edition archival fine art prints on Hahnemühle Photo Rag. Produced from original film scans, crafted with care and precision.';
+    title = 'Collect Limited Edition Film Prints | Quiet Frames Studio';
+    desc  = 'Limited edition archival fine art prints on Hahnemühle Photo Rag 308gsm. Produced from original film scans. Editions are strictly limited and never reprinted.';
   } else if (route.view === 'about') {
-    title = 'About — Quiet Frames Studio';
+    title = 'About Michael J McConnell — Film Photographer | Quiet Frames Studio';
+    desc  = 'Michael J McConnell is an analog photographer based outside Boston, shooting 35mm, medium format, and 4×5 film, hand-developed at home.';
   }
 
+  const path = window.location.pathname === '/index.html' ? '/' : window.location.pathname;
+  const url  = SITE_URL + path;
+
   document.title = title;
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.content = desc;
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle) ogTitle.content = title;
-  const ogDesc = document.querySelector('meta[property="og:description"]');
-  if (ogDesc) ogDesc.content = desc;
-  const ogUrl = document.querySelector('meta[property="og:url"]');
-  if (ogUrl) ogUrl.content = 'https://quietframesstudio.com' + (window.location.hash || '');
-  const ogImage = document.querySelector('meta[property="og:image"]');
-  if (ogImage) ogImage.content = image;
-  const twitterImage = document.querySelector('meta[name="twitter:image"]');
-  if (twitterImage) twitterImage.content = image;
+  const set = (sel, val) => {
+    const el = document.querySelector(sel);
+    if (el) el.content = val;
+  };
+  set('meta[name="description"]', desc);
+  set('meta[property="og:title"]', title);
+  set('meta[property="og:description"]', desc);
+  set('meta[property="og:url"]', url);
+  set('meta[property="og:image"]', image);
+  set('meta[name="twitter:title"]', title);
+  set('meta[name="twitter:description"]', desc);
+  set('meta[name="twitter:image"]', image);
+  const canonical = document.getElementById('canonical-link');
+  if (canonical) canonical.href = url;
+
+  const ld = routeJsonLd(route);
+  const ldEl = document.getElementById('route-jsonld');
+  if (ldEl) ldEl.textContent = ld ? JSON.stringify(ld) : 'null';
 }
 
-window.addEventListener('hashchange', route);
+window.addEventListener('popstate', route);
+// Legacy hash-route upgrade: #/photo/x → /photo/x
+(function () {
+  const h = window.location.hash;
+  if (h && h.startsWith('#/')) {
+    history.replaceState({}, '', h.slice(1));
+  }
+})();
 
 // ═══════════════════════════════════════════════════════════════════════
 // VIEW: HOME
@@ -1136,7 +1368,7 @@ function renderHome(app) {
   const heroHtml = `
 <section class="home-hero" id="home-hero" ${heroImg ? `onclick="navigate('/gallery/${heroPrimary.id}')"` : ''}>
   ${heroImg
-    ? `<img class="home-hero-img" src="${heroImg}" alt="${heroPrimary.title}" loading="eager">`
+    ? `<img class="home-hero-img" src="${imgUrl(heroImg)}" alt="${heroPrimary.title}" loading="eager" fetchpriority="high">`
     : '<div class="home-hero-placeholder"></div>'}
   <div class="home-hero-overlay"></div>
   <div class="home-hero-content">
@@ -1154,22 +1386,22 @@ function renderHome(app) {
   // Build featured series cards (skip the hero one, show next 2-3)
   const showSeries = featured.filter(s => s.cover).slice(0, 4);
   const cardHtml = showSeries.map(ser => `
-<div class="series-card" onclick="navigate('/gallery/${ser.id}')" role="button" tabindex="0">
+<a class="series-card" href="/gallery/${ser.id}" onclick="return go('/gallery/${ser.id}')">
   <div class="series-card-img">
-    <img src="${ser.cover}" alt="${ser.title}" loading="lazy">
+    ${thumbImg(ser.cover, ser.title)}
   </div>
   <div class="series-card-body">
     <div class="series-card-title">${ser.title}</div>
     <div class="series-card-sub">${ser.subtitle || ''}</div>
     <div class="tag-row">${seriesTags(ser).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
   </div>
-</div>`).join('');
+</a>`).join('');
 
   const featuredBlock = showSeries.length > 0 ? `
 <section class="home-featured">
   <div class="section-header">
     <span class="section-label">Featured Series</span>
-    <a class="section-link" href="#/work" onclick="navigate('/work')">All series →</a>
+    <a class="section-link" href="/work" onclick="return go('/work')">All series →</a>
   </div>
   <div class="featured-grid">${cardHtml}</div>
 </section>` : '';
@@ -1208,11 +1440,11 @@ function renderWork(app) {
 
   const rowsHtml = allSeries.map(ser => {
     const thumbHtml = ser.cover
-      ? `<img src="${ser.cover}" alt="${ser.title}" loading="lazy">`
+      ? thumbImg(ser.cover, ser.title)
       : '<div class="ph"></div>';
     const count = ser.photoCount || 0;
     return `
-<div class="series-row" onclick="navigate('/gallery/${ser.id}')" role="button" tabindex="0">
+<a class="series-row" href="/gallery/${ser.id}" onclick="return go('/gallery/${ser.id}')">
   <div class="series-row-thumb">${thumbHtml}</div>
   <div class="series-row-info">
     <div class="series-row-title">${ser.title}</div>
@@ -1220,7 +1452,7 @@ function renderWork(app) {
     <div class="series-row-count">${count} frame${count !== 1 ? 's' : ''}</div>
   </div>
   <div class="series-row-arrow">→</div>
-</div>`;
+</a>`;
   }).join('');
 
   app.innerHTML = `
@@ -1271,15 +1503,15 @@ function renderSeries(app, id) {
   const gridHtml = curated.map((photo, i) => {
     const isLandscape = photo.orientation === 'landscape';
     return `
-<div class="series-photo-item${isLandscape ? ' landscape' : ''}"
-     onclick="openSeriesPhoto('${id}', '${photo.id}')"
-     role="button" tabindex="0"
+<a class="series-photo-item${isLandscape ? ' landscape' : ''}"
+     href="/photo/${photo.id}"
+     onclick="return go('/photo/${photo.id}')"
      aria-label="${photo.title || 'Photograph'}">
-  <img src="${photo.file}" alt="${photo.title || ser.title}" loading="lazy">
+  ${thumbImg(photo.file, photo.title || ser.title)}
   <div class="series-photo-item-overlay">
     <span class="series-photo-item-label">${photo.title || ''}</span>
   </div>
-</div>`;
+</a>`;
   }).join('');
 
   const showMoreHtml = photos.length > CURATED_MAX ? `
@@ -1334,24 +1566,20 @@ function showAllSeriesPhotos(id) {
   const gridHtml = photos.map((photo, i) => {
     const isLandscape = photo.orientation === 'landscape';
     return `
-<div class="series-photo-item${isLandscape ? ' landscape' : ''}"
-     onclick="openSeriesPhoto('${id}', '${photo.id}')"
-     role="button" tabindex="0">
-  <img src="${photo.file}" alt="${photo.title || ''}" loading="lazy">
+<a class="series-photo-item${isLandscape ? ' landscape' : ''}"
+     href="/photo/${photo.id}"
+     onclick="return go('/photo/${photo.id}')">
+  ${thumbImg(photo.file, photo.title || '')}
   <div class="series-photo-item-overlay">
     <span class="series-photo-item-label">${photo.title || ''}</span>
   </div>
-</div>`;
+</a>`;
   }).join('');
 
   grid.innerHTML = gridHtml;
   const showMore = document.querySelector('.series-show-more');
   if (showMore) showMore.remove();
   lb_photos = photos;
-}
-
-function openSeriesPhoto(seriesId, photoId) {
-  navigate('/photo/' + photoId);
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -1421,7 +1649,7 @@ function renderPhoto(app, id) {
   app.innerHTML = `
 <div class="photo-detail">
   <div class="photo-detail-image-pane">
-    <img src="${photo.file}" alt="${photo.title || ''}" loading="eager">
+    <img src="${imgUrl(photo.file)}" alt="${photo.title || ''}" loading="eager" fetchpriority="high">
   </div>
   <div class="photo-detail-panel">
     <span class="photo-nav-back" onclick="${ser ? `navigate('/gallery/${ser.id}')` : `navigate('/work')`}">
@@ -1575,6 +1803,15 @@ function renderCollect(app) {
     </div>
   </div>
 
+  <div class="collect-faq">
+    <h2 class="collect-process-title">Frequently Asked Questions</h2>
+    ${COLLECT_FAQS.map(f => `
+    <details class="faq-item">
+      <summary class="faq-q">${f.q}</summary>
+      <p class="faq-a">${f.a}</p>
+    </details>`).join('')}
+  </div>
+
   <div class="collect-cta-block">
     <h2 class="collect-cta-title">Interested in a print?</h2>
     <p class="collect-cta-sub">Browse the work and collect directly from individual image pages, or reach out to discuss.</p>
@@ -1639,7 +1876,7 @@ function _showLightboxPhoto(photo) {
   const img   = document.getElementById('lb-img');
   const meta  = document.getElementById('lb-meta');
   const tags  = photo.tags || {};
-  img.src = photo.file;
+  img.src = imgUrl(photo.file);
   img.alt = photo.title || '';
 
   const parts = [
